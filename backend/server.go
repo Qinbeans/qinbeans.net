@@ -33,6 +33,7 @@ func Start() {
 			"message": "pong",
 		})
 	})
-	r.POST("/v1/login", ws.Login)
+	r.GET("/v1/ws/:token", ws.WsHandler)
+	r.POST("/v1/login", ws.LoginGuard)
 	r.Run(fmt.Sprintf("localhost:%s", port)) // listen and serve on
 }
