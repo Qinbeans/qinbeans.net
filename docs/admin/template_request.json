@@ -1,0 +1,4 @@
+{
+    "token": "some token",
+    "query": "SELECT * FROM users WHERE id = 1"
+}

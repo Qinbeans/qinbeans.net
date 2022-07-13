@@ -1,0 +1,1263 @@
+[0.01ms] ".env"
+bun install v0.1.3
+
+ [0.00ms] [cache hit] @sveltejs/vite-plugin-svelte
+   - "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30" - @sveltejs/vite-plugin-svelte@1.0.0-next.49
+
+ [0.00ms] [cache hit] @tsconfig/svelte
+   - "@tsconfig/svelte": "^2.0.1" - @tsconfig/svelte@2.0.1
+
+ [0.00ms] [cache hit] svelte
+   - "svelte": "^3.44.0" - svelte@3.49.0
+
+ [0.00ms] [cache hit] svelte-check
+   - "svelte-check": "^2.2.7" - svelte-check@2.8.0
+
+ [0.00ms] [cache hit] svelte-preprocess
+   - "svelte-preprocess": "^4.9.8" - svelte-preprocess@4.10.7
+
+ [0.00ms] [cache hit] tslib
+   - "tslib": "^2.3.1" - tslib@2.4.0
+Enqueue package manifest for download: typescript
+
+ [0.00ms] [cache hit] vite
+   - "vite": "^2.9.9" - vite@2.9.14
+
+ [0.00ms] [cache hit] axios
+   - "axios": "^0.27.2" - axios@0.27.2
+
+ [0.00ms] [cache hit] @rollup/pluginutils
+   - "@rollup/pluginutils": "^4.2.1" - @rollup/pluginutils@4.2.1
+
+ [0.00ms] [cache hit] debug
+   - "debug": "^4.3.4" - debug@4.3.4
+
+ [0.00ms] [cache hit] deepmerge
+   - "deepmerge": "^4.2.2" - deepmerge@4.2.2
+
+ [0.00ms] [cache hit] kleur
+   - "kleur": "^4.1.4" - kleur@4.1.5
+
+ [0.00ms] [cache hit] magic-string
+   - "magic-string": "^0.26.2" - magic-string@0.26.2
+
+ [0.00ms] [cache hit] svelte-hmr
+   - "svelte-hmr": "^0.14.12" - svelte-hmr@0.14.12
+
+ [0.00ms] [cache hit] @jridgewell/trace-mapping
+   - "@jridgewell/trace-mapping": "^0.3.9" - @jridgewell/trace-mapping@0.3.14
+
+ [0.00ms] [cache hit] picocolors
+   - "picocolors": "^1.0.0" - picocolors@1.0.0
+
+ [0.00ms] [cache hit] chokidar
+   - "chokidar": "^3.4.1" - chokidar@3.5.3
+
+ [0.00ms] [cache hit] fast-glob
+   - "fast-glob": "^3.2.7" - fast-glob@3.2.11
+
+ [0.00ms] [cache hit] import-fresh
+   - "import-fresh": "^3.2.1" - import-fresh@3.3.0
+
+ [0.00ms] [cache hit] sade
+   - "sade": "^1.7.4" - sade@1.8.1
+
+ [0.00ms] [cache hit] @types/pug
+   - "@types/pug": "^2.0.4" - @types/pug@2.0.6
+
+ [0.00ms] [cache hit] @types/sass
+   - "@types/sass": "^1.16.0" - @types/sass@1.43.1
+
+ [0.00ms] [cache hit] detect-indent
+   - "detect-indent": "^6.0.0" - detect-indent@6.1.0
+   - "magic-string": "^0.25.7" - magic-string@0.25.9
+
+ [0.00ms] [cache hit] sorcery
+   - "sorcery": "^0.10.0" - sorcery@0.10.0
+
+ [0.00ms] [cache hit] strip-indent
+   - "strip-indent": "^3.0.0" - strip-indent@3.0.0
+Enqueue package manifest for download: esbuild
+Enqueue package manifest for download: postcss
+
+ [0.00ms] [cache hit] resolve
+   - "resolve": "^1.22.0" - resolve@1.22.1
+Enqueue package manifest for download: rollup
+
+ [0.00ms] [cache hit] fsevents
+   - "fsevents": "~2.3.2" - fsevents@2.3.2
+
+ [0.00ms] [cache hit] follow-redirects
+   - "follow-redirects": "^1.14.9" - follow-redirects@1.15.1
+
+ [0.00ms] [cache hit] form-data
+   - "form-data": "^4.0.0" - form-data@4.0.0
+Enqueue package manifest for download: estree-walker
+Enqueue package manifest for download: picomatch
+Enqueue package manifest for download: ms
+Enqueue package manifest for download: sourcemap-codec
+Enqueue package manifest for download: @jridgewell/resolve-uri
+Enqueue package manifest for download: @jridgewell/sourcemap-codec
+Enqueue package manifest for download: anymatch
+Enqueue package manifest for download: braces
+Enqueue package manifest for download: glob-parent
+Enqueue package manifest for download: is-binary-path
+Enqueue package manifest for download: is-glob
+Enqueue package manifest for download: normalize-path
+Enqueue package manifest for download: readdirp
+Enqueue package manifest for download: @nodelib/fs.stat
+Enqueue package manifest for download: @nodelib/fs.walk
+Enqueue package manifest for download: merge2
+Enqueue package manifest for download: micromatch
+Enqueue package manifest for download: parent-module
+Enqueue package manifest for download: resolve-from
+Enqueue package manifest for download: mri
+Enqueue package manifest for download: @types/node
+Enqueue package manifest for download: buffer-crc32
+Enqueue package manifest for download: minimist
+Enqueue package manifest for download: sander
+Enqueue package manifest for download: min-indent
+Enqueue package manifest for download: is-core-module
+Enqueue package manifest for download: path-parse
+Enqueue package manifest for download: supports-preserve-symlinks-flag
+Enqueue package manifest for download: asynckit
+Enqueue package manifest for download: combined-stream
+Enqueue package manifest for download: mime-types
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] GET /esbuild
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /postcss
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /normalize-path
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /braces
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /anymatch
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /picomatch
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /@jridgewell/sourcemap-codec
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /typescript
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /sourcemap-codec
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /@jridgewell/resolve-uri
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /estree-walker
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /mri
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /merge2
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /@nodelib/fs.walk
+	[0m[36mAccept[0m[2m: [0m
+  🔍 Resolving [1/60] application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /readdirp
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /resolve-from
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /is-binary-path
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /glob-parent
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /minimist
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /@types/node
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /sander
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /mime-types
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /ms
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /@nodelib/fs.stat
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /combined-stream
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /rollup
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /micromatch
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection
+  🔍 Resolving [1/60] [0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /parent-module
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /asynckit
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /buffer-crc32
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /min-indent
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /supports-preserve-symlinks-flag
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /is-core-module
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /path-parse
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+GET /is-glob
+	[0m[36mAccept[0m[2m: [0mapplication/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*
+	[0m[36mConnection[0m[2m: [0mclose
+	[0m[36mUser-Agent[0m[2m: [0mbun.js 0.1.3
+	[0m[36mHost[0m[2m: [0mregistry.npmjs.org
+	[0m[36mAccept-Encoding[0m[2m: [0mdeflate, gzip
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m16729
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd0b9e6001-SMF
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m195
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"07cb2316f2ca1b25ccab679182c6ee8b"
+< 	[0m[36mLast-Modified[0m[2m: [0mMon, 13 Jun 2022 03:07:47 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mCOMPLETED
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m577980
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32ccfcdb5ffb-SMF
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m23
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"5107aec402e5f1ae28247af442e62a45"
+< 	[0m[36mLast-Modified[0m[2m: [0mSun, 10 Jul 2022 17:18:39 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mCOMPLETED
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m18374
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd0b9f6001-SMF
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m104
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"70c7691fc5b19c2b855a818293c11547"
+< 	[0m[36mLast-Modified[0m[2m: [0mSun, 26 Jun 2022 22:24:07 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mCOMPLETED
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m12121
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd0bab6001-SMF
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m115
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"8a1e09dc3d3501eeb413e7d7a6106d8c"
+< 	[0m[36mLast-Modified[0m[2m: [0mMon, 13 Jun 2022 06:33:59 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mCOMPLETED
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m20236
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd09205f88-SMF
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m240
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"d3ad429676498e8954839709a5b375f7"
+< 	[0m[36mLast-Modified[0m[2m: [0mSun, 19 Jun 2022 17:53:54 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mCOMPLETED
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m52342
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd091f5f88-SMF
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m115
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"4d803dce9086d9447f4472c0394eccf7"
+< 	[0m[36mLast-Modified[0m[2m: [0mSun, 19 Jun 2022 19:56:02 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mCOMPLETED
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m28539
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd0ad79670-SJC
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m76
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"dca9e5e35a4606da8c8dfeb60d150bab"
+< 	[0m[36mLast-Modified[0m[2m: [0mFri, 17 Jun 2022 20:58:50 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mPENDING
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m21167
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd1cbf967c-SJC
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m201
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"7e674c0b5c71b7ca105f9f9efcc0a87d"
+< 	[0m[36mLast-Modified[0m[2m: [0mTue, 12 Jul 2022 20:30:00 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mPENDING
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m12161
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd08865f95-SMF
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m104
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"8159636b2c1001ad3b99fbeb9624310f"
+< 	[0m[36mLast-Modified[0m[2m: [0mMon, 20 Jun 2022 11:40:41 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mCOMPLETED
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m3165
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd199b5f94-SMF
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m95
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"d6c727669b25d6ef5b90171bed317d42"
+< 	[0m[36mLast-Modified[0m[2m: [0mMon, 13 Jun 2022 03:39:05 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mCOMPLETED
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m2127
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd1ccc96ad-SJC
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m56
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"e7afe47e0e7fd4e1ecd12f7b2485b4f1"
+< 	[0m[36mLast-Modified[0m[2m: [0mSun, 19 Jun 2022 20:15:07 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mPENDING
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m1434963
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd1f209675-SJC
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m81
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"8c8a9eb8f610231ad4cef743b583f51e"
+< 	[0m[36mLast-Modified[0m[2m: [0mFri, 08 Jul 2022 11:35:59 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mCOMPLETED
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m7738
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32ccf90c5f88-SMF
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m194
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"d66b0b55e0b9a30b4289de070558dac6"
+< 	[0m[36mLast-Modified[0m[2m: [0mWed, 22 Jun 2022 05:31:18 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mPENDING
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m37632
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd082d5f89-SMF
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m104
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"9dfb2fdcdc8bf28746ba9bf443980150"
+< 	[0m[36mLast-Modified[0m[2m: [0mThu, 12 May 2022 22:25:18 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mCOMPLETED
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m15657
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd0cef5ffb-SMF
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m104
+< 	
+  🔍 Resolving [1/60] [0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"85af4ac82fd04e6054d5420a776b4dff"
+< 	[0m[36mLast-Modified[0m[2m: [0mSun, 26 Jun 2022 15:53:18 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mCOMPLETED
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m17983
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd08875f95-SMF
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m104
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"3ab7bce499b92a33d174dc74347128bd"
+< 	[0m[36mLast-Modified[0m[2m: [0mSat, 18 Jun 2022 12:54:25 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mCOMPLETED
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m293411
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd0fe5966a-SJC
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m34
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"e1266d15ec730c4b14f45bd5707e3120"
+< 	[0m[36mLast-Modified[0m[2m: [0mFri, 24 Jun 2022 09:22:36 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mPENDING
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m4357
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd0ba696b9-SJC
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m94
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"98fb0da1af8f2e75fcbb8aeca7c6a7a3"
+< 	[0m[36mLast-Modified[0m[2m: [0mSun, 26 Jun 2022 11:52:27 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mPENDING
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m8186
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd19985f94-SMF
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m115
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"fa6fa3d0aa07d4aa6446b5a7ecbe3db6"
+< 	[0m[36mLast-Modified[0m[2m: [0mMon, 13 Jun 2022 05:15:17 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mCOMPLETED
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m5796
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd2aa896f5-SJC
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m135
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"1eee5cb48de05dfdcab9cc48dd392bd7"
+< 	[0m[36mLast-Modified[0m[2m: [0mThu, 23 Jun 2022 14:38:14 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mPENDING
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m1887
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd189f5f95-SMF
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m103
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"f0c48805f74c670063bb468fd8df07fd"
+< 	[0m[36mLast-Modified[0m[2m: [0mThu, 19 May 2022 01:59:55 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mCOMPLETED
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m5010
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd0f069675-SJC
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m18
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"7bb93734f54504793c654cdb08a8cb0e"
+< 	[0m[36mLast-Modified[0m[2m: [0mSun, 19 Jun 2022 02:37:24 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mPENDING
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m20516
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd0b52adf8-SMF
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m104
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"042003b8feb49c68a11e225cad96c366"
+< 	[0m[36mLast-Modified[0m[2m: [0mSun, 19 Jun 2022 21:22:52 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mCOMPLETED
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m20005
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd08855f95-SMF
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m240
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"e42a2b854915c509a8a805acf15918e1"
+< 	[0m[36mLast-Modified[0m[2m: [0mWed, 06 Apr 2022 09:16:51 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mCOMPLETED
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m11060
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd2ec49679-SJC
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m27
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"f49987fd34ebf687f8dbb5187afd72f0"
+< 	[0m[36mLast-Modified[0m[2m: [0mSun, 19 Jun 2022 02:42:17 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mPENDING
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m18570
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd2971968f-SJC
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m138
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"44c785874dd6d0673479543960eeef67"
+< 	[0m[36mLast-Modified[0m[2m: [0mSun, 19 Jun 2022 02:38:45 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mPENDING
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m7069
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd1d2d966f-SJC
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m88
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"29cd690549f6d8dcd9f1e50b68e79ef1"
+< 	[0m[36mLast-Modified[0m[2m: [0mThu, 23 Jun 2022 10:11:43 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mCOMPLETED
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+
+  🔍 Resolving [1/60] Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m35249
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd0a53adda-SMF
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m239
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"f6ee5ffc309679ce894b62c8a8af6131"
+< 	[0m[36mLast-Modified[0m[2m: [0mMon, 13 Jun 2022 05:03:41 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mPENDING
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m69525
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd19a096de-SJC
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m104
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"ca9c7f184a589742f4f3bb170dea5aa8"
+< 	[0m[36mLast-Modified[0m[2m: [0mSun, 19 Jun 2022 18:48:51 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mPENDING
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m19112
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd1b3996ae-SJC
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m69
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"da374cb066ee8b326a8d199840b78ac7"
+< 	[0m[36mLast-Modified[0m[2m: [0mWed, 06 Apr 2022 09:16:51 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mPENDING
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m5846422
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd087d9687-SJC
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m103
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"91cd86053edd4d3e79d10e9c6779b306"
+< 	[0m[36mLast-Modified[0m[2m: [0mTue, 12 Jul 2022 07:16:28 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mPENDING
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m24079
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32ccf90d5f88-SMF
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m103
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"97dbec687a686a5b8dd986a1626397b6"
+< 	[0m[36mLast-Modified[0m[2m: [0mTue, 05 Jul 2022 23:40:50 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mCOMPLETED
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m11551
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32ccf8175f89-SMF
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m103
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"a278fff0e38e64db9937cc1caa111d93"
+< 	[0m[36mLast-Modified[0m[2m: [0mSun, 26 Jun 2022 16:53:36 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mCOMPLETED
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+
+  🔍 Resolving [1/60] Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m40500
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd1eca5f8f-SMF
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m194
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"c2bf899e572b6f0ce8c7e2f061760ac5"
+< 	[0m[36mLast-Modified[0m[2m: [0mSun, 26 Jun 2022 09:16:49 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mCOMPLETED
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] Response: < 200 OK
+< 	[0m[36mDate[0m[2m: [0mWed, 13 Jul 2022 04:15:36 GMT
+< 	[0m[36mContent-Type[0m[2m: [0mapplication/vnd.npm.install-v1+json
+< 	[0m[36mContent-Length[0m[2m: [0m1623193
+< 	[0m[36mConnection[0m[2m: [0mclose
+< 	[0m[36mCF-Ray[0m[2m: [0m729f32cd2ee15f8f-SMF
+< 	[0m[36mAccept-Ranges[0m[2m: [0mbytes
+< 	[0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+< 	[0m[36mAge[0m[2m: [0m197
+< 	[0m[36mCache-Control[0m[2m: [0mpublic, max-age=300
+< 	[0m[36mETag[0m[2m: [0m"1597938757b50fade58d779a625807fc"
+< 	[0m[36mLast-Modified[0m[2m: [0mWed, 06 Jul 2022 04:03:23 GMT
+< 	[0m[36mVary[0m[2m: [0maccept-encoding, accept
+< 	[0m[36mCF-Cache-Status[0m[2m: [0mHIT
+< 	[0m[36mExpect-CT[0m[2m: [0mmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< 	[0m[36mx-amz-replication-status[0m[2m: [0mCOMPLETED
+< 	[0m[36mServer[0m[2m: [0mcloudflare
+
+
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 
+  🔍 Resolving [1/60] 

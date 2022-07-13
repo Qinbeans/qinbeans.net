@@ -1,0 +1,368 @@
+@font-face {
+    font-family: fixedsys;
+    src: url("FixedsysExcelsiorIIIb_PL3.otf");
+}
+
+$bkg: rgb(38, 43, 68);
+$fg: rgb(172, 218, 236);
+$nfg: rgb(87, 87, 87);
+$btn: rgba(255, 255, 255, 0.616);
+$btn-hover: rgba(255, 255, 255, 0.205);
+
+$font-size: 1.5vw;
+
+* {
+    font-family: fixedsys;
+    color: $fg;
+}
+html {
+    background-color: $bkg;
+}
+
+.m-grid {
+    margin: 0 0 0 -0.5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(5vw, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(2vh, 1fr));
+    height: 85vh;
+    width: 100vw;
+}
+
+.n-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: grid;
+    height: 5vh;
+    width: 95vw;
+    grid-template-columns: repeat(auto-fill, minmax(5vw, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(1vh, 1fr));
+}
+
+.f-grid {
+    position: fixed;
+    bottom: 2.5vh;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(5vw, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(2vh, 1fr));
+    height: 10vh;
+    width: 100vw;
+}
+
+.b-grid {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(5vw, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(2vh, 1fr));
+    height: 50vh;
+    width: 50vw;
+}
+
+@for $x from 0 to 20 {
+    .x-#{$x} {
+        grid-column: #{$x} / auto;
+    }
+    @for $w from 1 to 20 {
+        .x-#{$x}-#{$w} {
+            grid-column: #{$x} / span #{$w};
+        }
+    }
+}
+
+@for $y from 0 to 200 {
+    .y-#{$y} {
+        grid-row: #{$y} / auto;
+    }
+    @for $h from 1 to 200 {
+        .y-#{$y}-#{$h} {
+            grid-row: #{$y} / span #{$h};
+        }
+    }
+}
+
+.child {
+    grid-column: auto;
+    grid-row: auto;
+}
+
+.bubble {
+    border-radius: 5px;
+}
+
+.title {
+    text-align: center;
+    width: 4.5vw;
+    height: 4vh;
+    font-size: $font-size * 0.8;
+}
+
+//check for thin screen
+@media screen and (max-width: 800px) {
+    .sel {
+        background-color: $btn;
+        cursor: pointer;
+        text-align: center;
+        width: 7vw;
+        font-size: 1.25vh;
+    }
+    
+    .curr {
+        background-color: $btn;
+        text-align: center;
+        width: 7vw;
+        font-size: 1.25vh;
+    }
+    .f-label {
+        font-size: 1vh;
+        color: white;
+        text-align: center;
+        width: 20vw;
+    }
+
+    .icon {
+        width: 2vh;
+        height: 2vh;
+    }
+    .wai-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0vh;
+        height: 100%;
+        background-image: url("./imgs/philmont2.jpg");
+        background-size: cover;
+        filter: blur(5px) brightness(30%);
+        -webkit-filter: blur(5px) brightness(30%);
+    }
+    .wai-txt {
+        position: absolute;
+        top: 5vh;
+        left: 0;
+        color: white;
+        text-align: center;
+    }
+    .exp-img {
+        position: absolute;
+        top: 100vh;
+        right: 0;
+        left: 0;
+        bottom: 0vh;
+        height: 100%;
+        background-image: url("./imgs/exp.png");
+        background-size: cover;
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
+    }
+    .exp-txt {
+        position: absolute;
+        top: 100vh;
+        left: 0;
+        color: white;
+        text-align: center;
+    }
+    .aatf-img {
+        position: absolute;
+        top: 200vh;
+        right: 0;
+        left: 0;
+        bottom: 0vh;
+        height: 100%;
+        background-image: url("./imgs/aatf.png");
+        background-size: cover;
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
+    }
+    .aatf-txt {
+        position: absolute;
+        top: 200vh;
+        left: 0;
+        height: 100vh;
+        color: white;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 801px) {
+    .sel {
+        background-color: $btn;
+        cursor: pointer;
+        text-align: center;
+        width: 4.5vw;
+        font-size: 1vw;
+    }
+    
+    .curr {
+        background-color: $btn;
+        text-align: center;
+        width: 4.5vw;
+        font-size: 1vw;
+    }
+    .f-label {
+        font-size: 1vw;
+        color: white;
+        text-align: center;
+        width: 20vw;
+    }
+
+    .icon {
+        width: 2vw;
+        height: 2vw;
+    }
+    .wai-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0vh;
+        height: 100%;
+        background-image: url("./imgs/philmont2.jpg");
+        background-size: cover;
+        filter: blur(5px) brightness(30%);
+        -webkit-filter: blur(5px) brightness(30%);
+    }
+    .wai-txt {
+        position: absolute;
+        top: 5vh;
+        left: 0;
+        color: white;
+        text-align: center;
+    }
+    .exp-img {
+        position: absolute;
+        top: 100vh;
+        right: 0;
+        left: 0;
+        bottom: 0vh;
+        height: 100%;
+        background-image: url("./imgs/exp.png");
+        background-size: cover;
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
+    }
+    .exp-txt {
+        position: absolute;
+        top: 100vh;
+        left: 0;
+        color: white;
+        text-align: center;
+    }
+    .aatf-img {
+        position: absolute;
+        top: 200vh;
+        right: 0;
+        left: 0;
+        bottom: 0vh;
+        height: 100%;
+        background-image: url("./imgs/aatf.png");
+        background-size: cover;
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
+    }
+    .aatf-txt {
+        position: absolute;
+        top: 200vh;
+        left: 0;
+        height: 100vh;
+        color: white;
+        text-align: center;
+    }
+}
+
+.sel:hover {
+    background-color: $btn-hover;
+}
+
+h1.h1 {
+    text-align: center;
+    font-size: 4vw;
+}
+
+p {
+    font-size: 1vw;
+    //left and right margins are 1vw
+    margin: 0vw 10vw 0vw 10vw;
+}
+
+.input {
+    font-size: 1.75vh;
+    background-color: $nfg;
+    border: none;
+}
+
+.submit {
+    text-align: center;
+    font-size: 1.25vh;
+    background-color: $btn;
+    color: $fg;
+    border: none;
+    height: 2vh;
+    border-radius: 1vw;
+}
+
+.submit:hover {
+    background-color: $btn-hover;
+}
+
+.logout {
+    position: absolute;
+    top: 10vh;
+    right: 5vw;
+    text-align: center;
+    font-size: 1.25vh;
+    background-color: $btn;
+    color: $fg;
+    border: none;
+    padding: 0.25vw 0.5vw 0.25vw 0.5vw;
+    border-radius: 1vw;
+    cursor: pointer;
+}
+
+.logout:hover {
+    background-color: $btn-hover;
+}
+
+.fr-grid {
+    top: 10vh;
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(10vh, 1fr));
+}
+
+.frame {
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    top: 0;
+}
+
+.date {
+    text-align: center;
+    bottom: 10%;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.5vw;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $btn;
+    border-radius: 100px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $btn-hover;
+}
