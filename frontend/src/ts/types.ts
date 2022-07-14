@@ -5,3 +5,10 @@ export interface Post {
     date: string;
     img: string;
 }
+
+export enum State {
+    ABOUT = 0,
+    DOCS = 1,
+    BLOG = 2,
+    CONTACT = 3,
+}

@@ -1,12 +1,12 @@
 import { writable } from 'svelte/store';
-import type { AdminUser } from './types';
+import { AdminUser, AdminState } from './types';
 
-export const admin = writable(-1);
+export const admin = writable(AdminState.NONE);
 export const token = writable("");
 export const user = writable<AdminUser>({
     creds: {
         username: "",
-        token: ""
+        token: ""//backend token
     },
     conn: null
 });

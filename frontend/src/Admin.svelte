@@ -4,24 +4,25 @@
     import Dashboard from "./admin/home.svelte";
 
     import { admin, token } from "./admin/ts/store";
+    import { AdminState } from "./admin/ts/types";
 
-    let state = 0;
+    let state = AdminState.LOGIN;
     let a_token = "";
     admin.subscribe(x => state = x);
     token.subscribe(x => a_token = x);
     if(state != 0 && a_token.length == 0) {
         alert("You are not logged in");
-        admin.set(0);
-        state = 0;
+        admin.set(AdminState.LOGIN);
+        state = AdminState.LOGIN;
     }
 </script>
 
 <main>
-    {#if state == 0}
+    {#if state == AdminState.LOGIN}
     <Login></Login>
-    {:else if state == 1}
+    {:else if state == AdminState.HOME}
     <Dashboard></Dashboard>
-    {:else if state == 2}
+    {:else if state == AdminState.BLOG}
     <Blog></Blog>
     {:else}
     <Login></Login>

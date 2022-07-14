@@ -1,7 +1,7 @@
 import axios, {AxiosResponse} from 'axios'
 import { user,admin,token } from "./store"
 import type { AdminUser,Credentials } from "./types"
-
+import { AdminState } from "./types"
 
 export const new_credentials = (username: string, token: string) => {
     return {
@@ -30,7 +30,7 @@ export const submit_credentials = (credentials: Credentials, mode: string) => {
             //get token
             const j_token = json.token
             //set token
-            admin.set(1)
+            admin.set(AdminState.HOME)
             token.set(j_token)
             alert("Login successful")
             user.update( u => {
