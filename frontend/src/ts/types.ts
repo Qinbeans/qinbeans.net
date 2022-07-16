@@ -7,8 +7,14 @@ export interface Post {
 }
 
 export enum State {
+    ERROR = -1,
     ABOUT = 0,
     DOCS = 1,
     BLOG = 2,
     CONTACT = 3,
+}
+
+export interface Error {
+    type?: string;
+    message: string;
 }

@@ -14,19 +14,34 @@ import (
 type Socket struct {
 	sock *websocket.Upgrader
 	conn *websocket.Conn
-	send chan []byte
+	send []byte
 }
 
 var (
 	Sockets = make(map[string]*Socket)
+	Status  = false
 )
 
 func createSocket(sock *websocket.Upgrader) *Socket {
 	return &Socket{
 		sock: sock,
 		conn: nil,
-		send: make(chan []byte),
+		send: nil,
 	}
+}
+
+func closeSocket(token string) error {
+	socket, ok := Sockets[token]
+	if !ok {
+		return errors.New("socket not found")
+	}
+	socket.close()
+	delete(Sockets, token)
+	return nil
+}
+
+func (s *Socket) close() {
+	s.conn.Close()
 }
 
 func LoginGuard(c *gin.Context) {
@@ -48,7 +63,7 @@ func LoginGuard(c *gin.Context) {
 func login(w http.ResponseWriter, r *http.Request, username string, token string) (*string, error) {
 	// check if token is valid
 	if username != auth.Authority.Username || token != auth.Authority.Token {
-		log.Errf("Invalid login credentials")
+		log.Errf("Invalid login credentials: %s:%s", username, token)
 		return nil, errors.New("unauthorized")
 	}
 	token = uuid.New().String()
@@ -66,6 +81,7 @@ func login(w http.ResponseWriter, r *http.Request, username string, token string
 }
 
 func WsHandler(c *gin.Context) {
+	log.Logf("WS handler called")
 	//part of the url is the token
 	token := c.Param("token")
 	//check if token is valid
@@ -84,18 +100,52 @@ func WsHandler(c *gin.Context) {
 	}
 	socket.conn = conn
 	//start reading from socket asynchronously
-	go func() {
-		for {
-			_, message, err := socket.conn.ReadMessage()
-			if err != nil {
-				log.Errf("Error reading from socket: %v", err)
-				c.JSON(http.StatusInternalServerError, gin.H{"message": "internal server error"})
-				return
+	go socket.messageHandler(c.Request, token)
+}
+
+func (s *Socket) messageHandler(r *http.Request, token string) {
+	for {
+		opcode, message, err := s.conn.ReadMessage()
+		if err != nil {
+			//Just close on error
+			if websocket.IsUnexpectedCloseError(err, websocket.CloseGoingAway) {
+				log.Logf("error: %v, user-agent: %v", err, r.Header.Get("User-Agent"))
 			}
-			if message != nil {
-				//message handler
-			}
-			log.Logf("Received message: %s", message)
+			break
 		}
-	}()
+		//guard case
+		if !Calls.Exists(byte(opcode)) {
+			log.Errf("Invalid opcode: %v", opcode)
+			continue
+		}
+		switch opcode {
+		case websocket.TextMessage:
+			{
+				switch message[0] {
+				case 'c':
+					{
+						log.Logf("connected")
+					}
+				default:
+					{
+						// probably a json
+						log.Errf("Invalid message type: %v", message[0])
+					}
+				}
+				break
+			}
+		case websocket.CloseMessage:
+			{
+				closeSocket(token)
+				break
+			}
+		default:
+			{
+				log.Errf("Unhandled opcode: %v", opcode)
+				break
+			}
+		}
+	}
+	log.Logf("Socket closed")
+	closeSocket(token)
 }

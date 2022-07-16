@@ -1,4 +1,4 @@
-import axios, {AxiosResponse} from 'axios'
+import { handler } from './socketHandler'
 import { user,admin,token } from "./store"
 import type { AdminUser,Credentials } from "./types"
 import { AdminState } from "./types"
@@ -12,8 +12,8 @@ export const new_credentials = (username: string, token: string) => {
 
 const to_form_data = (credentials: Credentials) => {
     const form = new FormData()
-    form.set('username', credentials.username)
-    form.set('token', credentials.token)
+    form.append('username', credentials.username)
+    form.append('token', credentials.token)
     return form
 }
 
@@ -21,27 +21,49 @@ export const submit_credentials = (credentials: Credentials, mode: string) => {
     const addr = (mode=="debug")?"http://localhost:5069/v1/login":"https://api.qinbeans.net/v1/login"
     const ws = (mode=="debug")?"ws://localhost:5069/v1/ws/":"wss://api.qinbeans.net/v1/ws/"
     const form = to_form_data(credentials)
-    const headers = {'Content-Type': 'multipart/form-data'};
-    axios.post(addr, form, {headers})
-        .then((res: AxiosResponse) => {
-            //set token
-            //receives a json
-            const json = res.data
-            //get token
-            const j_token = json.token
-            //set token
-            admin.set(AdminState.HOME)
-            token.set(j_token)
-            alert("Login successful")
-            user.update( u => {
-                u.creds = credentials
-                u.conn = new WebSocket(ws+j_token)
-                return u
-            })
-            return json.message
+    //check if form is valid
+    if (form.get('username') == null || form.get('token') == null) {
+        console.log("invalid form")
+    }
+    console.log(form, credentials)
+    // send post request to server
+    return fetch(addr, {
+        method: 'post',
+        body: form
+    }).then(response => {
+        if (response.status === 200) {
+            return response.json()
+        } else {
+            throw new Error(`Error ${response.status}: ${response.statusText}`)
+        }
+    }).then(json => {
+        // save user and token to store
+        const j_token = json.token
+        admin.set(AdminState.HOME)
+        token.set(j_token)
+        alert("Login Successful")
+        user.update( u => {
+            u.creds = credentials
+            u.conn = new WebSocket(ws+j_token)
+            return u
         })
-        .catch(err => {
-            alert("Login failed")
-            return err.response.data.message
-        })
+        handler()
+        return json.message
+    }
+    ).catch(err => {
+        alert("Login failed")
+        return err.response.data.message
+    })
+}
+
+export const logout = () => {
+    admin.set(AdminState.LOGIN)
+    token.set("")
+    user.update( u => {
+        u.creds = new_credentials("","")
+        if (u.conn != null) {
+            u.conn.close()
+        }
+        return u
+    })
 }

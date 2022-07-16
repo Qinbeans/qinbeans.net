@@ -4,14 +4,29 @@
   import Docs from "./lib/docs.svelte";
   import Blog from "./lib/blog.svelte";
   import Contact from "./lib/contact.svelte";
+  import Error from "./error/error.svelte";
   import { current } from "./ts/store";
   import { State as AppState } from "./ts/types";
+  import { pong } from "./ts/verify";
+  import type { Error as RequestError } from "./ts/types"
 
   let state = 0;
   current.subscribe(x => state = x);
+  let pos_err: RequestError = null;
+  pong().catch(e => {
+    pos_err = e
+    current.update(x => {
+      x = AppState.ERROR
+      return x
+    });
+    state = -1;
+  });
 </script>
 
-<Navbar></Navbar>
+{#if state != AppState.ERROR}
+  <Navbar></Navbar>
+{/if}
+
 <main>
   {#if state == AppState.ABOUT}
     <About></About>
@@ -21,6 +36,8 @@
     <Blog></Blog>
   {:else if state == AppState.CONTACT}
     <Contact></Contact>
+  {:else if state == AppState.ERROR}
+    <Error type="{pos_err.type}" message="{pos_err.message}"></Error>
   {:else}
     <About></About>
   {/if}

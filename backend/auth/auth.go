@@ -2,9 +2,11 @@ package auth
 
 import (
 	"errors"
+	"net/http"
 	"os"
 
 	"api.qinbeans.net/backend/log"
+	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
 )
 
@@ -16,6 +18,12 @@ type Auth struct {
 var (
 	Authority = Auth{}
 )
+
+func Ping(c *gin.Context) {
+	c.JSON(http.StatusOK, gin.H{
+		"message": "pong",
+	})
+}
 
 func SetAuth() error {
 	Authority.Username = os.Getenv("A_NAME")

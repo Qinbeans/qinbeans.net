@@ -1,12 +1,6 @@
 <script lang="ts">
     import Blog from "./blog.svelte";
-    import { admin, token } from "./ts/store";
-    const logout = () => {
-        //logout
-        admin.set(0);
-        token.set("");
-        //implement logout in backend
-    }
+    import { logout } from "./ts/credentials";
 </script>
 
 <div>
