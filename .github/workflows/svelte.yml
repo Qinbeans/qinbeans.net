@@ -14,21 +14,12 @@ defaults:
       
 jobs:
   build:
-
     runs-on: ubuntu-latest
-    
     steps:
     - uses: actions/checkout@v2
-    
     - name: Setup Bun
-      uses: xHyroM/setup-bun@v0.1.4
+      uses: xHyroM/setup-bun@latest
       with:
         bun-version: latest
-        github-token: "{{ secrets.GITHUB_TOKEN }}"
+        github-token: ${{ secrets.GITHUB_TOKEN }}
         misc-test-builds: false
-    - name: Installing dependencies
-      run: bun install
-    - name: Building
-      run: bun run build
-    - name: Testing
-      run: bun wiptest
