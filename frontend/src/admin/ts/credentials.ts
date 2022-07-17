@@ -18,8 +18,9 @@ const to_form_data = (credentials: Credentials) => {
 }
 
 export const submit_credentials = (credentials: Credentials, mode: string) => {
-    const addr = (mode=="debug")?"http://localhost:5069/v1/login":"https://api.qinbeans.net/v1/login"
-    const ws = (mode=="debug")?"ws://localhost:5069/v1/ws/":"wss://api.qinbeans.net/v1/ws/"
+    const local:string = import.meta.env.ACCESS
+    const addr = (mode=="debug")?"http://"+((local==null)?"localhost":local)+":5069/v1/login":"https://api.qinbeans.net/v1/login"
+    const ws = (mode=="debug")?"ws://"+((local==null)?"localhost":local)+":5069/v1/ws/":"wss://api.qinbeans.net/v1/ws/"
     const form = to_form_data(credentials)
     //check if form is valid
     if (form.get('username') == null || form.get('token') == null) {
