@@ -22,6 +22,10 @@ jobs:
     
     - name: Setup Bun
       uses: xHyroM/setup-bun@v0.1.4
+      with:
+        bun-version: latest
+        github-token: "{{ secrets.GITHUB_TOKEN }}"
+        misc-test-builds: false
     - name: Installing dependencies
       run: bun install
     - name: Building
