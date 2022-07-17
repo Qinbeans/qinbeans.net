@@ -22,4 +22,9 @@ jobs:
     
     - name: Setup Bun
       uses: xHyroM/setup-bun@v0.1.4
+    - name: Installing dependencies
+      run: bun install
     - name: Building
+      run: bun run build
+    - name: Testing
+      run: bun wiptest
