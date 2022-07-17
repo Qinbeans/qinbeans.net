@@ -1,5 +1,4 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+#based on Node JS, adapted for Bun
 
 name: Svelte CI
 
@@ -15,20 +14,21 @@ defaults:
       
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
-        node-version: [17.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
+        bun-version: ["latest"]
     steps:
     - uses: actions/checkout@v2
-    
-    - name: Use Node ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
+    - name: Setup Bun
+      uses: xHyroM/setup-bun@v0.1.3
       with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - run: npm run build
+        bun-version: ${{ matrix.bun-version }}
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        misc-test-builds: false
+    - name: Install
+      run: bun install
+    - name: Build
+      run: bun run build
+    - name: Test
+      run: bun wiptest
