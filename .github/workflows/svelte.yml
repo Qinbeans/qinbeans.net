@@ -26,3 +26,9 @@ jobs:
         bun-version: ${{ matrix.bun-version }}
         github-token: ${{ secrets.GITHUB_TOKEN }}
         misc-test-builds: false
+    - name: Install
+      run: bun install
+    - name: Build
+      run: bun run build
+    - name: Test
+      run: bun wiptest
