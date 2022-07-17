@@ -21,6 +21,5 @@ jobs:
     - uses: actions/checkout@v2
     
     - name: Setup Bun
-      # You may pin to the exact commit or the version.
-      # uses: xHyroM/setup-bun@a0f9c413e5da19211e83c1248fad43dd2a466ce9
       uses: xHyroM/setup-bun@v0.1.4
+    - name: Building
