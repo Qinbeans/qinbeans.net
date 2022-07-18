@@ -1,12 +1,13 @@
 <script lang="ts">
     import { current } from "../ts/store";
+    import { updateClient } from "../ts/client";
     
     let state = 0;
     current.subscribe(x => state = x);
     
     let class_state = ["sel","sel","sel","sel"];
     class_state[state] = "curr";
-    
+    console.log("navbar",state)
     let x_pos = [9,10,12,13];
     let width = 1;
 
@@ -18,6 +19,7 @@
         class_state[3] = "sel";
         current.set(0);
         state = 0;
+        updateClient();
     };
     const c_docs = () => {
         if(state == 1) return;
@@ -27,6 +29,7 @@
         class_state[3] = "sel";
         current.set(1);
         state = 1;
+        updateClient();
     };
     const c_blog = () => {
         if(state == 2) return;
@@ -36,6 +39,7 @@
         class_state[3] = "sel";
         current.set(2);
         state = 2;
+        updateClient();
     };
     const c_contact = () => {
         if(state == 3) return;
@@ -45,6 +49,7 @@
         class_state[3] = "curr";
         current.set(3);
         state = 3;
+        updateClient();
     };
     
     //check if screen width is less than 800

@@ -3,9 +3,14 @@ export interface Credentials {
     token: string;
 }
 
+export interface Connection {
+    socket: WebSocket;
+    token: string;
+}
+
 export interface AdminUser {
     creds: Credentials;
-    conn: WebSocket;
+    conn: Connection;
 }
 
 export enum AdminState {

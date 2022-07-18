@@ -36,6 +36,7 @@ func Start() error {
 		c_port := os.Getenv("C_PORT")
 		c_address := os.Getenv("C_ADDRESS")
 		url = "http://" + c_address + ":" + c_port
+		log.Logf("Allow %s", url)
 	}
 	log.Logf("Starting server on port %s", port)
 	r := gin.Default()

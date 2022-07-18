@@ -10,6 +10,14 @@ export const new_credentials = (username: string, token: string) => {
     };
 }
 
+export const new_connection = (socket: WebSocket, token: string) => {
+    updateAdmin()
+    return {
+        socket,
+        token
+    };
+}
+
 const to_form_data = (credentials: Credentials) => {
     const form = new FormData()
     form.append('username', credentials.username)
@@ -19,14 +27,14 @@ const to_form_data = (credentials: Credentials) => {
 
 export const submit_credentials = (credentials: Credentials, mode: string) => {
     const local:string = import.meta.env.ACCESS
-    const addr = (mode=="debug")?"http://"+((local==null)?"localhost":local)+":5069/v1/login":"https://api.qinbeans.net/v1/login"
-    const ws = (mode=="debug")?"ws://"+((local==null)?"localhost":local)+":5069/v1/ws/":"wss://api.qinbeans.net/v1/ws/"
+    const addr = (mode=="development")?"http://"+((local==null)?"localhost":local)+":5069/v1/login":"https://api.qinbeans.net/v1/login"
+    const ws = (mode=="development")?"ws://"+((local==null)?"localhost":local)+":5069/v1/ws/":"wss://api.qinbeans.net/v1/ws/"
+    console.log("Check:",addr,ws,mode)
     const form = to_form_data(credentials)
     //check if form is valid
     if (form.get('username') == null || form.get('token') == null) {
         console.log("invalid form")
     }
-    console.log(form, credentials)
     // send post request to server
     return fetch(addr, {
         method: 'post',
@@ -45,7 +53,7 @@ export const submit_credentials = (credentials: Credentials, mode: string) => {
         alert("Login Successful")
         user.update( u => {
             u.creds = credentials
-            u.conn = new WebSocket(ws+j_token)
+            u.conn = new_connection(new WebSocket(ws+j_token), j_token)
             return u
         })
         handler()
@@ -53,7 +61,8 @@ export const submit_credentials = (credentials: Credentials, mode: string) => {
     }
     ).catch(err => {
         alert("Login failed")
-        return err.response.data.message
+        console.log(err)
+        return err.response
     })
 }
 
@@ -63,8 +72,30 @@ export const logout = () => {
     user.update( u => {
         u.creds = new_credentials("","")
         if (u.conn != null) {
-            u.conn.close()
+            u.conn.socket.close()
         }
+        clearAdmin()
         return u
     })
+}
+
+
+export const updateAdmin = () => {
+    user.subscribe(u => {
+        localStorage.setItem('admin', JSON.stringify(u.creds))
+    })
+}
+
+export const getAdmin = () => {
+    const mode:string = import.meta.env.MODE
+    const admin = localStorage.getItem('admin')
+    if(admin == null) {
+        return null
+    }
+    const creds:Credentials = JSON.parse(admin)
+    return submit_credentials(creds, mode)
+}
+
+export const clearAdmin = () => {
+    localStorage.removeItem('admin');
 }

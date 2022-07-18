@@ -18,3 +18,23 @@ export interface Error {
     type?: string;
     message: string;
 }
+
+export interface Client {
+    state: State;
+    page?: number;
+    lastUpdate: Date;
+}
+
+export const newClient = (state: State, page?: number): Client => {
+    if(page==null) {
+        return {
+            state: state,
+            lastUpdate: new Date(),
+        };
+    }
+    return {
+        state,
+        page,
+        lastUpdate: new Date(),
+    };
+}

@@ -9,18 +9,24 @@
   import { State as AppState } from "./ts/types";
   import { pong } from "./ts/verify";
   import type { Error as RequestError } from "./ts/types"
+  import { getClient, clearClient } from "./ts/client";
 
   let state = 0;
   current.subscribe(x => state = x);
   let pos_err: RequestError = null;
+
   pong().catch(e => {
     pos_err = e
     current.update(x => {
       x = AppState.ERROR
+      clearClient()
       return x
     });
     state = -1;
   });
+  getClient()
+
+  
 </script>
 
 {#if state != AppState.ERROR}

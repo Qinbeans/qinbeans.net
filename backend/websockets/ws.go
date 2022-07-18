@@ -14,11 +14,10 @@ import (
 type Socket struct {
 	sock *websocket.Upgrader
 	conn *websocket.Conn
-	send []byte
 }
 
 var (
-	Sockets = make(map[string]*Socket)
+	Sockets = make(map[string]chan *Socket) //map of channel to Socket pointer
 	Status  = false
 )
 
@@ -26,7 +25,6 @@ func createSocket(sock *websocket.Upgrader) *Socket {
 	return &Socket{
 		sock: sock,
 		conn: nil,
-		send: nil,
 	}
 }
 
@@ -35,7 +33,9 @@ func closeSocket(token string) error {
 	if !ok {
 		return errors.New("socket not found")
 	}
-	socket.close()
+	locked := <-socket
+	locked.close()
+	socket <- locked //hand back to channel
 	delete(Sockets, token)
 	return nil
 }
@@ -76,7 +76,8 @@ func login(w http.ResponseWriter, r *http.Request, username string, token string
 		},
 	}
 	//reserve socket for token
-	Sockets[token] = createSocket(&ws)
+	Sockets[token] = make(chan *Socket, 1)
+	Sockets[token] <- createSocket(&ws)
 	return &token, nil
 }
 
@@ -92,15 +93,17 @@ func WsHandler(c *gin.Context) {
 		return
 	}
 	//read from socket
-	conn, err := socket.sock.Upgrade(c.Writer, c.Request, nil)
+	locked := <-socket
+	conn, err := locked.sock.Upgrade(c.Writer, c.Request, nil)
 	if err != nil {
 		log.Errf("Error upgrading socket: %v", err)
 		c.JSON(http.StatusInternalServerError, gin.H{"message": "internal server error"})
 		return
 	}
-	socket.conn = conn
+	locked.conn = conn
 	//start reading from socket asynchronously
-	go socket.messageHandler(c.Request, token)
+	go locked.messageHandler(c.Request, token)
+	socket <- locked //hand back to channel
 }
 
 func (s *Socket) messageHandler(r *http.Request, token string) {

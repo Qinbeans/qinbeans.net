@@ -16,7 +16,7 @@ function sleep(ms) {
 export const handler = async () => {
     let conn: WebSocket
     user.subscribe(u => {
-        conn = u.conn
+        conn = u.conn.socket
     })
     console.log(conn.readyState)
     //sleep until connection is established
