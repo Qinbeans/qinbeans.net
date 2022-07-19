@@ -74,7 +74,12 @@ export const logout = () => {
         if (u.conn != null) {
             u.conn.socket.close()
         }
-        clearAdmin()
+        //check if local storage is available
+        try{
+            clearAdmin()
+        }catch{
+            console.log("local storage not available")
+        }
         return u
     })
 }
