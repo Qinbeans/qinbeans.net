@@ -14,6 +14,8 @@ export enum State {
     CONTACT = 3,
 }
 
+export const STATES = 3;
+
 export interface Error {
     type?: string;
     message: string;

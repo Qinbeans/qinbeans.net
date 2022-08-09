@@ -7,9 +7,13 @@
     
     let class_state = ["sel","sel","sel","sel"];
     class_state[state] = "curr";
-    console.log("navbar",state)
+    // console.log("navbar",state)
     let x_pos = [9,10,12,13];
     let width = 1;
+    // change state in url query
+    const updateURL = () => {
+        window.location.search = "?state=" + state;
+    }
 
     const c_about = () => {
         if(state == 0) return;
@@ -20,6 +24,7 @@
         current.set(0);
         state = 0;
         updateClient();
+        updateURL();
     };
     const c_docs = () => {
         if(state == 1) return;
@@ -30,6 +35,7 @@
         current.set(1);
         state = 1;
         updateClient();
+        updateURL();
     };
     const c_blog = () => {
         if(state == 2) return;
@@ -50,6 +56,7 @@
         current.set(3);
         state = 3;
         updateClient();
+        updateURL();
     };
     
     //check if screen width is less than 800

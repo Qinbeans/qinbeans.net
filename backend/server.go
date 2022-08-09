@@ -7,6 +7,7 @@ import (
 
 	auth "api.qinbeans.net/backend/auth"
 	"api.qinbeans.net/backend/log"
+	"api.qinbeans.net/backend/model"
 	ws "api.qinbeans.net/backend/websockets"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
@@ -52,6 +53,7 @@ func Start() error {
 	r.GET("/v1/ping", auth.Ping)
 	r.GET("/v1/ws/:token", ws.WsHandler)
 	r.POST("/v1/login", ws.LoginGuard)
+	r.GET("/v1/posts", model.PostsGuard)
 	r.Run(fmt.Sprintf("%s:%s", address, port)) // listen and serve on
 	return nil
 }

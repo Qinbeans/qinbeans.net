@@ -13,6 +13,8 @@ export interface AdminUser {
     conn: Connection;
 }
 
+export const STATES = 2
+
 export enum AdminState {
     NONE = -1,
     LOGIN = 0,

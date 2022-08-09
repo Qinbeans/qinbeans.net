@@ -14,7 +14,6 @@ export const updateClient = (page?:number) => {
 //returns a page number if there is one in sessionStorage, otherwise returns null
 export const getClient = () => {
     const client = localStorage.getItem('client')
-    console.log(client)
     if(client == null) {
         return null
     }
