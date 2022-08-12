@@ -1,15 +1,15 @@
 import { user } from "./store"
 import { logout } from "./credentials"
 
-enum Outgoing {
-    TEXT = 1,
-    BINARY = 2,
-    CLOSE = 8,
-    PING = 9,
-    PONG = 10,
-}
+// enum Outgoing {
+//     TEXT = 1,
+//     BINARY = 2,
+//     CLOSE = 8,
+//     PING = 9,
+//     PONG = 10,
+// }
 
-function sleep(ms) {
+function sleep(ms: number) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 

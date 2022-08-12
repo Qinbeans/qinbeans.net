@@ -5,7 +5,7 @@
     const submit = (e:any) => {
         //submit form
         e.preventDefault()
-        const creds = new_credentials(document.getElementById("username").value, document.getElementById("token").value)
+        const creds = new_credentials((<HTMLInputElement>document.getElementById("username")).value, (<HTMLInputElement>document.getElementById("token")).value)
         submit_credentials(creds,mode)
     }
 </script>

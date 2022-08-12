@@ -22,7 +22,7 @@
                 state = AdminState.LOGIN;
             }
         }
-        req.catch(e => {
+        req.catch(() => {
             console.log("No admin credentials found");
             if(state != 0 && a_token.length == 0) {
                 alert("You are not logged in");

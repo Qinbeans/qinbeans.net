@@ -1,12 +1,12 @@
 <!-- Upload a new blog post, each entry gets a date using auto dating -->
 <script lang="ts">
     let img_label = "Image?"
-    const change_image = (e:any) => {
+    const change_image = () => {
         const input = document.getElementById("img")
         input.click()
     }
     const changed_image = (e:Event) => {
-        const file = e.target.files[0]
+        const file = (<HTMLInputElement>e.target).files[0]
         if(file != null) {
             img_label = file.name
         }

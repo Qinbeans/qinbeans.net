@@ -15,7 +15,8 @@
   current.subscribe(x => state = x);
   export let pos_err: RequestError = null;
 
-  pong().catch(e => {
+  pong().catch(_ => {
+    console.error("Pong failed");
     pos_err = {
       type: "500",
       message: "Oops, the hamsters took a break.  Let's wait until they come back."

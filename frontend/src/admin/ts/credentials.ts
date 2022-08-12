@@ -1,6 +1,6 @@
 import { handler } from './socketHandler'
 import { user,admin,token } from "./store"
-import type { AdminUser,Credentials } from "./types"
+import type { Credentials } from "./types"
 import { AdminState } from "./types"
 
 export const new_credentials = (username: string, token: string) => {
@@ -25,7 +25,7 @@ const to_form_data = (credentials: Credentials) => {
     return form
 }
 
-export const submit_credentials = (credentials: Credentials, mode: string) => {
+export const submit_credentials = async (credentials: Credentials, mode: string) => {
     const local:string = import.meta.env.ACCESS
     const addr = (mode=="development")?"http://"+((local==null)?"localhost":local)+":5069/v1/login":"https://api.qinbeans.net/v1/login"
     const ws = (mode=="development")?"ws://"+((local==null)?"localhost":local)+":5069/v1/ws/":"wss://api.qinbeans.net/v1/ws/"

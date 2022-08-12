@@ -392,3 +392,23 @@ p.error {
 ::-webkit-scrollbar-thumb:hover {
     background: $btn-hover;
 }
+
+nav.bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+}
+
+.center {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.left {
+    position: fixed;
+    left: 0;
+}
