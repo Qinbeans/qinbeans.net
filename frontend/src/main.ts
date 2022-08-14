@@ -1,12 +1,14 @@
 import App from './App.svelte'
 import Admin from './Admin.svelte'
 
-import { current } from './ts/store'
+import { current, mobile } from './ts/store'
 import type { State } from './ts/types'
 import { STATES } from './ts/types'
-import { updateClient } from './ts/client'
+import { updateClient, mobileCheck } from './ts/client'
 
 let app: any = null;
+
+mobile.set(mobileCheck());
 //if endpoint is /admin, then load admin.svelte into the app
 if (window.location.pathname.startsWith('/admin')) {
   app = new Admin({

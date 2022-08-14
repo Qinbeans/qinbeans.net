@@ -1,7 +1,7 @@
 <script lang="ts">
-    import { current } from "../ts/store";
+    import { current, mobile } from "../ts/store";
     import { updateClient } from "../ts/client";
-    import { Box, HStack, Stack, Button, ChakraProvider } from '../chakra-ui-svelte';
+    import { Box, HStack, Button, ChakraProvider } from '../chakra-ui-svelte';
     
     let state = 0;
     current.subscribe(x => state = x);
@@ -52,6 +52,7 @@
         current.set(2);
         state = 2;
         updateClient();
+        updateURL();
     };
     const c_contact = () => {
         if(state == 3) return;
@@ -68,74 +69,81 @@
         menu = !menu;
     }
 
-    const mobile_check = () => {
-        if(innerWidth < 800) {
-            bar_buttons = ["1.5","xl","28"];
-        }else{
-            bar_buttons = ["5","4xl","56"];
-        }
+    const mobileResize = () => {
+        mobile.subscribe(x => {
+            //true means mobile
+            if(x) {
+                console.log("mobile")
+                bar_buttons = ["5","4xl","56","6xl","60"];
+            } else {
+                console.log("desktop")
+                bar_buttons = ["1.5","xl","28","2xl","32"];
+            }
+        });
     }
     //pt, pb, mb, fontSize, w
-    let bar_buttons = ["5","4xl","56"];
+    let bar_buttons = ["5","4xl","56","6xl","60"];
 
-    mobile_check();
+    mobileResize();
 
 </script>
 <svelte:window
-    on:resize={mobile_check}
+    on:resize={mobileResize}
 	bind:innerWidth
     bind:innerHeight
 
   />
-<nav class="bar">
-    {#if innerWidth > innerHeight }
-        <ChakraProvider>
-            <Box class="center">
-                <HStack spacing="7" >
-                    <Button fontSize="lg" variant="link" on:click={c_about} class={class_state[0]}>
-                        About
-                    </Button>
-                    <Button fontSize="lg" variant="link" on:click={c_docs} class={class_state[1]}>
-                        Docs
-                    </Button>
-                    <Box fontSize="3xl" color="#aaf">
+<nav>
+    <div class="bar">
+        {#if innerWidth > innerHeight && innerHeight > 400 && innerWidth > 1100 }
+            <ChakraProvider>
+                <Box class="center">
+                    <HStack spacing="7" >
+                        <Button fontSize="lg" on:click={c_about} class={class_state[0]}>
+                            About
+                        </Button>
+                        <Button fontSize="lg" on:click={c_docs} class={class_state[1]}>
+                            Docs
+                        </Button>
+                        <Box fontSize="3xl" color="#aaf">
+                            Ryan Fong
+                        </Box>
+                        <Button fontSize="lg" on:click={c_blog} class={class_state[2]}>
+                            Blog
+                        </Button>
+                        <Button fontSize="md" on:click={c_contact} class={class_state[3]}>
+                            Contact
+                        </Button>
+                    </HStack>
+                </Box>
+            </ChakraProvider>
+        {:else}
+            <!-- create a hamburger button -->
+            <ChakraProvider>
+                <Box class="left">
+                    <Box textAlign="center" fontSize={bar_buttons[3]} color="{menu?'#888':'#aaf'}" bg="#afafaf55" pl="1" pr="1" maxW={bar_buttons[4]} borderColor="black" borderWidth="3" on:click={invert_menu}>
                         Ryan Fong
                     </Box>
-                    <Button fontSize="lg" variant="link" on:click={c_blog} class={class_state[2]}>
-                        Blog
-                    </Button>
-                    <Button fontSize="md" variant="link" on:click={c_contact} class={class_state[3]}>
-                        Contact
-                    </Button>
-                </HStack>
-            </Box>
-        </ChakraProvider>
-    {:else}
-        <!-- create a hamburger button -->
-        <ChakraProvider>
-            <Box class="left">
-                <Box textAlign="center" fontSize={innerWidth<800?'2xl':'6xl'} color="{menu?'#888':'#aaf'}" bg="#afafaf55" pl="1" pr="1" maxW={innerWidth<800?32:60} borderColor="black" borderWidth="3" on:click={invert_menu}>
-                    Ryan Fong
+                    {#if menu}
+                        <ChakraProvider>
+                            <Box as="ul" size="lg" bg="grey" maxW={innerWidth<800?32:60} pl={bar_buttons[0]} pt="0">
+                                <Button as="li" pt={bar_buttons[0]} pb={bar_buttons[0]} mb={bar_buttons[0]} borderRadius="0" fontSize={bar_buttons[1]} w={bar_buttons[2]} on:click={c_about} class={class_state[0]}>
+                                    About
+                                </Button>
+                                <Button as="li" pt={bar_buttons[0]} pb={bar_buttons[0]} mb={bar_buttons[0]} borderRadius="0" fontSize={bar_buttons[1]} w={bar_buttons[2]} on:click={c_docs} class={class_state[1]}>
+                                    Docs
+                                </Button>
+                                <Button as="li" pt={bar_buttons[0]} pb={bar_buttons[0]} mb={bar_buttons[0]} borderRadius="0" fontSize={bar_buttons[1]} w={bar_buttons[2]} on:click={c_blog} class={class_state[2]}>
+                                    Blog
+                                </Button>
+                                <Button as="li" pt={bar_buttons[0]} pb={bar_buttons[0]} mb={bar_buttons[0]} borderRadius="0" fontSize={bar_buttons[1]} w={bar_buttons[2]} on:click={c_contact} class={class_state[3]}>
+                                    Contact
+                                </Button>
+                            </Box>
+                        </ChakraProvider>
+                    {/if}
                 </Box>
-                {#if menu}
-                    <ChakraProvider>
-                        <Box as="ul" size="lg" bg="grey" maxW={innerWidth<800?32:60} pl={bar_buttons[0]} pt="0">
-                            <Button as="li" pt={bar_buttons[0]} pb={bar_buttons[0]} mb={bar_buttons[0]} borderRadius="0" fontSize={bar_buttons[1]} w={bar_buttons[2]} variant="link" on:click={c_about} class={class_state[0]}>
-                                About
-                            </Button>
-                            <Button as="li" pt={bar_buttons[0]} pb={bar_buttons[0]} mb={bar_buttons[0]} borderRadius="0" fontSize={bar_buttons[1]} w={bar_buttons[2]} variant="link" on:click={c_docs} class={class_state[1]}>
-                                Docs
-                            </Button>
-                            <Button as="li" pt={bar_buttons[0]} pb={bar_buttons[0]} mb={bar_buttons[0]} borderRadius="0" fontSize={bar_buttons[1]} w={bar_buttons[2]} variant="link" on:click={c_blog} class={class_state[2]}>
-                                Blog
-                            </Button>
-                            <Button as="li" pt={bar_buttons[0]} pb={bar_buttons[0]} mb={bar_buttons[0]} borderRadius="0" fontSize={bar_buttons[1]} w={bar_buttons[2]} variant="link" on:click={c_contact} class={class_state[3]}>
-                                Contact
-                            </Button>
-                        </Box>
-                    </ChakraProvider>
-                {/if}
-            </Box>
-        </ChakraProvider>
-    {/if}
+            </ChakraProvider>
+        {/if}
+    </div>
 </nav>

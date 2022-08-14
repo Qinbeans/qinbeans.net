@@ -353,9 +353,14 @@ p.error {
 }
 
 .fr-grid {
+    position: absolute;
+    // z-index: 99;
     top: 10vh;
     display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(10vh, 1fr));
+    grid-template-columns: repeat(3, minmax(10vh, 1fr));
+    grid-gap: 1vw;
+    // grid-template-rows: 
+    // grid-auto-rows: minmax(100px, auto);
 }
 
 .frame {
@@ -393,8 +398,10 @@ p.error {
     background: $btn-hover;
 }
 
-nav.bar {
+div.bar {
     position: absolute;
+    width: 0;
+    height: 0;
     top: 0;
     left: 0;
     right: 0;
@@ -411,4 +418,31 @@ nav.bar {
 .left {
     position: fixed;
     left: 0;
+}
+
+.post {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.main_post {
+    cursor: pointer;
+}
+
+.main_post:hover {
+    background-color: $btn-hover;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* allow click-through to backdrop */
+    pointer-events: none;
 }

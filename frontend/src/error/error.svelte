@@ -1,20 +1,28 @@
 <script lang="ts">
     import Error from "../assets/error.svg";
+    import { Box } from "../chakra-ui-svelte";
+    import { current } from "../ts/store";
+    import { State } from "../ts/types";
+    import { updateClient } from "../ts/client";
     // import { Box } from "../chakra-ui-svelte";
     export let type: string;
     export let message: string;
+    const go_home = () => {
+        if(type != "500"){
+            //change state
+            current.set(State.ABOUT);
+            //update client
+            updateClient();
+        }
+    };
 </script>
 
-<div class="error">
-    <h1 class="error">Error-{type}</h1>
-    <p class="error">
+<div>
+    <Box color="red.500" fontSize="4xl" textAlign="center">
+        Error-{type}
+    </Box>
+    <Box fontSize="2xl" textAlign="center">
         {message}
-    </p>
-    {#if type != "500"}
-        <a class="error" href="{window.location.origin+'?state=0'}">
-            <img class="error" src="{Error}" alt="baozi">
-        </a>
-    {:else}
-        <img class="error" src="{Error}" alt="baozi">
-    {/if}
+    </Box>
+    <img class="error" src="{Error}" alt="baozi" on:click={go_home}>
 </div>
