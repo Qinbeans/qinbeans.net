@@ -1,6 +1,6 @@
 <script lang="ts">
     import { current, mobile } from "../ts/store";
-    import { updateClient } from "../ts/client";
+    import { updateClient, updateURL } from "../ts/client";
     import { Box, HStack, Button, ChakraProvider } from '../chakra-ui-svelte';
     
     let state = 0;
@@ -12,9 +12,7 @@
     // let x_pos = [9,10,12,13];
     // let width = 1;
     // change state in url query
-    const updateURL = () => {
-        window.location.search = "?state=" + state;
-    }
+    
     let menu = false;
 
     let innerWidth = window.innerWidth;
@@ -30,7 +28,7 @@
         current.set(0);
         state = 0;
         updateClient();
-        updateURL();
+        updateURL(state);
     };
     const c_docs = () => {
         if(state == 1) return;
@@ -41,7 +39,7 @@
         current.set(1);
         state = 1;
         updateClient();
-        updateURL();
+        updateURL(state);
     };
     const c_blog = () => {
         if(state == 2) return;
@@ -52,7 +50,7 @@
         current.set(2);
         state = 2;
         updateClient();
-        updateURL();
+        updateURL(state);
     };
     const c_contact = () => {
         if(state == 3) return;
@@ -63,7 +61,7 @@
         current.set(3);
         state = 3;
         updateClient();
-        updateURL();
+        updateURL(state);
     };
     const invert_menu = () => {
         menu = !menu;
@@ -74,7 +72,7 @@
             //true means mobile
             if(x) {
                 console.log("mobile")
-                bar_buttons = ["5","4xl","56","6xl","60"];
+                bar_buttons = ["1","4xl","52","6xl","60"];
             } else {
                 console.log("desktop")
                 bar_buttons = ["1.5","xl","28","2xl","32"];
@@ -97,7 +95,7 @@
     <div class="bar">
         {#if innerWidth > innerHeight && innerHeight > 400 && innerWidth > 1100 }
             <ChakraProvider>
-                <Box class="center">
+                <Box class="center-fixed">
                     <HStack spacing="7" >
                         <Button fontSize="lg" on:click={c_about} class={class_state[0]}>
                             About
@@ -126,17 +124,17 @@
                     </Box>
                     {#if menu}
                         <ChakraProvider>
-                            <Box as="ul" size="lg" bg="grey" maxW={innerWidth<800?32:60} pl={bar_buttons[0]} pt="0">
-                                <Button as="li" pt={bar_buttons[0]} pb={bar_buttons[0]} mb={bar_buttons[0]} borderRadius="0" fontSize={bar_buttons[1]} w={bar_buttons[2]} on:click={c_about} class={class_state[0]}>
+                            <Box as="ul" size="lg" bg="grey" maxW={bar_buttons[4]} pl={bar_buttons[0]} pt="0">
+                                <Button as="li" color="purple.600" pt={bar_buttons[0]} pb={bar_buttons[0]} mb={bar_buttons[0]} borderRadius="0" fontSize={bar_buttons[1]} w={bar_buttons[2]} on:click={c_about} class={class_state[0]}>
                                     About
                                 </Button>
-                                <Button as="li" pt={bar_buttons[0]} pb={bar_buttons[0]} mb={bar_buttons[0]} borderRadius="0" fontSize={bar_buttons[1]} w={bar_buttons[2]} on:click={c_docs} class={class_state[1]}>
+                                <Button as="li" color="purple.600" pt={bar_buttons[0]} pb={bar_buttons[0]} mb={bar_buttons[0]} borderRadius="0" fontSize={bar_buttons[1]} w={bar_buttons[2]} on:click={c_docs} class={class_state[1]}>
                                     Docs
                                 </Button>
-                                <Button as="li" pt={bar_buttons[0]} pb={bar_buttons[0]} mb={bar_buttons[0]} borderRadius="0" fontSize={bar_buttons[1]} w={bar_buttons[2]} on:click={c_blog} class={class_state[2]}>
+                                <Button as="li" color="purple.600" pt={bar_buttons[0]} pb={bar_buttons[0]} mb={bar_buttons[0]} borderRadius="0" fontSize={bar_buttons[1]} w={bar_buttons[2]} on:click={c_blog} class={class_state[2]}>
                                     Blog
                                 </Button>
-                                <Button as="li" pt={bar_buttons[0]} pb={bar_buttons[0]} mb={bar_buttons[0]} borderRadius="0" fontSize={bar_buttons[1]} w={bar_buttons[2]} on:click={c_contact} class={class_state[3]}>
+                                <Button as="li" color="purple.600" pt={bar_buttons[0]} pb={bar_buttons[0]} mb={bar_buttons[0]} borderRadius="0" fontSize={bar_buttons[1]} w={bar_buttons[2]} on:click={c_contact} class={class_state[3]}>
                                     Contact
                                 </Button>
                             </Box>

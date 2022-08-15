@@ -105,17 +105,15 @@ html {
 //check for thin screen
 @media screen and (max-width: 800px) {
     .sel {
-        background-color: $btn;
+        background-color: $btn !important;
         cursor: pointer;
         text-align: center;
-        width: 7vw;
         font-size: 1.25vh;
     }
     
     .curr {
-        background-color: $btn-hover;
+        background-color: $btn-hover !important;
         text-align: center;
-        width: 7vw;
         font-size: 1.25vh;
     }
     .f-label {
@@ -141,13 +139,6 @@ html {
         filter: blur(5px) brightness(30%);
         -webkit-filter: blur(5px) brightness(30%);
     }
-    .wai-txt {
-        position: absolute;
-        top: 5vh;
-        left: 0;
-        color: white;
-        text-align: center;
-    }
     .exp-img {
         position: absolute;
         top: 100vh;
@@ -160,13 +151,6 @@ html {
         filter: blur(2px);
         -webkit-filter: blur(2px);
     }
-    .exp-txt {
-        position: absolute;
-        top: 100vh;
-        left: 0;
-        color: white;
-        text-align: center;
-    }
     .aatf-img {
         position: absolute;
         top: 200vh;
@@ -176,32 +160,22 @@ html {
         height: 100%;
         background-image: url("./imgs/aatf.png");
         background-size: cover;
-        filter: blur(2px);
-        -webkit-filter: blur(2px);
-    }
-    .aatf-txt {
-        position: absolute;
-        top: 200vh;
-        left: 0;
-        height: 100vh;
-        color: white;
-        text-align: center;
+        filter: blur(4px);
+        -webkit-filter: blur(4px);
     }
 }
 
 @media screen and (min-width: 801px) {
     .sel {
-        background-color: $btn;
+        background-color: $btn !important;
         cursor: pointer;
         text-align: center;
-        width: 4.5vw;
         font-size: 1vw;
     }
     
     .curr {
-        background-color: $btn-hover;
+        background-color: $btn-hover !important;
         text-align: center;
-        width: 4.5vw;
         font-size: 1vw;
     }
     .f-label {
@@ -227,13 +201,6 @@ html {
         filter: blur(5px) brightness(30%);
         -webkit-filter: blur(5px) brightness(30%);
     }
-    .wai-txt {
-        position: absolute;
-        top: 5vh;
-        left: 0;
-        color: white;
-        text-align: center;
-    }
     .exp-img {
         position: absolute;
         top: 100vh;
@@ -246,13 +213,6 @@ html {
         filter: blur(2px);
         -webkit-filter: blur(2px);
     }
-    .exp-txt {
-        position: absolute;
-        top: 100vh;
-        left: 0;
-        color: white;
-        text-align: center;
-    }
     .aatf-img {
         position: absolute;
         top: 200vh;
@@ -262,21 +222,13 @@ html {
         height: 100%;
         background-image: url("./imgs/aatf.png");
         background-size: cover;
-        filter: blur(2px);
-        -webkit-filter: blur(2px);
-    }
-    .aatf-txt {
-        position: absolute;
-        top: 200vh;
-        left: 0;
-        height: 100vh;
-        color: white;
-        text-align: center;
+        filter: blur(4px);
+        -webkit-filter: blur(4px);
     }
 }
 
 .sel:hover {
-    background-color: $btn-hover;
+    background-color: $btn-hover !important;
 }
 
 h1.h1 {
@@ -298,10 +250,6 @@ div.error {
     bottom: 0;
 }
 
-img.error {
-    margin-left: 47%;
-    width: 5%;
-}
 
 h1.error {
     text-align: center;
@@ -409,8 +357,14 @@ div.bar {
     z-index: 100;
 }
 
-.center {
+.center-fixed {
     position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.center-rel{
+    position: relative;
     left: 50%;
     transform: translate(-50%);
 }
@@ -439,10 +393,27 @@ div.bar {
     bottom: 0;
     right: 0;
     left: 0;
+    z-index: 100;
     display: flex;
     justify-content: center;
     align-items: center;
 
     /* allow click-through to backdrop */
     pointer-events: none;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(0,0,0,0.50)
+}
+
+.text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 100vh;
 }
