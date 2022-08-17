@@ -35,11 +35,11 @@ import { subscribe } from "svelte/internal";
     const mobileResize = () => {
         mobile.subscribe(x => {
             if(x && innerWidth > innerHeight) {
-                console.log("mobile(vert)");
-                post_sizes = ["4xl","8xl","4xl"];
-            } else {
                 console.log("mobile(hor)");
-                post_sizes = ["2xl","4xl","xl"];
+                post_sizes = ["xl","4xl","xl"];
+            } else {
+                console.log("mobile(vert)");
+                post_sizes = ["xl","4xl","2xl"];
             }
         });
     }
@@ -56,10 +56,11 @@ import { subscribe } from "svelte/internal";
                     message: content,
                     img_path: img_path,
                     alt_name: alt_name,
-                    h_size: "4xl",
+                    h_size: "2xl",
                     t_size: "2xl",
                     width: "md",
-                    height: "lg"
+                    height: "xs",
+                    t_height: "72"
                 });
             } else {
                 console.log("mobile(vert)");
@@ -73,7 +74,8 @@ import { subscribe } from "svelte/internal";
                     h_size: "4xl",
                     t_size: "md",
                     width: "md",
-                    height: "lg"
+                    height: "lg",
+                    t_height: "md"
                 });
             }
         });
@@ -89,7 +91,7 @@ import { subscribe } from "svelte/internal";
 ></svelte:window>
 
 
-<Box maxW={post_sizes[0]} maxH={post_sizes[0]} class="child main_post" bg="gray.300" borderRadius="10" on:click={handleModal}>
+<Box maxW={post_sizes[0]} maxH={post_sizes[0]} class="child main_post mini-window" bg="gray.300" borderRadius="10" on:click={handleModal}>
     <Box textAlign="center" fontSize={post_sizes[1]} color="purple.300">{title}-{date}</Box>
     <Box textAlign="center" fontSize={post_sizes[2]} color="blackAlpha.800" class="post">{content}</Box>
     {#if img_path.length > 0}

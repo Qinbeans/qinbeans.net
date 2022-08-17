@@ -37,7 +37,7 @@ import { text } from "svelte/internal";
 
 <ChakraProvider>
     <div class="wai-img"></div>
-    <Box top={text_sizes[3]} paddingLeft={text_sizes[2]} paddingRight={text_sizes[2]} class="center-rel text">
+    <Box top={text_sizes[3]} paddingLeft={text_sizes[2]} paddingRight={text_sizes[2]} class="center-rel text mini-window">
         <Box textAlign="center" fontSize={text_sizes[0]} color="purple.100">Who Am I</Box>
         <Box textAlign="center" fontSize={text_sizes[1]} color="blue.400">
             My name is Ryan Fong.  I started off coding, if you can call visual languages like Scratch and Snap coding, in middle school.  I never imagined myself becoming a Computer Science major back then, but I think I'd be satisifed with the path I've chosen.
@@ -52,7 +52,7 @@ import { text } from "svelte/internal";
         </Box>
     </Box>
     <div class="exp-img"></div>
-    <Box top={text_sizes[3]} paddingLeft={text_sizes[2]} paddingRight={text_sizes[2]} class="center-rel text">
+    <Box paddingLeft={text_sizes[2]} paddingRight={text_sizes[2]} class="center-rel text">
         <Box textAlign="center" fontSize={text_sizes[0]} color="purple.100">Experiences</Box>
         <Box textAlign="center" fontSize={text_sizes[1]} color="blue.400">
             For most of my experience in coding, I've used C++, but I was also playing with other languages like Rust and Golang.  Prior to university, I used Java.  My Java is a little rusty, but I'm pretty sure I retained most of the important aspects.  I have a good amount of experience with machine learning and by extension Python.  Other than that, I have used Javascript, SCSS/CSS, HTML, Vue, and Svelte in making websites.

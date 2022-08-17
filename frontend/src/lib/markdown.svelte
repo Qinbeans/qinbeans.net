@@ -1,7 +1,9 @@
 <script lang="ts">
     import SvelteMarkdown from 'svelte-markdown'
+    import { Box } from '../chakra-ui-svelte'
     // Import the element definition
     export let src = ""
+    export let height = "96"
 
     let content = ""
 
@@ -19,6 +21,6 @@
 
 </script>
 
-<div>
+<Box height={height} class="mini-window">
     <SvelteMarkdown source={content} />
-</div>
+</Box>
