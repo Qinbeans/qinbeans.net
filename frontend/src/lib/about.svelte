@@ -14,7 +14,7 @@ import { text } from "svelte/internal";
         mobile.subscribe((x) => {
             console.log("mobile",x,"sizes",innerWidth,innerHeight)
             if ((x && innerWidth < innerHeight)) {
-                text_sizes = ["8xl","5xl", "20", "28"]
+                text_sizes = ["3xl","md", "10", "10"]
                 console.log("About -> Mobile")
             } else if (innerWidth < 1415) {
                 text_sizes = ["5xl","2xl", "20", "28"]

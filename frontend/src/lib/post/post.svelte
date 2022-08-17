@@ -5,6 +5,7 @@
     import { mobile } from "../../ts/store";
     import Modal from "./modal.svelte";
     import { openModal } from "svelte-modals";
+import { subscribe } from "svelte/internal";
 
     export let title = "";
     export let date = "";
@@ -46,12 +47,35 @@
 
     const handleModal = () => {
         console.log("Clicked")
-        openModal(Modal,{
-            title: title,
-            date: date,
-            message: content,
-            img_path: img_path,
-            alt_name: alt_name
+        mobile.subscribe(x => {
+            if(x && innerWidth > innerHeight) {
+                console.log("mobile(hor)");
+                openModal(Modal,{
+                    title: title,
+                    date: date,
+                    message: content,
+                    img_path: img_path,
+                    alt_name: alt_name,
+                    h_size: "4xl",
+                    t_size: "2xl",
+                    width: "md",
+                    height: "lg"
+                });
+            } else {
+                console.log("mobile(vert)");
+                post_sizes = ["2xl","4xl","xl"];
+                openModal(Modal,{
+                    title: title,
+                    date: date,
+                    message: content,
+                    img_path: img_path,
+                    alt_name: alt_name,
+                    h_size: "4xl",
+                    t_size: "md",
+                    width: "md",
+                    height: "lg"
+                });
+            }
         });
     }
 

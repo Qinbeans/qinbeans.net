@@ -72,7 +72,7 @@
             //true means mobile
             if(x) {
                 console.log("mobile")
-                bar_buttons = ["1","4xl","52","6xl","60"];
+                bar_buttons = ["0.5","2xl","44","4xl","52"];
             } else {
                 console.log("desktop")
                 bar_buttons = ["1.5","xl","28","2xl","32"];
