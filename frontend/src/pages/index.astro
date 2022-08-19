@@ -1,0 +1,21 @@
+---
+import Footer from "../components/footer.svelte";
+import Header from "../components/header.svelte";
+import Body from "../components/views/main.svelte";
+import type { Error } from "../ts/types";
+
+let search = Astro.url.search
+let def_error: Error = {
+	type: "404",
+	message: "Are you lost? Click me to go back to home. 🤝"
+}
+---
+<!-- Don't forget hydration: only load when needed. -->
+<!DOCTYPE html>
+<html lang="en" class="bg-slate-800">
+	<Header />
+	<body id="body" class="h-screen">
+        <Body search={search} pos_err={def_error} client:load/>
+		<Footer client:idle/>
+	</body>
+</html>

@@ -1,3 +1,4 @@
+//admin
 export interface Post {
     id: number;
     title: string;
@@ -7,6 +8,7 @@ export interface Post {
 }
 
 export enum State {
+    NONE = -100,
     ERROR = -1,
     ABOUT = 0,
     DOCS = 1,
@@ -14,7 +16,9 @@ export enum State {
     CONTACT = 3,
 }
 
-export const STATES = 3;
+
+//admin
+export const C_STATES = 3;
 
 export interface Error {
     type?: string;
@@ -39,4 +43,28 @@ export const newClient = (state: State, page?: number): Client => {
         page,
         lastUpdate: new Date(),
     };
+}
+
+export interface Credentials {
+    username: string;
+    token: string;
+}
+
+export interface Connection {
+    socket: WebSocket;
+    token: string;
+}
+
+export interface AdminUser {
+    creds: Credentials;
+    conn?: Connection;
+}
+
+export const A_STATES = 2
+
+export enum AdminState {
+    NONE = -1,
+    LOGIN = 0,
+    HOME = 1,
+    BLOG = 2
 }
