@@ -30,13 +30,13 @@
     const checkResize = () => {
             if(innerWidth < 500 && innerWidth < innerHeight) {
                 console.log("mobile(vert)");
-                format = ["max-w-xl max-h-64","text-4xl","text-2xl"];
+                format = ["max-h-64","text-4xl","text-2xl"];
             } else if(innerWidth < 1415) {
                 console.log("mobile(hor)");
-                format = ["max-w-xl max-h-64","text-4xl","text-xl"];
+                format = ["max-h-64","text-4xl","text-xl"];
             } else {
                 console.log("desktop");
-                format = ["max-w-md max-h-96","text-4xl","text-xl"];
+                format = ["max-h-96","text-4xl","text-xl"];
             }
     }
 
@@ -50,11 +50,10 @@
                 message: content,
                 img_path: img_path,
                 alt_name: title,
-                h_size: "2xl",
-                t_size: "2xl",
-                width: "md",
-                height: "96",
-                t_height: "72"
+                parent: "w-5/6 h-3/5",
+                f_child: "text-4xl",
+                s_child: "w-full h-5/6",
+                s_f_child: "text-2xl"
             });
         } else {
             console.log("horizontal");
@@ -64,11 +63,10 @@
                 message: content,
                 img_path: img_path,
                 alt_name: title,
-                h_size: "4xl",
-                t_size: "md",
-                width: "md",
-                height: "64",
-                t_height: "72"
+                parent: "w-1/2 h-5/6",
+                f_child: "text-6xl",
+                s_child: "w-full h-5/6",
+                s_f_child: "text-xl"
             });
         }
     }
@@ -83,7 +81,7 @@
 ></svelte:window>
 
 <!-- maxh, maxw -->
-<div class="cursor-pointer bg-gray-300 border-gray-300 rounded-lg border-8 border-opacity-0" on:click={handleModal}>
+<div class="cursor-pointer bg-gray-500 border-gray-500 rounded-lg border-8 border-opacity-0" on:click={handleModal}>
     <!-- fontsize -->
     <div class="text-center {format[1]} text-pink-500">{title}-{date}</div>
     <!-- fontsize -->

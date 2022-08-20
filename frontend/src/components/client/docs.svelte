@@ -37,6 +37,7 @@
     </Box>
 </ChakraProvider> -->
 <div class="relative ml-10 mr-10 {format}">
+    <div class="text-2xl text-center text-pink-500 underline">Docs</div>
     <Markdown src="/docs/client/contact_form.md" />
     <div class="divider"></div>
     <Markdown src="/docs/admin/admin_form.md" />

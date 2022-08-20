@@ -26,11 +26,11 @@
         }
     });
 </script>
-<div class="text-center w-screen">
-    <div class="text-red-500 text-4xl">
+<div class="w-screen h-screen grid place-content-center text-center">
+    <div class="text-red-500 text-5xl">
         Error-{type}
     </div>
-    <div class="text-2xl">
+    <div class="text-xl">
         {message}
     </div>
     <div class="flex justify-center w-screen">

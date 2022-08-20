@@ -4,7 +4,7 @@
 
     let state = 0;
     current.subscribe(x => state = x);
-    const BASE = "bg-gray-400 hover:bg-gray-700 bg-opacity-60 cursor-pointer";
+    const BASE = "bg-gray-400 hover:border-2 border-pink-500 border-solid bg-opacity-60 cursor-pointer";
     const SEL = "bg-gray-700 bg-opacity-80 cursor-default"
 
     const BAR = "mr-2 ml-2 rounded-lg pl-2 pr-2 pt-1 pb-1"
@@ -16,8 +16,8 @@
     const BURGER_WIDE = "pt-1.5 pb-1.5 mb-1.5 text-xl, w-24"
     const CONTAINER_THIN = "pt-0 w-28 pl-0.5"
     const CONTAINER_WIDE = "pt-0 w-28 pl-1.5"
-    const BB_THIN = "text-4xl w-14 text-purple-600"
-    const BB_WIDE = "text-2xl w-8 text-purple-600"
+    const BB_THIN = "text-2xl w-28 p-0.5 text-purple-600"
+    const BB_WIDE = "text-2xl w-28 p-0.5 text-purple-600"
 
 
     let burger = ["","",""];
@@ -95,7 +95,7 @@
                     <li class="{BAR} {class_state[1]}">
                         <span id="1" on:click={changeFocus}>Docs</span>
                     </li>
-                    <li class="mr-2 ml-2 text-2xl">
+                    <li class="mr-2 ml-2 text-4xl">
                         <span class="text-purple-600">Ryan Fong</span>
                     </li>
                     <li class="{BAR} {class_state[2]}">
@@ -107,7 +107,7 @@
                 </ul>
             </div>
         {:else}
-            <span class="border-black border-solid border-2 text-center cursor-pointer {menu?SEL:BASE} {burger[0]}" on:click={invert_menu}>
+            <span class="border-black text-center cursor-pointer {menu?SEL:BASE} {burger[0]}" on:click={invert_menu}>
                 Ryan Fong
             </span>
             {#if menu}

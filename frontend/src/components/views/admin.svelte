@@ -9,8 +9,13 @@
 
     let state = AdminState.LOGIN;
     let a_token = "";
-    admin.subscribe(x => state = x);
+    admin.subscribe(x => {
+        if(x != AdminState.NONE){
+            state = x
+        }
+    });
     token.subscribe(x => a_token = x);
+    console.log("state:",state);
     onMount(() => {
         let req = getAdmin();
         if(req == null){
@@ -19,6 +24,7 @@
                 alert("You are not logged in");
                 admin.set(AdminState.LOGIN);
                 state = AdminState.LOGIN;
+                console.log("state:",state);
             }
         }else{
             req.catch(() => {
@@ -27,6 +33,7 @@
                     alert("You are not logged in");
                     admin.set(AdminState.LOGIN);
                     state = AdminState.LOGIN;
+                    console.log("state:",state);
                 }
             });
         }

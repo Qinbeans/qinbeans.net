@@ -21,6 +21,6 @@
         <label for="token">Token</label>
         <input class="pl-1.5 pr-1.5 rounded-lg bg-gray-700" id="token" type="password" name="token" placeholder="Token">
         <!-- Submit -->
-        <input class="cursor-pointer pl-1.5 pr-1.5 rounded-lg bg-gray-700 text-pink-500" type="submit" value="Login" on:click={submit}>
+        <input class="cursor-pointer pl-1.5 pr-1.5 rounded-lg bg-gray-700 text-pink-500 hover:border-2 border-solid border-pink-500" type="submit" value="Login" on:click={submit}>
     </div>
 </div>

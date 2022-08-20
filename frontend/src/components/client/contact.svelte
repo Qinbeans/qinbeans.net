@@ -8,10 +8,12 @@
         <input class="pl-1.5 pr-1.5 mb-1.5 rounded-lg bg-gray-700" type="email" placeholder="someone@example.com">
         <label for="content">Content</label>
         <textarea class="pl-1.5 pr-1.5 rounded-lg bg-gray-700" name="content" id="content" cols="20" rows="10"></textarea>
-        <div class="w-full text-center">
-            <label for="human">I Am Human</label>
-            <input type="checkbox" name="human" id="human" value="human">
+        <div class="flex justify-center">
+            <label class="w-fit form-control" for="human">
+                I Am Human
+                <input class="checkbox bg-pink-500" type="checkbox" name="human" id="human" value="human">
+            </label>
         </div>
-        <button class="cursor-pointer pl-1.5 pr-1.5 rounded-lg bg-gray-700 text-pink-500">Submit</button>
+        <button class="cursor-pointer pl-1.5 pr-1.5 rounded-lg bg-gray-700 text-pink-500 hover:border-2 border-solid border-pink-500">Submit</button>
     </div>
 </div>

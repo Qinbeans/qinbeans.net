@@ -1,5 +1,5 @@
 <script lang="ts">
-    export let favicon = "/favicon.ico";
+    export let favicon = "/bao.svg";
     export let title = "Ryan Fong";
 </script>
 <head>

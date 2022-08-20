@@ -1,8 +1,8 @@
 <script lang="ts">
-    import BaoziDance from "../../assets/baozi-dance.gif";
+    import BaoziDance from "../../assets/baozidance.svg";
 </script>
 
-<div class="grid grid-cols-1 place-content-center">
-    <BaoziDance />
-    <div class="text-pink-500 text-2xl">loading</div>
+<div class="w-screen h-screen grid place-content-center">
+    <img src={BaoziDance} height="100" alt="baozi">
+    <div class="text-pink-500 text-2xl underline">Loading</div>
 </div>

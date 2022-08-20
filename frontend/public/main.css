@@ -1,6 +1,59 @@
 * {
     color: rgb(172, 218, 236);
 }
+/* width */
+::-webkit-scrollbar {
+    width: 0.5vw;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.616);
+    border-radius: 100px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.205);
+}
+
+
+label.form-control {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0.5em;
+}
+input[type="checkbox"].checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1em;
+    height: 1em;
+    border: 0.15em solid black;
+    border-radius: 0.15em;
+    transform: translateY(0.2em);
+    cursor: pointer;
+    display: grid;
+    border-radius: 8px;
+}
+input[type="checkbox"].checkbox::before {
+    content: "";
+    margin-left: 0.1em;
+    margin-top: 0.1em;
+    width: 0.50em;
+    height: 0.50em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em black;
+    border-radius: 8px;
+}
+input[type="checkbox"].checkbox:checked::before {
+    transform: scale(1);
+}
 
 @media screen and (max-width: 800px) {
     .wai-img {
@@ -123,3 +176,4 @@
     overflow: scroll;
     text-overflow: ellipsis;
 }
+
