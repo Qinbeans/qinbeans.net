@@ -4,7 +4,7 @@ export const pong = async (): Promise<number> => {
     setTimeout(() => controller.abort(), 5000)
     const mode = import.meta.env.MODE
     const addr = mode === 'development' ? 'http://localhost:5069/v1/ping' : 'https://api.qinbeans.net/v1/ping'
-    console.log("Fetching ping from: " + addr)
+    // console.log("Fetching ping from: " + addr)
     const res = await fetch(addr, {
         method: 'GET',
         headers: {},

@@ -19,6 +19,6 @@
 
 </script>
 
-<div class="scrollable h-52 bg-gray-500 bg-opacity-80 rounded-lg p-1.5">
+<div class="scrollable h-52 bg-slate-500 bg-opacity-60 dark:bg-black dark:bg-opacity-75 rounded-lg p-1.5">
     <SvelteMarkdown source={content}/>
 </div>

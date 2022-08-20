@@ -37,7 +37,7 @@
     };
 
     pong().catch(() => {
-        console.error("Pong failed");
+        // console.error("Pong failed");
         pos_err = {
             type: "500",
             message: "Oops, the hamsters took a break.  Let's wait until they come back."

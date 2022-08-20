@@ -1,6 +1,19 @@
-* {
-    color: rgb(172, 218, 236);
+
+@media (prefers-color-scheme: dark){
+    * {
+        color: rgb(172, 218, 236);
+    }
 }
+@media (prefers-color-scheme: light){
+    * {
+        color: rgb(0, 0, 0);
+    }
+}
+
+.shadow {
+    text-shadow: 2px 2px 4px #000000;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 0.5vw;

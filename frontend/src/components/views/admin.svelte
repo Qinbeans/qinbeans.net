@@ -15,7 +15,6 @@
         }
     });
     token.subscribe(x => a_token = x);
-    console.log("state:",state);
     onMount(() => {
         let req = getAdmin();
         if(req == null){
@@ -24,7 +23,6 @@
                 alert("You are not logged in");
                 admin.set(AdminState.LOGIN);
                 state = AdminState.LOGIN;
-                console.log("state:",state);
             }
         }else{
             req.catch(() => {
@@ -33,7 +31,6 @@
                     alert("You are not logged in");
                     admin.set(AdminState.LOGIN);
                     state = AdminState.LOGIN;
-                    console.log("state:",state);
                 }
             });
         }
@@ -41,7 +38,7 @@
 </script>
 <!-- Grid -->
 {#if state == AdminState.LOGIN}
-    <div class="w-screen h-screen grid place-content-center">
+    <div class="relative top-10 w-screen grid place-content-center">
         <Login/>
     </div>
 {:else}

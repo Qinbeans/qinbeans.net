@@ -30,9 +30,9 @@
     <div class="text-red-500 text-5xl">
         Error-{type}
     </div>
-    <div class="text-xl">
+    <span class="text-xl dark:text-white text-gray-900">
         {message}
-    </div>
+    </span>
     <div class="flex justify-center w-screen">
         <img id="baozi" width="100" src="{Error}" alt="baozi" on:click={go_home}>
     </div>

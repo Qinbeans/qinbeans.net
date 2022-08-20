@@ -29,11 +29,10 @@ export const submit_credentials = async (credentials: Credentials, mode: string)
     const local:string = import.meta.env.ACCESS
     const addr = (mode=="development")?"http://"+((local==null)?"localhost":local)+":5069/v1/login":"https://api.qinbeans.net/v1/login"
     const ws = (mode=="development")?"ws://"+((local==null)?"localhost":local)+":5069/v1/ws/":"wss://api.qinbeans.net/v1/ws/"
-    console.log("Check:",addr,ws,mode)
     const form = to_form_data(credentials)
     //check if form is valid
     if (form.get('username') == null || form.get('token') == null) {
-        console.log("invalid form")
+        return null
     }
     // send post request to server
     return fetch(addr, {
@@ -61,7 +60,6 @@ export const submit_credentials = async (credentials: Credentials, mode: string)
     }
     ).catch(err => {
         alert("Login failed")
-        console.log(err)
         return err.response
     })
 }

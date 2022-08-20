@@ -20,35 +20,9 @@
             img: "",
         }
     ] as P[];
-
-    let innerWidth = globalThis.innerWidth;
-    let innerHeight = globalThis.innerHeight;
-    
-    let format = "top-10 grid-cols-3 gap-2"
-
-    const checkResize = () => {
-        if(innerWidth < 500 && innerWidth < innerHeight) {
-            format = "top-10 grid-cols-1 gap-0.5";
-            console.log("mobile(vert)", format);
-        } else if(innerWidth < 1415) {
-            format = "top-8 grid-cols-3 gap-1.5";
-            console.log("mobile(hor)", format);
-        } else {
-            format = "top-11 grid-cols-3 gap-2";
-            console.log("desktop", format);
-        }
-    }
-    checkResize();
-
 </script>
 
-<svelte:window
-    on:resize={checkResize}
-    bind:innerHeight
-    bind:innerWidth
-/>
-
-<div id="blog" class="relative grid {format}">
+<div id="blog" class="relative grid top-10 grid-cols-1 gap-0.5 sm:top-11 sm:grid-cols-3 sm:gap-2">
     {#each posts as post}
         <Post
             title={post.title}
