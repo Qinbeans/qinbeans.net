@@ -87,13 +87,13 @@ export const logout = () => {
 
 export const updateAdmin = () => {
     user.subscribe(u => {
-        localStorage.setItem('admin', JSON.stringify(u.creds))
+        globalThis.localStorage.setItem('admin', JSON.stringify(u.creds))
     })
 }
 
 export const getAdmin = () => {
     const mode:string = import.meta.env.MODE
-    const admin = localStorage.getItem('admin')
+    const admin = globalThis.localStorage.getItem('admin')
     if(admin == null) {
         return null
     }
@@ -102,5 +102,5 @@ export const getAdmin = () => {
 }
 
 export const clearAdmin = () => {
-    localStorage.removeItem('admin');
+    globalThis.localStorage.removeItem('admin');
 }

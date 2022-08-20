@@ -1,0 +1,13 @@
+---
+import Footer from "../components/footer.svelte";
+import Header from "../components/header.svelte";
+import Error from "../components/error.svelte";
+---
+<!DOCTYPE html>
+<html lang="en" class="bg-slate-800">
+	<Header />
+	<body id="body" class="h-screen">
+        <Error type="404" message="Are you lost? Let me guide you back home. 😇" client:load/>
+        <Footer client:idle/>
+	</body>
+</html>

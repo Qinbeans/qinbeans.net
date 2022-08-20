@@ -1,6 +1,6 @@
 <script lang="ts">
-    import { current, mobile } from "../../ts/store";
-    import { updateClient, updateURL } from "../../ts/update";
+    import { current } from "../../ts/store";
+    import { updateClient, updateURL } from "../../ts/utils";
 
     let state = 0;
     current.subscribe(x => state = x);
@@ -85,31 +85,6 @@
   />
 
 <nav>
-    <!-- <ChakraProvider>
-                <Box class="left">
-                    <Box textAlign="center" fontSize={bar_buttons[3]} color="{menu?'#888':'#aaf'}" bg="#afafaf55" pl="1" pr="1" maxW={bar_buttons[4]} borderColor="black" borderWidth="3" on:click={invert_menu}>
-                        Ryan Fong
-                    </Box>
-                    {#if menu}
-                        <ChakraProvider>
-                            <Box as="ul" size="lg" bg="grey" maxW={bar_buttons[4]} pl={bar_buttons[0]} pt="0">
-                                <Button as="li" color="purple.600" pt={bar_buttons[0]} pb={bar_buttons[0]} mb={bar_buttons[0]} borderRadius="0" fontSize={bar_buttons[1]} w={bar_buttons[2]} on:click={c_about} class={class_state[0]}>
-                                    About
-                                </Button>
-                                <Button as="li" color="purple.600" pt={bar_buttons[0]} pb={bar_buttons[0]} mb={bar_buttons[0]} borderRadius="0" fontSize={bar_buttons[1]} w={bar_buttons[2]} on:click={c_docs} class={class_state[1]}>
-                                    Docs
-                                </Button>
-                                <Button as="li" color="purple.600" pt={bar_buttons[0]} pb={bar_buttons[0]} mb={bar_buttons[0]} borderRadius="0" fontSize={bar_buttons[1]} w={bar_buttons[2]} on:click={c_blog} class={class_state[2]}>
-                                    Blog
-                                </Button>
-                                <Button as="li" color="purple.600" pt={bar_buttons[0]} pb={bar_buttons[0]} mb={bar_buttons[0]} borderRadius="0" fontSize={bar_buttons[1]} w={bar_buttons[2]} on:click={c_contact} class={class_state[3]}>
-                                    Contact
-                                </Button>
-                            </Box>
-                        </ChakraProvider>
-                    {/if}
-                </Box>
-            </ChakraProvider> -->
     <div class="fixed w-screen h-0 top-0 left-0 right-0 bottom-0 z-50">
         {#if innerWidth > innerHeight && innerHeight > 400 && innerWidth > 800 }
             <div class="justify-center">

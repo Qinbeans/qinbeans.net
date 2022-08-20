@@ -8,7 +8,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "check": "astro check"
   },
   "devDependencies": {
     "@astrojs/svelte": "^1.0.0",
@@ -21,7 +22,6 @@
     "@astrojs/webapi": "^1.0.0",
     "global": "^4.4.0",
     "svelte-markdown": "^0.2.3",
-    "svelte-modals": "^1.2.0",
-    "uuid": "^8.3.2"
+    "svelte-modals": "^1.2.0"
   }
 }

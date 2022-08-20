@@ -1,14 +1,14 @@
 ---
 import Footer from "../components/footer.svelte";
 import Header from "../components/header.svelte";
-//get query
+import Admin from "../components/views/admin.svelte";
 ---
 <!-- Don't forget hydration: only load when needed. -->
 <!DOCTYPE html>
-<html lang="en" class="bg-slate-500">
+<html lang="en" class="bg-slate-800">
 	<Header />
 	<body class="h-full">
-        hello
+		<Admin client:load/>
 		<Footer />
 	</body>
 </html>

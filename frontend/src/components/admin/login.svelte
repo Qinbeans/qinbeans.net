@@ -10,17 +10,17 @@
     }
 </script>
 
-<div class="m-grid">
-    <h1 class="h1 x-9 y-1">Login</h1>
+<div class="w-fit h-fit bg-black bg-opacity-75 rounded-lg pl-5 pr-5 pb-1.5">
+    <div class="text-2xl text-pink-500">Login</div>
     <!-- expect a response with a token, else send back here with a warning -->
-    <div class="x-9 y-15">
+    <div class="grid grid-cols-1 place-content-center gap-1.5">
         <!-- Username -->
         <label for="username">Username</label>
-        <input class="input bubble" id="username" type="text" name="username" placeholder="Username">
+        <input class="pl-1.5 pr-1.5 rounded-lg bg-gray-700" id="username" type="text" name="username" placeholder="Username">
         <!-- Token -->
         <label for="token">Token</label>
-        <input class="input bubble" id="token" type="password" name="token" placeholder="Token">
+        <input class="pl-1.5 pr-1.5 rounded-lg bg-gray-700" id="token" type="password" name="token" placeholder="Token">
         <!-- Submit -->
-        <input class="submit" type="submit" value="Login" on:click={submit}>
+        <input class="cursor-pointer pl-1.5 pr-1.5 rounded-lg bg-gray-700 text-pink-500" type="submit" value="Login" on:click={submit}>
     </div>
 </div>

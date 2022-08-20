@@ -1,4 +1,4 @@
-<!-- <script lang="ts">
+<script lang="ts">
     import Post from "./post/post.svelte";
     import type { Post as P } from "../../ts/types";
     import { Modals, closeModal } from "svelte-modals";
@@ -20,9 +20,35 @@
             img: "",
         }
     ] as P[];
+
+    let innerWidth = globalThis.innerWidth;
+    let innerHeight = globalThis.innerHeight;
+    
+    let format = "top-10 grid-cols-3 gap-2"
+
+    const checkResize = () => {
+        if(innerWidth < 500 && innerWidth < innerHeight) {
+            format = "top-10 grid-cols-1 gap-0.5";
+            console.log("mobile(vert)", format);
+        } else if(innerWidth < 1415) {
+            format = "top-8 grid-cols-3 gap-1.5";
+            console.log("mobile(hor)", format);
+        } else {
+            format = "top-11 grid-cols-3 gap-2";
+            console.log("desktop", format);
+        }
+    }
+    checkResize();
+
 </script>
 
-<div id="blog" class="main fr-grid">
+<svelte:window
+    on:resize={checkResize}
+    bind:innerHeight
+    bind:innerWidth
+/>
+
+<div id="blog" class="relative grid {format}">
     {#each posts as post}
         <Post
             title={post.title}
@@ -39,4 +65,4 @@
       class="backdrop"
       on:click={closeModal}
     />
-</Modals> -->
+</Modals>

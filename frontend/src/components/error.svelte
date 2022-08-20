@@ -1,9 +1,9 @@
 <!-- Sanitize -->
 <script lang="ts">
-    import Error from "../../assets/error.svg";
+    import Error from "../assets/error.svg";
     import { current } from "../ts/store";
     import { State } from "../ts/types";
-    import { updateClient, updateURL } from "../ts/update";
+    import { updateClient, updateURL } from "../ts/utils";
     import { onMount } from "svelte";
 
     export let type: string;

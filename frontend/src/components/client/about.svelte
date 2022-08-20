@@ -13,7 +13,7 @@
         } else if (innerWidth < 1415) {
             format = ["top-7", "pl-5 pr-5", "text-5xl", "text-2xl"]
         } else {
-            format = ["top-8", "pl-24 pr-24", "text-5xl", "text-2xl"]
+            format = ["top-11", "pl-24 pr-24", "text-5xl", "text-2xl"]
         }
     }
 

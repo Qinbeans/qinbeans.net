@@ -21,15 +21,15 @@
 
 {#if isOpen}
     <div role="dialog" class="modal">
-        <!-- <Box bg="blackAlpha.600" maxW={width} height={height} borderRadius="10" padding="10">
-            <Box textAlign="center" color="blue.500" fontSize={h_size}>{title}-{date}</Box>
-            <Box height={t_height} class="modal_post">
-                <Box color="purple.500" fontSize={t_size}>{message}</Box>
+        <div class="bg-black bg-opacity-60 max-w-{width} max-h-{t_height} rounded-lg border-8 border-solid border-black border-opacity-0 p-10">
+            <div class="text-center text-blue-500 text-{h_size}">{title}-{date}</div>
+            <div class="h-{height} max-h-{height} modal_post overflow-hidden text-ellipsis overflow-y-scroll">
+                <div class="text-purple-500 text-{t_size}">{message}</div>
                 {#if img_path.length > 0}
                     <img src={img_path} alt={alt_name} id={alt_name}>
                 {/if}
-            </Box>
-            <Box on:click={closeModal} bg="red.100" borderRadius="10" color="teal" padding="1.5" class="tighten">Close</Box>
-        </Box> -->
+            </div>
+            <div on:click={closeModal} class="cursor-pointer pl-1.5 pr-1.5 rounded-lg bg-gray-700 text-pink-500 mt-2.5 w-fit h-fit">Close</div>
+        </div>
     </div>
 {/if}

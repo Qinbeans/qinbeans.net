@@ -10,9 +10,9 @@
 
     const checkResize = () => {
         if(innerWidth < 500){
-            format = "mb-15 p-1.5","14"
+            format = "mb-15 p-1.5 top-10","14"
         }else{
-            format = "mb-12 p-2","12"
+            format = "mb-12 p-2 top-11","12"
         }
     }
 
@@ -36,7 +36,7 @@
         <Markdown height={sizes[1]} src="/docs/admin/blog_form.md" />
     </Box>
 </ChakraProvider> -->
-<div class="relative ml-10 mr-10 top-10 {format}">
+<div class="relative ml-10 mr-10 {format}">
     <Markdown src="/docs/client/contact_form.md" />
     <div class="divider"></div>
     <Markdown src="/docs/admin/admin_form.md" />

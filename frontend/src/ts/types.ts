@@ -9,6 +9,7 @@ export interface Post {
 
 export enum State {
     NONE = -100,
+    LOADING = -2,
     ERROR = -1,
     ABOUT = 0,
     DOCS = 1,

@@ -3,7 +3,7 @@ import { current } from "./store"
 import { newClient } from "./types";
 
 export const updateURL = (state: State) => {
-    globalThis.location.search = "?state=" + state;
+    globalThis.location.href = globalThis.location.origin + "?state=" + state;
 }
 
 export const updateClient = (page?:number) => {
