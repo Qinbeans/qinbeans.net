@@ -25,7 +25,7 @@ export const handler = async () => {
         console.log(socket.readyState)
         //sleep until connection is established
         while (socket.readyState != 1) {
-            console.log("waiting for connection")
+            // console.log("waiting for connection")
             await sleep(1000)
         }
         console.log("connection established")
@@ -47,6 +47,7 @@ export const handler = async () => {
         socket.onclose = (event) => {
             console.log("Closed: " + event.type)
             logout()
+            return
         }
         socket.onopen = (event) => {
             console.log("Connected: " + event.type)

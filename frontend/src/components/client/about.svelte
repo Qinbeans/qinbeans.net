@@ -6,7 +6,7 @@
     </div>
     <br>
     <div class="text-md sm:text-2xl text-center text-blue-200">
-        Ever since I was probably a toddler, I've had a curiosity for things like climbing trees to see what trees had to offer or playing with LEGOs to see what I could make.  I think this curiosity is what drove me to Computer Science and to this day, I play with just about anything I can get my hands on.  This website is probably proof that I still play with whatever I can get my hands on since it's built with some niche methods, but you can read all about it in my docs.
+        Ever since I was probably a toddler, I've had a curiosity for things like climbing trees to see the world beyond what my height allowed me or playing with LEGOs to see what I could make.  I think this curiosity is what drove me to Computer Science and to this day, I play with just about anything I can get my hands on.  This website is probably proof that I still play with whatever I can get my hands on since it's built with some niche methods, but you can read all about it in my docs.
     </div>
     <br>
     <div class="text-md sm:text-2xl text-center text-blue-100">

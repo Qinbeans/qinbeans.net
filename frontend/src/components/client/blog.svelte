@@ -21,18 +21,18 @@
         }
     ] as P[];
 </script>
-
-<div id="blog" class="relative grid top-10 grid-cols-1 gap-0.5 sm:top-11 sm:grid-cols-3 sm:gap-2">
-    {#each posts as post}
-        <Post
-            title={post.title}
-            date={post.date}
-            content={post.content}
-            img_path={post.img}
-        ></Post>
-    {/each}
+<div class="h-screen">
+    <div id="blog" class="relative grid top-10 grid-cols-1 gap-0.5 sm:top-11 sm:grid-cols-3 sm:gap-2">
+        {#each posts as post}
+            <Post
+                title={post.title}
+                date={post.date}
+                content={post.content}
+                img_path={post.img}
+            ></Post>
+        {/each}
+    </div>
 </div>
-
 <Modals>
     <div
       slot="backdrop"

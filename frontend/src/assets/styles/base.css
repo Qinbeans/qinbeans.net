@@ -18,6 +18,9 @@ html {
     h1, h2, h3, h4 {
         color: rgb(192 132 252);
     }
+    h1 {
+        text-shadow: #616161 2px 2px 4px;
+    }
 }
 @media (prefers-color-scheme: light){
     * {
@@ -25,6 +28,9 @@ html {
     }
     h1, h2, h3, h4 {
         color: rgb(107 33 168);
+    }
+    h1 {
+        text-shadow: #000000 2px 2px 4px;
     }
 }
 
@@ -130,7 +136,41 @@ input[type="checkbox"].checkbox:checked::before {
         height: 90vh;
         overflow-y: scroll;
     }
+    h1 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+    h2 {
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+    h3 {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+    h4 {
+        font-size: 0.75rem;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+    ul, ol {
+        list-style: circle inside;
+        padding: 0;
+        margin: 0;
+    }
 }
+
+p > img {
+    background-color: #eaeaea;
+    padding: 0.5em;
+    border-radius: 8px;
+    margin: 0.5em 0;
+    opacity: 0.8;
+}
+
 @media screen and (min-width: 801px) {
     .wai-img {
         position: absolute;
@@ -174,6 +214,31 @@ input[type="checkbox"].checkbox:checked::before {
         height: 100vh;
         overflow-y: scroll;
     }
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+    h2 {
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+    h4 {
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+    ul, ol {
+        list-style: circle inside;
+        padding: 0;
+        margin: 0;
+    }
 }
 
 .divider {
@@ -206,25 +271,4 @@ input[type="checkbox"].checkbox:checked::before {
 .modal_post{
     overflow: scroll;
     text-overflow: ellipsis;
-}
-
-h1 {
-    font-size: 2.5rem;
-    font-weight: 500;
-    line-height: 1.2;
-}
-h2 {
-    font-size: 2rem;
-    font-weight: 500;
-    line-height: 1.2;
-}
-h3 {
-    font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 1.2;
-}
-h4 {
-    font-size: 1.25rem;
-    font-weight: 500;
-    line-height: 1.2;
 }

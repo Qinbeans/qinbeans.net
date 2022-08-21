@@ -6,6 +6,12 @@
     const mode = import.meta.env.MODE
     const submit = (e:any) => {
         //submit form
+        //grab id human
+        let human = (<HTMLInputElement>document.getElementById("human")).checked
+        if(!human){
+            alert("You aren't a human")
+            return
+        }
         e.preventDefault()
         const creds = new_credentials((<HTMLInputElement>document.getElementById("username")).value, (<HTMLInputElement>document.getElementById("token")).value)
         submit_credentials(creds,mode)
@@ -31,6 +37,12 @@
         <label for="token">Token</label>
         <input class="pl-1.5 pr-1.5 rounded-lg dark:bg-gray-700 bg-gray-300" id="token" type="password" name="token" placeholder="Token">
         <!-- Submit -->
+        <div class="flex justify-center">
+            <label class="w-fit form-control" for="human">
+                I Am Human
+                <input class="checkbox bg-pink-500" type="checkbox" name="human" id="human" value="human">
+            </label>
+        </div>
         <input class="shadow cursor-pointer pl-1.5 pr-1.5 rounded-lg dark:bg-gray-700 bg-gray-300 text-pink-500 hover:border-2 border-solid border-pink-500" type="submit" value="Login" on:click={submit}>
     </div>
 </div>

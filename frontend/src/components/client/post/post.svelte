@@ -43,11 +43,11 @@
 ></svelte:window>
 
 <!-- maxh, maxw -->
-<div class="cursor-pointer dark:bg-black dark:bg-opacity-40 bg-gray-500 bg-opacity-60 dark:border-black border-gray-500 rounded-lg border-8 dark:border-opacity-0 border-opacity-0" on:click={handleModal}>
+<div class="cursor-pointer h-full dark:bg-black dark:bg-opacity-40 bg-gray-500 bg-opacity-60 dark:border-black border-gray-500 rounded-lg border-8 dark:border-opacity-0 border-opacity-0" on:click={handleModal}>
     <!-- fontsize -->
     <div class="text-center text-4xl sm:text-4xl text-pink-500">{title}-{date}</div>
     <!-- fontsize -->
-    <div class="scrollable max-h-64 sm:max-h-96">
+    <div class="scrollable max-h-64">
         <div class="text-center text-2xl sm:text-xl text-black dark:text-white text-ellipsis overflow-hidden">{content}</div>
         {#if img_path.length > 0}
             <img src="{img_path}" alt="{title}" id={title}>            

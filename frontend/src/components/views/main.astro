@@ -8,26 +8,11 @@
     import Navbar from "../client/navbar.svelte";
     import Loading from "./loading.svelte";
     import type { Error as RequestError } from "../../ts/types"
-    // import { getClient, clearClient } from "../../ts/client";
     import { getStateFromQuery, getClient } from "../../ts/utils";
 
     let search = Astro.url.search
-    console.log(search)
-    // let state = 0;
     let state = getStateFromQuery(search);
     let loading = true;
-    // current.subscribe(x => {
-    //     if(state == State.NONE){
-    //         let res = getClient()
-    //         if (res == null)
-    //             state = x
-    //     }
-    //     if(x != State.NONE){
-    //         state = x
-    //     }else{
-    //         current.set(state)
-    //     }
-    // });
     export let pos_err: RequestError = {
         type: "500",
         message: "Oops, the hamsters took a break.  Let's wait until they come back."
@@ -41,7 +26,6 @@
     // Testing deployment mode
     // const addr = 'http://localhost:5069/v1/ping'
     const addr = mode === 'development' ? 'http://0.0.0.0:5069/v1/ping' : 'https://api.qinbeans.net/v1/ping'
-    console.log("Fetching ping from: " + addr)
     await fetch(addr, {
         method: 'GET',
         headers: {},
@@ -52,7 +36,6 @@
         state = State.ERROR
         loading = false
     }).then(() => {
-        console.log("Got ping",state)
         loading = false
     })
 ---
