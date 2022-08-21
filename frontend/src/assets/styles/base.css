@@ -1,0 +1,274 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Fixedsys";
+    src: url("../fonts/FixedsysExcelsiorIIIb_PL3.otf");
+}
+
+html {
+    font-family: "Fixedsys" !important;
+}
+
+@media (prefers-color-scheme: dark){
+    * {
+        color: rgb(172, 218, 236);
+    }
+    h1, h2, h3, h4 {
+        color: rgb(192 132 252);
+    }
+    h1 {
+        text-shadow: #616161 2px 2px 4px;
+    }
+}
+@media (prefers-color-scheme: light){
+    * {
+        color: rgb(0, 0, 0);
+    }
+    h1, h2, h3, h4 {
+        color: rgb(107 33 168);
+    }
+    h1 {
+        text-shadow: #000000 2px 2px 4px;
+    }
+}
+
+.shadow {
+    text-shadow: 2px 2px 4px #000000;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.5vw;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.616);
+    border-radius: 100px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.205);
+}
+
+
+label.form-control {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0.5em;
+}
+input[type="checkbox"].checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1em;
+    height: 1em;
+    border: 0.15em solid black;
+    border-radius: 0.15em;
+    transform: translateY(0.2em);
+    cursor: pointer;
+    display: grid;
+    border-radius: 8px;
+}
+input[type="checkbox"].checkbox::before {
+    content: "";
+    margin-left: 0.1em;
+    margin-top: 0.1em;
+    width: 0.50em;
+    height: 0.50em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em black;
+    border-radius: 8px;
+}
+input[type="checkbox"].checkbox:checked::before {
+    transform: scale(1);
+}
+
+@media screen and (max-width: 800px) {
+    .wai-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0vh;
+        height: 100%;
+        z-index: 0;
+        background-image: url("../imgs/philmont2.jpg");
+        background-size: cover;
+        filter: blur(5px) brightness(30%);
+        -webkit-filter: blur(5px) brightness(30%);
+    }
+    .exp-img {
+        position: absolute;
+        top: 90vh;
+        right: 0;
+        left: 0;
+        bottom: 0vh;
+        height: 100%;
+        background-image: url("../imgs/exp.png");
+        background-size: cover;
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
+    }
+    .aatf-img {
+        position: absolute;
+        top: 180vh;
+        right: 0;
+        left: 0;
+        bottom: 0vh;
+        height: 100%;
+        background-image: url("../imgs/aatf.png");
+        background-size: cover;
+        filter: blur(4px);
+        -webkit-filter: blur(4px);
+    }
+    .scrollable {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 90vh;
+        overflow-y: scroll;
+    }
+    h1 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+    h2 {
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+    h3 {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+    h4 {
+        font-size: 0.75rem;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+    ul, ol {
+        list-style: circle inside;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+p > img {
+    background-color: #eaeaea;
+    padding: 0.5em;
+    border-radius: 8px;
+    margin: 0.5em 0;
+    opacity: 0.8;
+}
+
+@media screen and (min-width: 801px) {
+    .wai-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0vh;
+        height: 100%;
+        background-image: url("../imgs/philmont2.jpg");
+        background-size: cover;
+        filter: blur(5px) brightness(30%);
+        -webkit-filter: blur(5px) brightness(30%);
+    }
+    .exp-img {
+        position: absolute;
+        top: 100vh;
+        right: 0;
+        left: 0;
+        bottom: 0vh;
+        height: 100%;
+        background-image: url("../imgs/exp.png");
+        background-size: cover;
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
+    }
+    .aatf-img {
+        position: absolute;
+        top: 200vh;
+        right: 0;
+        left: 0;
+        bottom: 0vh;
+        height: 100%;
+        background-image: url("../imgs/aatf.png");
+        background-size: cover;
+        filter: blur(4px);
+        -webkit-filter: blur(4px);
+    }
+    .scrollable {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 100vh;
+        overflow-y: scroll;
+    }
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+    h2 {
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+    h4 {
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+    ul, ol {
+        list-style: circle inside;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.divider {
+    border-top: 1px solid #eaeaea;
+    margin: 1rem 0;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(0,0,0,0.50)
+}
+
+.modal_post{
+    overflow: scroll;
+    text-overflow: ellipsis;
+}
