@@ -1,3 +1,7 @@
+---
+layout: ../../../layouts/docs.astro
+title: Contact Form
+---
 # Client Contact Form
 Clients will fill out a form for contact with a title, message, and email.
 

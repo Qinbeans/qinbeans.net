@@ -1,3 +1,7 @@
+---
+layout: ../../../layouts/docs.astro
+title: Blog Form
+---
 # Blog Form
 Each new blog requires a title and message.  There's an optional image used as a background for the blog.
 

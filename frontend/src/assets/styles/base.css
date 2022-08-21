@@ -1,12 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Fixedsys";
+    src: url("../fonts/FixedsysExcelsiorIIIb_PL3.otf");
+}
+
+html {
+    font-family: "Fixedsys" !important;
+}
 
 @media (prefers-color-scheme: dark){
     * {
         color: rgb(172, 218, 236);
     }
+    h1, h2, h3, h4 {
+        color: rgb(192 132 252);
+    }
 }
 @media (prefers-color-scheme: light){
     * {
         color: rgb(0, 0, 0);
+    }
+    h1, h2, h3, h4 {
+        color: rgb(107 33 168);
     }
 }
 
@@ -77,7 +95,7 @@ input[type="checkbox"].checkbox:checked::before {
         bottom: 0vh;
         height: 100%;
         z-index: 0;
-        background-image: url("./imgs/philmont2.jpg");
+        background-image: url("../imgs/philmont2.jpg");
         background-size: cover;
         filter: blur(5px) brightness(30%);
         -webkit-filter: blur(5px) brightness(30%);
@@ -89,7 +107,7 @@ input[type="checkbox"].checkbox:checked::before {
         left: 0;
         bottom: 0vh;
         height: 100%;
-        background-image: url("./imgs/exp.png");
+        background-image: url("../imgs/exp.png");
         background-size: cover;
         filter: blur(2px);
         -webkit-filter: blur(2px);
@@ -101,7 +119,7 @@ input[type="checkbox"].checkbox:checked::before {
         left: 0;
         bottom: 0vh;
         height: 100%;
-        background-image: url("./imgs/aatf.png");
+        background-image: url("../imgs/aatf.png");
         background-size: cover;
         filter: blur(4px);
         -webkit-filter: blur(4px);
@@ -121,7 +139,7 @@ input[type="checkbox"].checkbox:checked::before {
         right: 0;
         bottom: 0vh;
         height: 100%;
-        background-image: url("./imgs/philmont2.jpg");
+        background-image: url("../imgs/philmont2.jpg");
         background-size: cover;
         filter: blur(5px) brightness(30%);
         -webkit-filter: blur(5px) brightness(30%);
@@ -133,7 +151,7 @@ input[type="checkbox"].checkbox:checked::before {
         left: 0;
         bottom: 0vh;
         height: 100%;
-        background-image: url("./imgs/exp.png");
+        background-image: url("../imgs/exp.png");
         background-size: cover;
         filter: blur(2px);
         -webkit-filter: blur(2px);
@@ -145,7 +163,7 @@ input[type="checkbox"].checkbox:checked::before {
         left: 0;
         bottom: 0vh;
         height: 100%;
-        background-image: url("./imgs/aatf.png");
+        background-image: url("../imgs/aatf.png");
         background-size: cover;
         filter: blur(4px);
         -webkit-filter: blur(4px);
@@ -190,3 +208,23 @@ input[type="checkbox"].checkbox:checked::before {
     text-overflow: ellipsis;
 }
 
+h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+h4 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.2;
+}

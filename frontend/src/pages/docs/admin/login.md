@@ -1,3 +1,7 @@
+---
+layout: ../../../layouts/docs.astro
+title: Admin Form
+---
 # Admin
 The admin form would take in a username and token.
 

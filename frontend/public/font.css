@@ -1,8 +1,0 @@
-@font-face {
-    font-family: "Fixedsys";
-    src: url("/FixedsysExcelsiorIIIb_PL3.otf");
-}
-
-html {
-    font-family: "Fixedsys" !important;
-}

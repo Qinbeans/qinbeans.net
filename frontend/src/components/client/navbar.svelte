@@ -1,9 +1,13 @@
 <script lang="ts">
     import { current } from "../../ts/store";
-    import { updateClient, updateURL } from "../../ts/utils";
+    import { getStateFromQuery, updateClient, updateURL } from "../../ts/utils";
 
-    let state = 0;
-    current.subscribe(x => state = x);
+    export let search = "";
+    let state = getStateFromQuery(search);
+    // current.subscribe(x => {
+    //     state = x
+    //     console.log(state)
+    // });
     const BASE = "bg-gray-400 dark:bg-zinc-600 hover:border-2 border-pink-500 border-solid bg-opacity-80 dark:bg-opacity-60 cursor-pointer";
     const SEL = "bg-gray-700 dark:bg-black bg-opacity-80 dark:bg-opacity-60 cursor-default"
     

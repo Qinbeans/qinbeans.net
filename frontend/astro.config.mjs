@@ -13,7 +13,9 @@ export default defineConfig({
       external: []
     }
   },
-  integrations: [svelte(), tailwind()],
+  integrations: [svelte(), tailwind({
+    applyBaseStyles: false
+  })],
   output: 'server',
   adapter: deno(),
 });
