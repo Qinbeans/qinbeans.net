@@ -4,6 +4,9 @@
     import { AdminState } from "../../ts/types";
     import { onMount } from "svelte";
     import { getAdmin } from "../../ts/credentials";
+    import Home from "../admin/home.svelte";
+    import BlogIt from "../admin/blogit.svelte";
+    import Error from "../error.svelte";
 
     import Login from "../admin/login.svelte";
 
@@ -39,9 +42,13 @@
 <!-- Grid -->
 {#if state == AdminState.LOGIN}
     <div class="relative top-10 w-screen grid place-content-center">
-        <Login/>
+        <Login />
+    </div>
+{:else if state == AdminState.HOME}
+    <div class="w-screen h-screen grid grid-cols-3 grid-rows-6 grid-flow-col place-content-end">
+            <Home />
+            <BlogIt />
     </div>
 {:else}
-    <div class="w-screen h-screen grid grid-cols-3 grid-rows-6">
-    </div>
+    <Error type="404" message="I'm sorry, I don't believe you're authorized to be here.  It's ok because I can take you back home."/>
 {/if}

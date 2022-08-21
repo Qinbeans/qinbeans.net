@@ -14,17 +14,22 @@ function sleep(ms: number) {
 }
 
 export const handler = async () => {
-    let conn: WebSocket
+    let socket: WebSocket
     user.subscribe(async (u) => {
-        conn = u.conn.socket
-        console.log(conn.readyState)
+        const conn = u.conn
+        if (conn === undefined) {//guard case
+            console.log("no connection")
+            return
+        }
+        socket = conn.socket
+        console.log(socket.readyState)
         //sleep until connection is established
-        while (conn.readyState != 1) {
+        while (socket.readyState != 1) {
             console.log("waiting for connection")
             await sleep(1000)
         }
         console.log("connection established")
-        conn.onmessage = (event) => {
+        socket.onmessage = (event) => {
             //0x09 is ping
             switch (event.data[0]) {
                 default: {
@@ -34,18 +39,18 @@ export const handler = async () => {
             }
         }
         //close connection if error
-        conn.onerror = (event) => {
+        socket.onerror = (event) => {
             console.log("Error: " + event.type)
             logout()
         }
         //close connection if closed
-        conn.onclose = (event) => {
+        socket.onclose = (event) => {
             console.log("Closed: " + event.type)
             logout()
         }
-        conn.onopen = (event) => {
+        socket.onopen = (event) => {
             console.log("Connected: " + event.type)
         }
-        conn.send("c")
+        socket.send("c")
     })
 }
