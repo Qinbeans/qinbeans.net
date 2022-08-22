@@ -1,5 +1,6 @@
 <script lang="ts">
     import { current } from "../../ts/store";
+    import { State } from "../../ts/types";
     import { getClient, getStateFromQuery, updateClient, updateURL } from "../../ts/utils";
 
     export let search = "";
@@ -12,10 +13,14 @@
                 return
             }
             state = x;
-            updateClient()
             updateURL(state)
         });
     }
+
+    if(state == State.NONE){
+        state = State.ABOUT
+    }
+
     const BASE = "bg-gray-400 dark:bg-zinc-600 hover:border-2 border-pink-500 border-solid bg-opacity-80 dark:bg-opacity-60 cursor-pointer";
     const SEL = "bg-gray-700 dark:bg-black bg-opacity-80 dark:bg-opacity-60 cursor-default"
     
