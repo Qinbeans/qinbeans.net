@@ -3,7 +3,6 @@
     import { submit_credentials, new_credentials } from "../../ts/credentials";
     import { updateClient, updateURL } from "../../ts/utils";
     import { current } from "../../ts/store"
-    const mode = import.meta.env.MODE
     const submit = (e:any) => {
         //submit form
         //grab id human
@@ -14,7 +13,7 @@
         }
         e.preventDefault()
         const creds = new_credentials((<HTMLInputElement>document.getElementById("username")).value, (<HTMLInputElement>document.getElementById("token")).value)
-        submit_credentials(creds,mode)
+        submit_credentials(creds)
     }
 
     const go_home = () => {

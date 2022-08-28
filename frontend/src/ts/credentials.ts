@@ -25,10 +25,13 @@ const to_form_data = (credentials: Credentials) => {
     return form
 }
 
-export const submit_credentials = async (credentials: Credentials, mode: string) => {
-    const local:string = import.meta.env.ACCESS
-    const addr = (mode=="development")?"http://"+((local==null)?"localhost":local)+":5069/v1/login":"https://api.qinbeans.net/v1/login"
-    const ws = (mode=="development")?"ws://"+((local==null)?"localhost":local)+":5069/v1/ws/":"wss://api.qinbeans.net/v1/ws/"
+export const submit_credentials = async (credentials: Credentials) => {
+    const api:string = import.meta.env.API
+    const http:string = import.meta.env.API_HTTP
+    const ws_prot:string = import.meta.env.API_WS
+    const port:string = import.meta.env.API_PORT
+    const addr = `${http}://${(port.length > 0)?`${api}:${port}`:api}/v1/login`
+    const ws = `${ws_prot}://${(port.length > 0)?`${api}:${port}`:api}/v1/ws/`
     const form = to_form_data(credentials)
     //check if form is valid
     if (form.get('username') == null || form.get('token') == null) {
@@ -90,13 +93,12 @@ export const updateAdmin = () => {
 }
 
 export const getAdmin = () => {
-    const mode:string = import.meta.env.MODE
     const admin = globalThis.localStorage.getItem('admin')
     if(admin == null) {
         return null
     }
     const creds:Credentials = JSON.parse(admin)
-    return submit_credentials(creds, mode)
+    return submit_credentials(creds)
 }
 
 export const clearAdmin = () => {

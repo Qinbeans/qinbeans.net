@@ -25,3 +25,12 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`      | Preview your build locally, before deploying     |
 | `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro --help` | Get help using the Astro CLI                     |
+
+## .env Variables
+
+Anything with "*" is required
+
+- API*: the backend API URL
+- API_PORT: the backend API port -- if not filled in, its assumed you are using port 80 or 443
+- API_HTTP*: the protocol to use when connecting to the backend API
+- API_WS*: the websocket protocol to use when connecting to the backend API
