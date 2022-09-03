@@ -1,8 +1,13 @@
 import { writable } from 'svelte/store';
-import { State, AdminUser, AdminState } from './types';
+import { AdminUser, AdminState, State } from './types';
+import type { Client } from './types';
+
 
 //client
-export const current = writable(State.NONE);
+//current contains timestamp of last update
+export const current = writable<Client>({
+    state: State.NONE
+});
 //admin
 export const admin = writable(AdminState.NONE);
 export const token = writable("");

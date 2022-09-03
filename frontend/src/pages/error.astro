@@ -1,0 +1,25 @@
+---
+import Footer from "../components/footer.svelte";
+import Header from "../components/header.svelte";
+import Error from "../components/error.svelte";
+import '../assets/styles/base.css'
+import { errMap } from "../ts/types";
+import type { Error as EStat } from "../ts/types";
+let err_code = Astro.url.searchParams.get("code");
+let err: EStat = errMap.get("404")!;
+if(err_code != null){
+	let temp = errMap.get(err_code);
+	if(temp != undefined){
+		err = temp;
+	}
+}
+---
+
+<!DOCTYPE html>
+<html lang="en" class="dark:bg-slate-800 bg-sky-300">
+	<Header />
+	<body id="body" class="h-screen">
+		<Error err={err} client:visible/>
+		<Footer/>
+    </body>
+</html>

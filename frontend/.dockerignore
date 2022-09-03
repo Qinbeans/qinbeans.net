@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.vscode/
+.npmrc
+.gitignore
+README.md
+pnpm-lock.yaml

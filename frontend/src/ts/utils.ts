@@ -1,17 +1,25 @@
-import { State, Client } from "./types";
+import { State, Client, stateMap } from "./types";
 import { current } from "./store"
 import { newClient } from "./types";
 
-export const updateURL = (state: State) => {
-    globalThis.location.href = globalThis.location.origin + "?state=" + state;
+export const sleep = (ms: number) => {
+    let now = new Date()
+    let exitTime = now.getMilliseconds() + ms
+    while (now.getMilliseconds() > exitTime) {}
 }
 
-export const updateClient = (page?:number) => {
+export const updateURL = (state: State, load: boolean) => {
+    if(load) {
+        globalThis.location.href = globalThis.location.origin + "/loading/?backtrace=" + state;
+    } else {
+        globalThis.location.href = globalThis.location.origin + "/" + stateMap.get(state);
+    }
+}
+
+export const updateClient = () => {
     current.subscribe(state => {
-        //create a json
-        const client:Client = newClient(state, page)
         //send json to localstorage
-        globalThis.localStorage.setItem('client', JSON.stringify(client))
+        globalThis.localStorage.setItem('client', JSON.stringify(state))
     });
 }
 
@@ -27,34 +35,18 @@ export const getClient = () => {
     }
     const parsed:Client = JSON.parse(client)
     const now = new Date()
-    const old = new Date(parsed.lastUpdate)
-    const diff = now.getTime() - old.getTime()
+    let diff = 0
+    if(parsed.lastUpdate != undefined) {
+        diff = now.getTime() - parsed.lastUpdate.getTime()
+    }else{
+        return null
+    }
     //if the client is more than an hour old, simply return null
     if(diff > 1000 * 60 * 60) {
         clearClient()
         return null
     }
     console.log("Parsed State",parsed.state)
-    current.set(parsed.state)
+    current.set(parsed)
     return parsed.page
-}
-
-export const getStateFromQuery = (search: string) => {
-    let query = new URLSearchParams(search);
-    let state = query.get('state')
-    if(state == null) {
-        return State.NONE
-    }
-    switch (state) {
-        case "0": //about
-            return State.ABOUT
-        case "1": //docs
-            return State.DOCS;
-        case "2": //blog
-            return State.BLOG;
-        case "3": //contact
-            return State.CONTACT;
-        default:
-            return State.ERROR;
-    }
 }

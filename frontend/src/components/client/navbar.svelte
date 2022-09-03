@@ -1,19 +1,25 @@
 <script lang="ts">
     import { current } from "../../ts/store";
     import { State } from "../../ts/types";
-    import { getClient, getStateFromQuery, updateClient, updateURL } from "../../ts/utils";
+    import { getClient, updateClient, updateURL } from "../../ts/utils";
 
-    export let search = "";
-    let state = getStateFromQuery(search);
-    if(search == ""){
+    export let state = -100;
+    if(state == -100){
         //grab from localstorage
         getClient()
         current.subscribe(x => {
-            if(x < 0){
+            if(x.state < 0){
                 return
             }
-            state = x;
-            updateURL(state)
+            state = x.state;
+            updateClient();
+            let now = new Date();
+            if (x.lastUpdate == undefined || now.getMilliseconds() - x.lastUpdate.getMilliseconds() > 60000) {
+                x.lastUpdate = now;
+                updateURL(state, true);
+            }else{
+                updateURL(state, false);
+            }
         });
     }
 
@@ -39,33 +45,21 @@
         if(state == id){
             return
         }
+        //id is string, so convert to int
+        state = parseInt(id);
         class_state[state] = BASE;
-        switch(id){
-            case "0":
-                class_state[0] = SEL;
-                current.set(0);
-                state = 0;
-                break;
-            case "1":
-                class_state[1] = SEL;
-                current.set(1);
-                state = 1;
-                break;
-            case "2":
-                class_state[2] = SEL;
-                current.set(2);
-                state = 2;
-                break;
-            case "3":
-                class_state[3] = SEL;
-                current.set(3);
-                state = 3;
-                break;
-            default:
-                return;
-        }
-        updateClient();
-        updateURL(state);
+        current.update(x => {
+            x.state = state;
+            updateClient();
+            let now = new Date();
+            if (x.lastUpdate == undefined || now.getMilliseconds() - x.lastUpdate.getMilliseconds() > 60000) {
+                x.lastUpdate = now;
+                updateURL(state, true);
+            }else{
+                updateURL(state, false);
+            }
+            return x;
+        });
     }
 
     const invert_menu = () => {

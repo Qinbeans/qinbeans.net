@@ -1,0 +1,47 @@
+---
+import Footer from "../components/footer.svelte";
+import Header from "../components/header.svelte";
+import { errMap } from "../ts/types";
+import Error from "../components/error.svelte";
+import Router from "../components/router.svelte";
+
+
+let lastLoc = Astro.url.searchParams.get("backtrace");
+let err = null
+let parsed = -1
+
+//query params
+if(lastLoc == null){
+    let res = errMap.get("400")
+    if(res != undefined){
+        err = res
+    }
+}else{
+    parsed = parseInt(lastLoc)
+    if(isNaN(parsed)){
+        let res = errMap.get("400")
+        if(res != undefined){
+            err = res
+        }
+    }
+}
+
+const api = import.meta.env.API
+const http = import.meta.env.API_HTTP
+const port = import.meta.env.API_PORT
+// Testing deployment mode
+const addr = `${http}://${(port !== undefined)?`${api}:${port}`:api}/v1/ping`
+---
+<!DOCTYPE html>
+<html lang="en" class="dark:bg-slate-800 bg-sky-300">
+	<Header />
+	<body class="h-full">
+        {err!=null &&(
+            <Error err={err} client:visible/>
+        )}
+        {err==null &&(
+            <Router state={parsed} addr={addr} client:visible/>
+        )}
+		<Footer />
+	</body>
+</html>

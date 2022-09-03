@@ -1,4 +1,19 @@
 <script lang="ts">
+    import { current } from "../../ts/store";
+    import { updateURL } from "../../ts/utils";
+    
+    if(typeof window !== "undefined" && typeof window.location !== 'undefined') {
+        current.update((x) => {
+            let now = new Date();
+            if(x.lastUpdate == undefined || now.getMilliseconds() - x.lastUpdate.getMilliseconds() > 60000) {
+                x.lastUpdate = now;
+                updateURL(3,true);
+            }
+            x.state = 3;
+            return x
+        })
+    }
+
     const submit = () => {
         let human = (<HTMLInputElement>document.getElementById("human")).checked
         if (!human) {
