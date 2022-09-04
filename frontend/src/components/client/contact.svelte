@@ -1,4 +1,23 @@
 <script lang="ts">
+    import { current } from "../../ts/store";
+    import { getClient, updateURL } from "../../ts/utils";
+    
+    if(typeof window !== "undefined" && typeof window.location !== 'undefined') {
+        //check if user has pinged the server
+        getClient()
+        let now = new Date();
+        let last = 0;
+        current.subscribe((x) => {
+            if(x.lastUpdate != undefined){
+                let lastTime = new Date(x.lastUpdate)
+                last = lastTime.getTime();
+            }
+        })
+        if(now.getTime() - last > 6000000) {
+            updateURL(3,true);
+        }
+    }
+
     const submit = () => {
         let human = (<HTMLInputElement>document.getElementById("human")).checked
         if (!human) {

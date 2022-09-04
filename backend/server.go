@@ -36,7 +36,11 @@ func Start() error {
 	} else {
 		c_port := os.Getenv("C_PORT")
 		c_address := os.Getenv("C_ADDRESS")
-		url = "http://" + c_address + ":" + c_port
+		if c_port != "" {
+			url = "https://" + c_address + ":" + c_port
+		} else {
+			url = "https://" + c_address
+		}
 		log.Logf("Allow %s", url)
 	}
 	log.Logf("Starting server on port %s", port)
@@ -50,6 +54,7 @@ func Start() error {
 		AllowCredentials: true,
 		MaxAge:           time.Hour,
 	}))
+	r.Use()
 	r.GET("/v1/ping", auth.Ping)
 	r.GET("/v1/ws/:token", ws.WsHandler)
 	r.POST("/v1/login", ws.LoginGuard)

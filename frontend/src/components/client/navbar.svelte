@@ -1,21 +1,34 @@
 <script lang="ts">
     import { current } from "../../ts/store";
-    import { getClient, getStateFromQuery, updateClient, updateURL } from "../../ts/utils";
+    import { State } from "../../ts/types";
+    import { getClient, updateClient, updateURL } from "../../ts/utils";
 
-    export let search = "";
-    let state = getStateFromQuery(search);
-    if(search == ""){
+    getClient()
+    export let state = -100;
+    if(state == -100){
         //grab from localstorage
-        getClient()
         current.subscribe(x => {
-            if(x < 0){
+            if(x.state < 0){
                 return
             }
-            state = x;
-            updateClient()
-            updateURL(state)
+            state = x.state;
+            updateClient();
+            let now = new Date();
+            let last = 0
+            if (x.lastUpdate != undefined)
+                last = x.lastUpdate.getTime()
+            if (now.getTime() - last > 6000000) {
+                updateURL(state, true);
+            }else{
+                updateURL(state, false);
+            }
         });
     }
+
+    if(state == State.NONE){
+        state = State.ABOUT
+    }
+
     const BASE = "bg-gray-400 dark:bg-zinc-600 hover:border-2 border-pink-500 border-solid bg-opacity-80 dark:bg-opacity-60 cursor-pointer";
     const SEL = "bg-gray-700 dark:bg-black bg-opacity-80 dark:bg-opacity-60 cursor-default"
     
@@ -34,33 +47,30 @@
         if(state == id){
             return
         }
+        //id is string, so convert to int
+        state = parseInt(id);
         class_state[state] = BASE;
-        switch(id){
-            case "0":
-                class_state[0] = SEL;
-                current.set(0);
-                state = 0;
-                break;
-            case "1":
-                class_state[1] = SEL;
-                current.set(1);
-                state = 1;
-                break;
-            case "2":
-                class_state[2] = SEL;
-                current.set(2);
-                state = 2;
-                break;
-            case "3":
-                class_state[3] = SEL;
-                current.set(3);
-                state = 3;
-                break;
-            default:
-                return;
-        }
+        let load_flag = false;
+        let last = 0
+        current.update(x => {
+            x.state = state;
+            updateClient();
+            let now = new Date();
+            if (x.lastUpdate != undefined){
+                let lastTime = new Date(x.lastUpdate)
+                last = lastTime.getTime()
+            }
+            if (now.getTime() - last > 6000000) {
+                load_flag = true;
+            }else{
+                load_flag = false;
+            }
+            return x;
+        });
         updateClient();
-        updateURL(state);
+        updateURL(state, load_flag);
+
+
     }
 
     const invert_menu = () => {

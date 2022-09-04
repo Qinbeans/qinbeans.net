@@ -1,0 +1,40 @@
+version: '3'
+
+#connect to traefik_defualt network
+networks:
+  default:
+    name: traefik_default
+    external: true
+
+services:
+  frontend:
+    build: ./frontend
+    environment:
+      - API=api.qinbeans.net
+      - API_PORT=443
+      - API_HTTP=https
+      - API_WS=wss
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.frontend-qinbeansnet.rule=Host(`qinbeans.net`)"
+      - "traefik.http.routers.frontend-qinbeansnet.entrypoints=websecure"
+      - "traefik.http.routers.frontend-qinbeansnet.tls=true"
+      - "traefik.http.routers.frontend-qinbeansnet.tls.certresolver=cf"
+      - "traefik.http.services.frontend-qinbeansnet.loadbalancer.server.port=8085"
+  backend:
+    build: .
+    command: run
+    environment:
+      - PORT=${PORT}
+      - C_ADDRESS=qinbeans.net
+      - A_NAME=${A_NAME}
+      - ADDRESS=0.0.0.0
+      - GIN_MODE=release
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.backend-qinbeansnet.rule=Host(`api.qinbeans.net`)"
+      - "traefik.http.routers.backend-qinbeansnet.entrypoints=websecure"
+      - "traefik.http.routers.backend-qinbeansnet.tls=true"
+      - "traefik.http.routers.backend-qinbeansnet.tls.certresolver=cf"
+      - "traefik.http.services.backend-qinbeansnet.loadbalancer.server.port=${PORT}"
+    #add db service later

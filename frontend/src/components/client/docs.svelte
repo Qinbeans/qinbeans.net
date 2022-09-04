@@ -1,5 +1,22 @@
----
----
+<script lang="ts">
+    import { current } from '../../ts/store';
+    import { getClient, updateURL } from '../../ts/utils';
+    if(typeof window !== "undefined" && typeof window.location !== 'undefined') {
+        //check if user has pinged the server
+        getClient()
+        let now = new Date();
+        let last = 0;
+        current.subscribe((x) => {
+            if(x.lastUpdate != undefined){
+                let lastTime = new Date(x.lastUpdate)
+                last = lastTime.getTime();
+            }
+        })
+        if(now.getTime() - last > 6000000) {
+            updateURL(1,true);
+        }
+    }
+</script>
 <div class="w-full h-5/6 relative sm:mb-12 sm:p-2 sm:top-11 mb-15 p-1.5 top-10 min-h-fit">
     <div class="text-2xl text-center text-pink-500 underline">Docs</div>
     <div class="grid grid-cols-1 w-full gap-1">

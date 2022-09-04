@@ -26,11 +26,29 @@ export interface Error {
     message: string;
 }
 
+export const errMap = new Map<string, Error>([
+    ["400", { type: "400", message: "Uh oh something went wrong.  Are you sure this is the way back?" }],
+    ["404", { type: "404", message: "Are you lost?  Let's head back to safety :P" }],
+    ["500", { type: "500", message: "I think someone let the monkey's loose in the lab 😨"}],
+    ["503", { type: "503", message: "Whoops. Seems like that's not gonna work." }],
+    ["504", { type: "504", message: "0_0" }],
+    ["505", { type: "505", message: "These aren't the [protocols] you're looking for..." }],
+]);
+
 export interface Client {
     state: State;
     page?: number;
-    lastUpdate: Date;
+    lastUpdate?: Date;
 }
+
+//map of state to string
+export const stateMap = new Map<State, string>([
+    [State.ABOUT, "about"],
+    [State.DOCS, "docs"],
+    [State.BLOG, "blog"],
+    [State.CONTACT, "contact"],
+    [State.ERROR, "error"],
+]);
 
 export const newClient = (state: State, page?: number): Client => {
     if(page==null) {
