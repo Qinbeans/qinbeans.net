@@ -4,8 +4,8 @@ import { newClient } from "./types";
 
 export const sleep = (ms: number) => {
     let now = new Date()
-    let exitTime = now.getMilliseconds() + ms
-    while (now.getMilliseconds() > exitTime) {}
+    let exitTime = now.getTime() + ms
+    while (now.getTime() > exitTime) {}
 }
 
 export const updateURL = (state: State, load: boolean) => {
@@ -36,11 +36,15 @@ export const getClient = () => {
     const parsed:Client = JSON.parse(client)
     const now = new Date()
     let diff = 0
-    if(parsed.lastUpdate != undefined) {
-        diff = now.getTime() - parsed.lastUpdate.getTime()
+    let last = 0
+    console.log(parsed)
+    if(parsed != undefined && parsed.lastUpdate != undefined) {
+        let parsedTime: Date = new Date(parsed.lastUpdate)
+        last = parsedTime.getTime()
     }else{
         return null
     }
+    diff = now.getTime() - last
     //if the client is more than an hour old, simply return null
     if(diff > 1000 * 60 * 60) {
         clearClient()

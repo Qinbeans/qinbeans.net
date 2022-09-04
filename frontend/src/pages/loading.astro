@@ -4,6 +4,7 @@ import Header from "../components/header.svelte";
 import { errMap } from "../ts/types";
 import Error from "../components/error.svelte";
 import Router from "../components/router.svelte";
+import '../assets/styles/base.css';
 
 
 let lastLoc = Astro.url.searchParams.get("backtrace");
@@ -40,7 +41,7 @@ const addr = `${http}://${(port !== undefined)?`${api}:${port}`:api}/v1/ping`
             <Error err={err} client:visible/>
         )}
         {err==null &&(
-            <Router state={parsed} addr={addr} client:visible/>
+            <Router state={parsed} addr={addr} client:load/>
         )}
 		<Footer />
 	</body>

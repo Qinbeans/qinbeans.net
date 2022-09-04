@@ -1,17 +1,21 @@
 <script lang="ts">
     import { current } from "../../ts/store";
-    import { updateURL } from "../../ts/utils";
+    import { getClient, updateURL } from "../../ts/utils";
     
     if(typeof window !== "undefined" && typeof window.location !== 'undefined') {
-        current.update((x) => {
-            let now = new Date();
-            if(x.lastUpdate == undefined || now.getMilliseconds() - x.lastUpdate.getMilliseconds() > 60000) {
-                x.lastUpdate = now;
-                updateURL(3,true);
+        //check if user has pinged the server
+        getClient()
+        let now = new Date();
+        let last = 0;
+        current.subscribe((x) => {
+            if(x.lastUpdate != undefined){
+                let lastTime = new Date(x.lastUpdate)
+                last = lastTime.getTime();
             }
-            x.state = 3;
-            return x
         })
+        if(now.getTime() - last > 6000000) {
+            updateURL(3,true);
+        }
     }
 
     const submit = () => {

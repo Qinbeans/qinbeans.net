@@ -3,19 +3,23 @@
     import type { Post as P } from "../../ts/types";
     import { Modals, closeModal } from "svelte-modals";
     import { current } from "../../ts/store";
-    import { updateURL } from "../../ts/utils";
+    import { getClient, updateURL } from "../../ts/utils";
     //sends a request to backend and receives a json with a list of posts
     //request 9 posts per scroll, and push them into posts array
     if(typeof window !== "undefined" && typeof window.location !== 'undefined') {
-        current.update((x) => {
-            let now = new Date();
-            if(x.lastUpdate == undefined || now.getMilliseconds() - x.lastUpdate.getMilliseconds() > 60000) {
-                x.lastUpdate = now;
-                updateURL(2,true);
+        //check if user has pinged the server
+        getClient()
+        let now = new Date();
+        let last = 0;
+        current.subscribe((x) => {
+            if(x.lastUpdate != undefined){
+                let lastTime = new Date(x.lastUpdate)
+                last = lastTime.getTime();
             }
-            x.state = 2;
-            return x
         })
+        if(now.getTime() - last > 6000000) {
+            updateURL(2,true);
+        }
     }
     let posts = [
         {

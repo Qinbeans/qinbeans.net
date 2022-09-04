@@ -50,5 +50,5 @@
             <BlogIt />
     </div>
 {:else}
-    <Error type="404" message="I'm sorry, I don't believe you're authorized to be here.  It's ok because I can take you back home."/>
+    <Error err={{type:"404",message:"I'm sorry, I don't believe you're authorized to be here.  It's ok because I can take you back home."}}/>
 {/if}

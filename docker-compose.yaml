@@ -26,10 +26,10 @@ services:
     command: run
     environment:
       - PORT=${PORT}
-      - C_PORT=443
       - C_ADDRESS=qinbeans.net
       - A_NAME=${A_NAME}
       - ADDRESS=0.0.0.0
+      - GIN_MODE=release
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.backend-qinbeansnet.rule=Host(`api.qinbeans.net`)"

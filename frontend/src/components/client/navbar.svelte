@@ -3,10 +3,10 @@
     import { State } from "../../ts/types";
     import { getClient, updateClient, updateURL } from "../../ts/utils";
 
+    getClient()
     export let state = -100;
     if(state == -100){
         //grab from localstorage
-        getClient()
         current.subscribe(x => {
             if(x.state < 0){
                 return
@@ -14,8 +14,10 @@
             state = x.state;
             updateClient();
             let now = new Date();
-            if (x.lastUpdate == undefined || now.getMilliseconds() - x.lastUpdate.getMilliseconds() > 60000) {
-                x.lastUpdate = now;
+            let last = 0
+            if (x.lastUpdate != undefined)
+                last = x.lastUpdate.getTime()
+            if (now.getTime() - last > 6000000) {
                 updateURL(state, true);
             }else{
                 updateURL(state, false);
@@ -48,18 +50,27 @@
         //id is string, so convert to int
         state = parseInt(id);
         class_state[state] = BASE;
+        let load_flag = false;
+        let last = 0
         current.update(x => {
             x.state = state;
             updateClient();
             let now = new Date();
-            if (x.lastUpdate == undefined || now.getMilliseconds() - x.lastUpdate.getMilliseconds() > 60000) {
-                x.lastUpdate = now;
-                updateURL(state, true);
+            if (x.lastUpdate != undefined){
+                let lastTime = new Date(x.lastUpdate)
+                last = lastTime.getTime()
+            }
+            if (now.getTime() - last > 6000000) {
+                load_flag = true;
             }else{
-                updateURL(state, false);
+                load_flag = false;
             }
             return x;
         });
+        updateClient();
+        updateURL(state, load_flag);
+
+
     }
 
     const invert_menu = () => {

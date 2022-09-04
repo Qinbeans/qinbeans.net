@@ -1,4 +1,4 @@
-<footer class="fixed w-screen pointer-events-none bottom-1 sm:bottom-5 ">
+<footer class="fixed w-screen pointer-events-none bottom-1 sm:bottom-5 z-20">
   <!-- make horizontal list -->
   <div class="text-center justify-center pointer-events-auto">
     <ul class="flex justify-center list-none">
