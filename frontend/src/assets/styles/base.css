@@ -101,10 +101,11 @@ input[type="checkbox"].checkbox:checked::before {
         bottom: 0vh;
         height: 100%;
         z-index: 0;
-        background-image: url("../imgs/philmont2.jpg");
+        opacity: 0.5;
+        background-image: url("../imgs/philmont2.png");
         background-size: cover;
-        filter: blur(5px) brightness(30%);
-        -webkit-filter: blur(5px) brightness(30%);
+        filter: blur(5px) brightness(40%);
+        -webkit-filter: blur(5px) brightness(40%);
     }
     .exp-img {
         position: absolute;
@@ -114,10 +115,11 @@ input[type="checkbox"].checkbox:checked::before {
         z-index: 0;
         bottom: 0vh;
         height: 100%;
+        opacity: 0.5;
         background-image: url("../imgs/exp.png");
         background-size: cover;
-        filter: blur(2px);
-        -webkit-filter: blur(2px);
+        filter: blur(10px) brightness(20%);
+        -webkit-filter: blur(10px) brightness(20%);
     }
     .aatf-img {
         position: absolute;
@@ -127,10 +129,11 @@ input[type="checkbox"].checkbox:checked::before {
         bottom: 0vh;
         z-index: 0;
         height: 100%;
+        opacity: 0.5;
         background-image: url("../imgs/aatf.png");
         background-size: cover;
-        filter: blur(4px);
-        -webkit-filter: blur(4px);
+        filter: blur(10px) brightness(20%);
+        -webkit-filter: blur(10px) brightness(20%);
     }
     .scrollable {
         overflow: hidden;
@@ -182,10 +185,11 @@ p > img {
         bottom: 0vh;
         z-index: 0;
         height: 100%;
+        opacity: 0.5;
         background-image: url("../imgs/philmont2.jpg");
         background-size: cover;
-        filter: blur(5px) brightness(30%);
-        -webkit-filter: blur(5px) brightness(30%);
+        filter: blur(5px) brightness(40%);
+        -webkit-filter: blur(5px) brightness(40%);
     }
     .exp-img {
         position: absolute;
@@ -195,10 +199,11 @@ p > img {
         left: 0;
         bottom: 0vh;
         height: 100%;
+        opacity: 0.5;
         background-image: url("../imgs/exp.png");
         background-size: cover;
-        filter: blur(2px);
-        -webkit-filter: blur(2px);
+        filter: blur(10px) brightness(20%);
+        -webkit-filter: blur(10px) brightness(20%);
     }
     .aatf-img {
         position: absolute;
@@ -208,10 +213,11 @@ p > img {
         z-index: 0;
         bottom: 0vh;
         height: 100%;
+        opacity: 0.5;
         background-image: url("../imgs/aatf.png");
         background-size: cover;
-        filter: blur(4px);
-        -webkit-filter: blur(4px);
+        filter: blur(10px) brightness(20%);
+        -webkit-filter: blur(10px) brightness(20%);
     }
     .scrollable {
         overflow: hidden;
@@ -276,4 +282,16 @@ p > img {
 .modal_post{
     overflow: scroll;
     text-overflow: ellipsis;
+}
+input#email:invalid {
+    border: 2px solid rgb(236 72 153);
+}
+input#email:valid {
+    border: 2px solid rgb(74 222 128);
+}
+textarea#content:invalid {
+    border: 2px solid rgb(236 72 153);
+}
+textarea#content:valid {
+    border: 2px solid rgb(74 222 128);
 }

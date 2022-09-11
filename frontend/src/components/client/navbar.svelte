@@ -17,7 +17,7 @@
             let last = 0
             if (x.lastUpdate != undefined)
                 last = x.lastUpdate.getTime()
-            if (now.getTime() - last > 6000000) {
+            if (now.getTime() - last > 60000) {
                 updateURL(state, true);
             }else{
                 updateURL(state, false);
@@ -60,7 +60,7 @@
                 let lastTime = new Date(x.lastUpdate)
                 last = lastTime.getTime()
             }
-            if (now.getTime() - last > 6000000) {
+            if (now.getTime() - last > 60000) {
                 load_flag = true;
             }else{
                 load_flag = false;

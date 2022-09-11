@@ -23,7 +23,7 @@
             console.log("Time:",last)
         })
         console.log("Diff",now.getTime()-last)
-        if(now.getTime() - last > 6000000) {
+        if(now.getTime() - last > 60000) {
             pong(addr).catch((err) => {
                 console.log("Err",err)
                 window.location.href = window.location.origin+"/error/?code="+err.type

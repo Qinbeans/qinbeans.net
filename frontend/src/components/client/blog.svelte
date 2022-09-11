@@ -17,7 +17,7 @@
                 last = lastTime.getTime();
             }
         })
-        if(now.getTime() - last > 6000000) {
+        if(now.getTime() - last > 60000) {
             updateURL(2,true);
         }
     }
