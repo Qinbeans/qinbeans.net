@@ -2,6 +2,8 @@
     import { current } from "../../ts/store";
     import { State } from "../../ts/types";
     import { getClient, updateClient, updateURL } from "../../ts/utils";
+    import FaBrandsGithub from "svelte-icons-pack/fa/FaBrandsGithub";
+    import Icon from 'svelte-icons-pack/Icon.svelte';
 
     getClient()
     export let state = -100;
@@ -95,6 +97,11 @@
                     <li class="mr-2 ml-2 rounded-lg pl-2 pr-2 pt-1 pb-1 {class_state[1]}">
                         <span id="1" on:click={changeFocus}>Docs</span>
                     </li>
+                    <li class="mr-2 ml-2 rounded-lg pl-2 pr-2 pt-1 pb-1 {BASE}" on:click={() => {
+                        window.location.href = "https://github.com/Qinbeans";
+                    }}>
+                            <Icon size="30" src={FaBrandsGithub}/>
+                    </li>
                     <li class="mr-2 ml-2 text-4xl">
                         <span class="text-purple-600 shadow">Ryan Fong</span>
                     </li>
@@ -116,6 +123,13 @@
                     <li class="sm:pt-1.5 sm:pb-1.5 sm:mb-1.5 sm:text-xl sm:w-24 pt-0.5 pb-0.5 mb-0.5 text-2xl w-28 {class_state[1]}" id="1" on:click={changeFocus}>Docs</li>
                     <li class="sm:pt-1.5 sm:pb-1.5 sm:mb-1.5 sm:text-xl sm:w-24 pt-0.5 pb-0.5 mb-0.5 text-2xl w-28 {class_state[2]}" id="2" on:click={changeFocus}>Blog</li>
                     <li class="sm:pt-1.5 sm:pb-1.5 sm:mb-1.5 sm:text-xl sm:w-24 pt-0.5 pb-0.5 mb-0.5 text-2xl w-28 {class_state[3]}" id="3" on:click={changeFocus}>Contact</li>
+                    <li class="sm:pt-1.5 sm:pb-1.5 sm:mb-1.5 sm:text-xl sm:w-24 pt-0.5 pb-0.5 mb-0.5 text-2xl w-28 {BASE}">
+                        <!-- center vertically -->
+                        <a class="flex items-center" href="https://github.com/Qinbeans">
+                            <Icon src={FaBrandsGithub}/>
+                            Github
+                        </a>
+                    </li>
                 </ul>
             {/if}
         {/if}

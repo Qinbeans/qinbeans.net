@@ -21,6 +21,7 @@
     "@astrojs/deno": "^1.0.0",
     "@astrojs/webapi": "^1.0.0",
     "global": "^4.4.0",
+    "svelte-icons-pack": "^2.0.0",
     "svelte-markdown": "^0.2.3",
     "svelte-modals": "^1.2.0"
   }

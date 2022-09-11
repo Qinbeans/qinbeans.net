@@ -8,6 +8,7 @@ specifiers:
   astro: ^1.0.6
   global: ^4.4.0
   svelte: ^3.46.4
+  svelte-icons-pack: ^2.0.0
   svelte-markdown: ^0.2.3
   svelte-modals: ^1.2.0
 
@@ -15,6 +16,7 @@ dependencies:
   '@astrojs/deno': 1.0.0
   '@astrojs/webapi': 1.0.0
   global: 4.4.0
+  svelte-icons-pack: 2.0.0
   svelte-markdown: 0.2.3_svelte@3.49.0
   svelte-modals: 1.2.0
 
@@ -3223,6 +3225,10 @@ packages:
     dependencies:
       svelte: 3.49.0
     dev: true
+
+  /svelte-icons-pack/2.0.0:
+    resolution: {integrity: sha512-B0EjVQrdURQCY/n//vBmJA/cbrT6ngv6Ja4FXVXUlZjcSKhoXpIgmcQQ0lPH5PpCcJNKbDQYyxPnUW1KTrkWJA==}
+    dev: false
 
   /svelte-markdown/0.2.3_svelte@3.49.0:
     resolution: {integrity: sha512-2h680NzTXnAD0CXhxe3GeHl6W+ayG4iKQRl+BIDRw+R0mUE0OiNxP1Vt8Rn+aWevB/LBiBIPCAwvL+0BkG057A==}
