@@ -14,12 +14,12 @@
       </li>
       <li class="mr-1 ml-1 sm:mr-4 sm:ml-4">
         <a href="https://vitejs.dev">
-          <img class="w-4 h-4 sm:w-5 sm:h-5 rounded-md border-solid border-pink-500 hover:border-2" src="/logos/vite.jpg" alt="vite">
+          <img class="w-4 h-4 sm:w-5 sm:h-5 rounded-md border-solid border-pink-500 hover:border-2" src="/logos/vite.png" alt="vite">
         </a>
       </li>
       <li class="mr-1 ml-1 sm:mr-4 sm:ml-4">
         <a href="https://go.dev">
-          <img class="w-4 h-4 sm:w-5 sm:h-5 rounded-md border-solid border-pink-500 hover:border-2" src="/logos/go.jpg" alt="golang">
+          <img class="w-4 h-4 sm:w-5 sm:h-5 rounded-md border-solid border-pink-500 hover:border-2" src="/logos/go.png" alt="golang">
         </a>
       </li>
       <li class="mr-1 ml-1 sm:mr-4 sm:ml-4">

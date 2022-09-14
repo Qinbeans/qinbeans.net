@@ -10,3 +10,4 @@ interface ImportMetaEnv {
   interface ImportMeta {
     readonly env: ImportMetaEnv;
   }
+declare module 'svelte-icons-pack/fa/FaBrandsGithub';

@@ -1,6 +1,6 @@
 <!-- Sanitize -->
 <script lang="ts">
-    import Error from "../assets/error.svg";
+    import Error from "../assets/error.webp";
     import { current } from "../ts/store";
     import { errMap } from "../ts/types";
     import { updateClient, updateURL } from "../ts/utils";

@@ -1,5 +1,5 @@
 <script lang="ts">
-    import BaoziDance from "../../assets/baozidance.svg";
+    import BaoziDance from "../../assets/baozidance.webp";
 </script>
 
 <div class="w-screen h-screen grid place-content-center">
