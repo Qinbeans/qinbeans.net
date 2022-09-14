@@ -11,3 +11,4 @@ interface ImportMetaEnv {
     readonly env: ImportMetaEnv;
   }
 declare module 'svelte-icons-pack/fa/FaBrandsGithub';
+declare module 'svelte-icons-pack/fa/FaBrandsLinkedin';

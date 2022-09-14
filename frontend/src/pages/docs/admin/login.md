@@ -23,4 +23,4 @@ The backend sends a JSON back in and the frontend has to unmarshal it to retriev
 }
 ```
 
-![interconnect](/docs/admin/interconnect.png)
+![interconnect](/docs/admin/interconnect.webp)

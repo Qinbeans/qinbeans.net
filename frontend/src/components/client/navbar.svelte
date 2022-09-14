@@ -3,6 +3,7 @@
     import { State } from "../../ts/types";
     import { getClient, updateClient, updateURL } from "../../ts/utils";
     import FaBrandsGithub from "svelte-icons-pack/fa/FaBrandsGithub";
+    import FaBrandsLinkedin from "svelte-icons-pack/fa/FaBrandsLinkedin";
     import Icon from 'svelte-icons-pack/Icon.svelte';
 
     getClient()
@@ -100,10 +101,15 @@
                     <li class="mr-2 ml-2 rounded-lg pl-2 pr-2 pt-1 pb-1 {BASE}" on:click={() => {
                         window.location.href = "https://github.com/Qinbeans";
                     }}>
-                            <Icon size="30" src={FaBrandsGithub}/>
+                        <Icon size="30" src={FaBrandsGithub}/>
                     </li>
                     <li class="mr-2 ml-2 text-4xl">
                         <span class="text-purple-600 shadow">Ryan Fong</span>
+                    </li>
+                    <li class="mr-2 ml-2 rounded-lg pl-2 pr-2 pt-1 pb-1 {BASE}" on:click={() => {
+                        window.location.href = "https://www.linkedin.com/in/rybeats/";
+                    }}>
+                        <Icon size="30" color="rgb(37, 99, 235)" src={FaBrandsLinkedin}/>
                     </li>
                     <li class="mr-2 ml-2 rounded-lg pl-2 pr-2 pt-1 pb-1 {class_state[2]}">
                         <span id="2" on:click={changeFocus}>Blog</span>
@@ -114,7 +120,7 @@
                 </ul>
             </div>
         {:else}
-            <span class="text-center cursor-pointer {menu?SEL:BASE} text-2xl w-28 p-0.5 text-purple-600" on:click={invert_menu}>
+            <span class="text-center cursor-pointer {menu?SEL:BASE} text-3xl w-28 p-0.5 text-purple-600" on:click={invert_menu}>
                 Ryan Fong
             </span>
             {#if menu}
@@ -125,9 +131,13 @@
                     <li class="sm:pt-1.5 sm:pb-1.5 sm:mb-1.5 sm:text-xl sm:w-24 pt-0.5 pb-0.5 mb-0.5 text-2xl w-28 {class_state[3]}" id="3" on:click={changeFocus}>Contact</li>
                     <li class="sm:pt-1.5 sm:pb-1.5 sm:mb-1.5 sm:text-xl sm:w-24 pt-0.5 pb-0.5 mb-0.5 text-2xl w-28 {BASE}">
                         <!-- center vertically -->
-                        <a class="flex items-center" href="https://github.com/Qinbeans">
+                        <a class="flex justify-center" href="https://github.com/Qinbeans">
                             <Icon src={FaBrandsGithub}/>
-                            Github
+                        </a>
+                    </li>
+                    <li class="sm:pt-1.5 sm:pb-1.5 sm:mb-1.5 sm:text-xl sm:w-24 pt-0.5 pb-0.5 mb-0.5 text-2xl w-28 {BASE}">
+                        <a class="flex justify-center" href="https://www.linkedin.com/in/rybeats/">
+                            <Icon src={FaBrandsLinkedin}/>
                         </a>
                     </li>
                 </ul>
