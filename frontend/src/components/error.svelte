@@ -31,7 +31,6 @@
         }
     };
     onMount(() => {
-        console.log("click")
         if(err.type != "500"){
             let baozi = document.getElementById("baozi")
             if(baozi)

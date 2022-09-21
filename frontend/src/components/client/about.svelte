@@ -12,7 +12,6 @@
                 let lastTime = new Date(x.lastUpdate)
                 last = lastTime.getTime();
             }
-            console.log("Time:",last)
         })
         if(now.getTime() - last > 60000) {
             updateURL(0,true);

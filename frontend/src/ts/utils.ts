@@ -37,7 +37,6 @@ export const getClient = () => {
     const now = new Date()
     let diff = 0
     let last = 0
-    console.log(parsed)
     if(parsed != undefined && parsed.lastUpdate != undefined) {
         let parsedTime: Date = new Date(parsed.lastUpdate)
         last = parsedTime.getTime()
@@ -50,7 +49,6 @@ export const getClient = () => {
         clearClient()
         return null
     }
-    console.log("Parsed State",parsed.state)
     current.set(parsed)
     return parsed.page
 }

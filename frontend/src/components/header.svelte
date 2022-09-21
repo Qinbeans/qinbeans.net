@@ -1,5 +1,5 @@
 <script lang="ts">
-    export let favicon = "/favicon.ico";
+    import favicon from '../assets/bao.webp';
     export let title = "Ryan Fong";
 </script>
 <head>

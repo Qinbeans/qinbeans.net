@@ -1,6 +1,8 @@
 FROM node:slim AS BUILD
 WORKDIR /build
 
+RUN npm install -g pnpm
+
 COPY package.json package.json
 COPY astro.config.mjs astro.config.mjs
 COPY src src
@@ -8,14 +10,13 @@ COPY public public
 COPY tailwind.config.cjs tailwind.config.cjs
 COPY tsconfig.json tsconfig.json
 COPY .env.production .env.production
+COPY .npmrc package.json pnpm-lock.yaml ./
 
 # Install dependencies
-RUN yarn
-
-# ENTRYPOINT [ "yarn","run","dev","--host","--port=8085" ]
+RUN pnpm install
 
 # Build
-RUN yarn run build
+RUN pnpm run build
 
 FROM denoland/deno:distroless AS RUNNER
 

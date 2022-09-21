@@ -12,7 +12,6 @@
         ).then(
             text => {
                 content = text
-                console.log(content)
             }
         )
     }

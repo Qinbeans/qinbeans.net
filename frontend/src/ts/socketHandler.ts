@@ -18,17 +18,13 @@ export const handler = async () => {
     user.subscribe(async (u) => {
         const conn = u.conn
         if (conn === undefined) {//guard case
-            console.log("no connection")
             return
         }
         socket = conn.socket
-        console.log(socket.readyState)
         //sleep until connection is established
         while (socket.readyState != 1) {
-            // console.log("waiting for connection")
             await sleep(1000)
         }
-        console.log("connection established")
         socket.onmessage = (event) => {
             //0x09 is ping
             switch (event.data[0]) {
@@ -40,17 +36,14 @@ export const handler = async () => {
         }
         //close connection if error
         socket.onerror = (event) => {
-            console.log("Error: " + event.type)
             logout()
         }
         //close connection if closed
         socket.onclose = (event) => {
-            console.log("Closed: " + event.type)
             logout()
             return
         }
         socket.onopen = (event) => {
-            console.log("Connected: " + event.type)
         }
         socket.send("c")
     })

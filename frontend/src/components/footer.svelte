@@ -4,32 +4,32 @@
     <ul class="flex justify-center list-none">
       <li class="mr-1 ml-1 sm:mr-4 sm:ml-4">
         <a href="https://svelte.dev">
-          <img class="w-4 h-4 sm:w-5 sm:h-5 rounded-md border-solid border-pink-500 hover:border-2" src="/logos/svelte.png" alt="svelte">
+          <img class="w-4 h-4 sm:w-5 sm:h-5 rounded-md border-solid border-pink-500 hover:border-2" src="/logos/svelte.webp" alt="svelte">
         </a>
       </li>
       <li class="mr-1 ml-1 sm:mr-4 sm:ml-4">
         <a href="https://tailwindcss.com">
-          <img class="w-4 h-4 sm:w-5 sm:h-5 rounded-md border-solid border-pink-500 hover:border-2" src="/logos/tailwind.png" alt="tailwind">
+          <img class="w-4 h-4 sm:w-5 sm:h-5 rounded-md border-solid border-pink-500 hover:border-2" src="/logos/tailwind.webp" alt="tailwind">
         </a>
       </li>
       <li class="mr-1 ml-1 sm:mr-4 sm:ml-4">
         <a href="https://vitejs.dev">
-          <img class="w-4 h-4 sm:w-5 sm:h-5 rounded-md border-solid border-pink-500 hover:border-2" src="/logos/vite.png" alt="vite">
+          <img class="w-4 h-4 sm:w-5 sm:h-5 rounded-md border-solid border-pink-500 hover:border-2" src="/logos/vite.webp" alt="vite">
         </a>
       </li>
       <li class="mr-1 ml-1 sm:mr-4 sm:ml-4">
         <a href="https://go.dev">
-          <img class="w-4 h-4 sm:w-5 sm:h-5 rounded-md border-solid border-pink-500 hover:border-2" src="/logos/go.png" alt="golang">
+          <img class="w-4 h-4 sm:w-5 sm:h-5 rounded-md border-solid border-pink-500 hover:border-2" src="/logos/go.webp" alt="golang">
         </a>
       </li>
       <li class="mr-1 ml-1 sm:mr-4 sm:ml-4">
         <a href="https://gin-gonic.com">
-          <img class="w-4 h-4 sm:w-5 sm:h-5 rounded-md border-solid border-pink-500 hover:border-2" src="/logos/gin.png" alt="gin">
+          <img class="w-4 h-4 sm:w-5 sm:h-5 rounded-md border-solid border-pink-500 hover:border-2" src="/logos/gin.webp" alt="gin">
         </a>
       </li>
       <li class="mr-1 ml-1 sm:mr-4 sm:ml-4">
         <a href="https://astro.build/">
-          <img class="w-4 h-4 sm:w-5 sm:h-5 rounded-md border-solid border-pink-500 hover:border-2" src="/logos/astro.png" alt="astro">
+          <img class="w-4 h-4 sm:w-5 sm:h-5 rounded-md border-solid border-pink-500 hover:border-2" src="/logos/astro.webp" alt="astro">
         </a>
       </li>
     </ul>

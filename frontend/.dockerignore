@@ -1,7 +1,5 @@
 node_modules/
 .vscode/
-.npmrc
 .gitignore
 README.md
-pnpm-lock.yaml
 *.test.ts
