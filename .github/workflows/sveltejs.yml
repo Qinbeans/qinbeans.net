@@ -15,14 +15,17 @@ defaults:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        bun-version: ["latest"]
     steps:
-    - uses: actions/checkout@v3
-    - name: Setup pnpm
-      uses: pnpm/action-setup@v2.2.2
+    - uses: actions/checkout@v2
+    - name: Setup Bun
+      uses: xHyroM/setup-bun@v0.1.7
       with:
-        dest: frontend
+        bun-version: ${{ matrix.bun-version }}
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        misc-test-builds: false
     - run: pnpm install
     - run: pnpm run build
