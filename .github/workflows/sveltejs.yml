@@ -23,6 +23,6 @@ jobs:
     - name: Setup pnpm
       uses: pnpm/action-setup@v2.2.2
       with:
-        dest: ./frontend
+        dest: frontend
     - run: pnpm install
     - run: pnpm run build
