@@ -1,4 +1,4 @@
 .env
-tmp
-target
-pkg
+tmp/
+target/
+pkg/
