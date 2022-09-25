@@ -2,6 +2,7 @@
     import { current } from "../../ts/store";
     import { State } from "../../ts/types";
     import { getClient, updateClient, updateURL } from "../../ts/utils";
+    import init, { update_url } from "../../wasm-lib/pkg";
     import FaBrandsGithub from "svelte-icons-pack/fa/FaBrandsGithub";
     import FaBrandsLinkedin from "svelte-icons-pack/fa/FaBrandsLinkedin";
     import Icon from 'svelte-icons-pack/Icon.svelte';
@@ -21,9 +22,13 @@
             if (x.lastUpdate != undefined)
                 last = x.lastUpdate.getTime()
             if (now.getTime() - last > 60000) {
-                updateURL(state, true);
+                init().then(() => {
+                    update_url(state, true);
+                })
             }else{
-                updateURL(state, false);
+                init().then(() => {
+                    update_url(state, false);
+                })
             }
         });
     }
@@ -70,10 +75,9 @@
             }
             return x;
         });
-        updateClient();
-        updateURL(state, load_flag);
-
-
+        init().then(() => {
+            update_url(state, load_flag);
+        })
     }
 
     const invert_menu = () => {

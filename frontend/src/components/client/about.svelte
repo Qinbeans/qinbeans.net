@@ -1,6 +1,7 @@
 <script lang="ts">
-    import { getClient, updateURL } from "../../ts/utils";
+    import { getClient } from "../../ts/utils";
     import { current } from "../../ts/store";
+    import init, { update_url } from "../../wasm-lib/pkg";
 
     if(typeof window !== "undefined" && typeof window.location !== 'undefined') {
         //check if user has pinged the server
@@ -14,7 +15,9 @@
             }
         })
         if(now.getTime() - last > 60000) {
-            updateURL(0,true);
+            init().then(() => {
+                update_url(0, true);
+            })
         }
     }
 

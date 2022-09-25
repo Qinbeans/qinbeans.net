@@ -3,9 +3,10 @@
     import Error from "../assets/error.webp";
     import { current } from "../ts/store";
     import { errMap } from "../ts/types";
-    import { updateClient, updateURL } from "../ts/utils";
+    import { updateClient } from "../ts/utils";
     import { onMount } from "svelte";
     import type { Error as EStat } from "../ts/types";
+    import init, { update_url } from "../wasm-lib/pkg";
 
     export let err: EStat;
     if (err === undefined) {
@@ -27,7 +28,9 @@
             });
             // update client
             updateClient();
-            updateURL(0,true);
+            init().then(() => {
+                update_url(0, true);
+            })
         }
     };
     onMount(() => {
