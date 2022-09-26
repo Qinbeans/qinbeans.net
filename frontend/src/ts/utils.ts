@@ -1,20 +1,5 @@
-import { State, Client, stateMap } from "./types";
+import type { Client } from "./types"
 import { current } from "./store"
-import { newClient } from "./types";
-
-export const sleep = (ms: number) => {
-    let now = new Date()
-    let exitTime = now.getTime() + ms
-    while (now.getTime() > exitTime) {}
-}
-
-export const updateURL = (state: State, load: boolean) => {
-    if(load) {
-        globalThis.location.href = globalThis.location.origin + "/loading/?backtrace=" + state;
-    } else {
-        globalThis.location.href = globalThis.location.origin + "/" + stateMap.get(state);
-    }
-}
 
 export const updateClient = () => {
     current.subscribe(state => {

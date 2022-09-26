@@ -54,7 +54,6 @@ func Start() error {
 		AllowCredentials: true,
 		MaxAge:           time.Hour,
 	}))
-	r.Use()
 	r.GET("/v1/ping", auth.Ping)
 	r.GET("/v1/ws/:token", ws.WsHandler)
 	r.POST("/v1/login", ws.LoginGuard)

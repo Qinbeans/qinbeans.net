@@ -1,7 +1,7 @@
 <script lang="ts">
     import { current } from "../../ts/store";
     import { State } from "../../ts/types";
-    import { getClient, updateClient, updateURL } from "../../ts/utils";
+    import { getClient, updateClient } from "../../ts/utils";
     import init, { update_url } from "../../wasm-lib/pkg";
     import FaBrandsGithub from "svelte-icons-pack/fa/FaBrandsGithub";
     import FaBrandsLinkedin from "svelte-icons-pack/fa/FaBrandsLinkedin";

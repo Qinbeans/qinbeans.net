@@ -3,7 +3,8 @@
 
     import { stateMap } from "../ts/types";
     import { getClient, updateClient } from "../ts/utils";
-    import { pong } from '../ts/verify'
+    // import { pong } from '../ts/verify'
+    import init, { pong } from "../wasm-lib/pkg";
     import Loading from './views/loading.svelte'
 
     export let addr = "";
@@ -20,28 +21,11 @@
             }
         })
         if(now.getTime() - last > 60000) {
-            pong(addr).catch((err) => {
-                window.location.href = window.location.origin+"/error/?code="+err.type
-            }).then((res) => {
-                if(res == undefined) {
-                    window.location.href = window.location.origin+"/error/?code=500"
-                }
-                current.update((x2) => {
-                    if(state == -100){
-                        if(exists === null || exists === undefined) {
-                            state = 0
-                        }
-                    }
-                    x2.state = state
-                    let redirect = stateMap.get(state)
-                    if(redirect != undefined){
-                        redir = window.location.origin+"/"+redirect;
-                    }
-                    x2.lastUpdate = now
-                    return x2
+            init().then(() => {
+                console.log(addr)
+                pong(addr,window.location.origin+"/error?code=500").catch((e) => {
+                    console.log(e)
                 })
-                updateClient()
-                window.location.href = redir
             })
         }else{
             current.update((x) => {

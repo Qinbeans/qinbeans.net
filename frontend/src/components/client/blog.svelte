@@ -3,7 +3,8 @@
     import type { Post as P } from "../../ts/types";
     import { Modals, closeModal } from "svelte-modals";
     import { current } from "../../ts/store";
-    import { getClient, updateURL } from "../../ts/utils";
+    import { getClient } from "../../ts/utils";
+    import init, { update_url } from "../../wasm-lib/pkg";
     //sends a request to backend and receives a json with a list of posts
     //request 9 posts per scroll, and push them into posts array
     if(typeof window !== "undefined" && typeof window.location !== 'undefined') {
@@ -18,7 +19,9 @@
             }
         })
         if(now.getTime() - last > 60000) {
-            updateURL(2,true);
+            init().then(() => {
+                update_url(2,true);
+            })
         }
     }
     let posts = [
