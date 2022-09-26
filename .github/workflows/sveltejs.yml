@@ -27,7 +27,7 @@ jobs:
         # Optional version of wasm-pack to install(eg. 'v0.9.1', 'latest')
         version: 'latest'
     - name: Build WASM
-      run: wasm-pack build --target web wasm-lib
+      run: wasm-pack build --target web frontend/src/wasm-lib
     - name: Setup Node
       uses: actions/setup-node@v3
       with:
