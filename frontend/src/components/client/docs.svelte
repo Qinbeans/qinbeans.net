@@ -14,7 +14,9 @@
             }
         })
         if(now.getTime() - last > 60000) {
-            updateURL(1,true);
+            init().then(() => {
+                update_url(1,true);
+            })
         }
     }
 </script>
