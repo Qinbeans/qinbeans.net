@@ -22,17 +22,18 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Setup WASM Pack
-    - uses: jetli/wasm-pack-action@v0.3.0
+      uses: jetli/wasm-pack-action@v0.3.0
       with:
         # Optional version of wasm-pack to install(eg. 'v0.9.1', 'latest')
         version: 'latest'
     - name: Build WASM
       run: wasm-pack build --target web wasm-lib
     - name: Setup Node
-    - uses: actions/setup-node@v3
+      uses: actions/setup-node@v3
       with:
         node-version: 16
     - name: Install dependencies
       run: npm install
     - name: Build
       run: npm run build
+    
