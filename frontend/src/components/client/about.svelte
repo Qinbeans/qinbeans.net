@@ -25,11 +25,7 @@
 
 <div class="h-screen">
     <div class="absolute top-10 sm:top-11 pl-3 pr-3 sm:pl-24 sm:pr-24 justify-center scrollable z-10 text-pa">
-<<<<<<< HEAD
         <div class="text-3xl sm:text-4xl text-center text-purple-500">Who Am I</div>
-=======
-        <div class="text-3xl sm:text-5xl text-center text-purple-500">Who Am I</div>
->>>>>>> 9bb523f (Rebase attempt)
         <div class="text-md sm:text-2xl text-center text">
             My name is Ryan Fong.  I started off coding, if you can call visual languages like Scratch and Snap coding, in middle school.  I never imagined myself becoming a Computer Science major back then, but I think I'd be satisifed with the path I've chosen.
         </div>

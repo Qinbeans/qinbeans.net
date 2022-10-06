@@ -4,7 +4,7 @@
     import { stateMap } from "../ts/types";
     import { getClient, updateClient } from "../ts/utils";
     // import { pong } from '../ts/verify'
-    import init, { pong } from "../wasm-lib/pkg";
+    import init, { pong, update_url } from "../wasm-lib/pkg";
     import Loading from './views/loading.svelte'
 
     export let addr = "";
@@ -23,7 +23,21 @@
         if(now.getTime() - last > 60000) {
             init().then(() => {
                 console.log(addr)
-                pong(addr,window.location.origin+"/error?code=500").catch((e) => {
+                if(state==-100){
+                    state=0
+                }
+                current.update((x) => {
+                    x.state = state;
+                    x.addr = addr;
+                    x.lastUpdate = now;
+                    return x;
+                });
+                pong(addr,window.location.origin+"/error?code=500")
+                .then((_)=>{
+                    updateClient()
+                    update_url(state,false)
+                })
+                .catch((e) => {
                     console.log(e)
                 })
             })

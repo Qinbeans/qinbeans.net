@@ -20,4 +20,4 @@ lazy_static = "1.4"
 wasm-bindgen-futures = "0.4"
 [dependencies.web-sys]
 version = "0.3"
-features = ["Window", "Location","Request","RequestInit","RequestMode","AbortSignal","AbortController"]
+features = ["Window", "Location","Request","RequestInit","RequestMode","AbortSignal","AbortController","console"]

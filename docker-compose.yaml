@@ -11,7 +11,6 @@ services:
     build: ./frontend
     environment:
       - API=api.qinbeans.net
-      - API_PORT=443
       - API_HTTP=https
       - API_WS=wss
     labels:
@@ -33,8 +32,13 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.backend-qinbeansnet.rule=Host(`api.qinbeans.net`)"
+      - "traefik.http.middlewares.backend-cors.headers.accesscontrolallowmethods=GET,OPTIONS,PUT"
+      - "traefik.http.middlewares.backend-cors.headers.accesscontrolalloworiginlist=https://qinbeans.net"
+      - "traefik.http.middlewares.backend-cors.headers.accesscontrolmaxage=100"
+      - "traefik.http.middlewares.backend-cors.headers.addvaryheader=true"
       - "traefik.http.routers.backend-qinbeansnet.entrypoints=websecure"
       - "traefik.http.routers.backend-qinbeansnet.tls=true"
       - "traefik.http.routers.backend-qinbeansnet.tls.certresolver=cf"
       - "traefik.http.services.backend-qinbeansnet.loadbalancer.server.port=${PORT}"
+      - "traefik.http.routers.service.middlewares=backend-cors"
     #add db service later

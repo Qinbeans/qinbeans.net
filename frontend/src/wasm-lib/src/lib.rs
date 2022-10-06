@@ -106,10 +106,15 @@ pub async fn pong(addr: &str, error: &str) -> Result<JsValue,JsError> {
     let resp = window.fetch_with_request(&request);
 
     let res = JsFuture::from(resp).await;
-    if let Err(_) = res {
+    if let Err(e) = res {
         if let Err(_) = window.location().set_href(error){
             return Err(JsError::new("Failed to redirect"));
         }
+        //use console.log
+        //make js_sys::Array
+        let arr = js_sys::Array::new();
+        arr.push(&JsValue::from_str(e.as_string().unwrap().as_str()));
+        web_sys::console::log(&arr);
         return Err(JsError::new("500"));
     }
     Ok(JsValue::from_str("200"))

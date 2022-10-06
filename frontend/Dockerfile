@@ -1,3 +1,14 @@
+# Rust build
+FROM rust:slim-bullseye AS RUST_BUILD
+WORKDIR /build
+
+RUN apt-get update && apt-get install -y curl
+
+RUN curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+COPY ./src/wasm-lib .
+
+RUN wasm-pack build --release --target web
+
 FROM node:slim AS BUILD
 WORKDIR /build
 
@@ -11,12 +22,14 @@ COPY tailwind.config.cjs tailwind.config.cjs
 COPY tsconfig.json tsconfig.json
 COPY .env.production .env.production
 COPY .npmrc package.json pnpm-lock.yaml ./
+COPY --from=RUST_BUILD /build/pkg src/wasm-lib/pkg
 
 # Install dependencies
 RUN pnpm install
 
 # Build
 RUN pnpm run build
+
 
 FROM denoland/deno:distroless AS RUNNER
 
