@@ -3,3 +3,7 @@ tmp/
 target/
 Cargo.lock
 db
+node_modules
+build
+.svelte-kit
+bun.lockb
