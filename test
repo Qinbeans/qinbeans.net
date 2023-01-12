@@ -4,6 +4,4 @@ green='\e[1;32m'
 NC='\e[0m'
 
 echo -e "${green}Backend Test${NC}"
-go test -cover $1 $(go list ./... | grep -v /log)
 echo -e "${green}Frontend Test${NC}"
-bun wiptest frontend

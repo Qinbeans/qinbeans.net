@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ "$1" == "migrate"]; then
+    # if migrations directory does not exist
+    if [ ! -d ./migrations ]; then
+        # create migrations directory
+        diesel setup
+    fi
+
+    diesel migration run
+
+    diesel migration redo
+else
+    cargo run
+fi

@@ -1,0 +1,26 @@
+FROM rust:slim-buster AS Build
+
+WORKDIR /backend
+
+COPY ./src ./src
+COPY ./Cargo.toml ./Cargo.toml
+
+RUN cargo build
+
+FROM rust:slim-buster AS Run
+
+USER app
+
+RUN apt-get update && apt-get upgrade && apt-get install libmysqlclient-dev
+
+RUN cargo install diesel_cli --no-default-features --features mysql
+
+WORKDIR /home/app
+
+COPY --from=Build --chown=app ./target/release/backend /usr/bin
+
+COPY --chown=app ./startup ./startup
+
+RUN ./startup
+
+RUN backend

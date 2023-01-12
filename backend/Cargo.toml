@@ -1,0 +1,16 @@
+[package]
+name = "backend"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = { version = "0.5.0-rc.2", features = ["json","uuid","tls"] }
+diesel = { version = "2.0.2", features = ["mysql","chrono"] }
+uuid = { version = "0.8.2", features = ["v4"] }
+dotenvy = "0.15"
+chrono = "0.4.23"
+image = "0.24.5"
+serde_json = "1.0.91"
+tokio = { version = "1.24.1", features = ["sync"] }
