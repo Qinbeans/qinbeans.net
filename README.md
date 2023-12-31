@@ -1,15 +1,5 @@
-https://qinbeans.net
+# My Portfolio @qinbeans.net
 
-[![Go](https://github.com/Qinbeans/qinbeans.net/actions/workflows/go.yml/badge.svg)](https://github.com/Qinbeans/qinbeans.net/actions/workflows/go.yml)
-[![Svelte CI](https://github.com/Qinbeans/qinbeans.net/actions/workflows/sveltejs.yml/badge.svg)](https://github.com/Qinbeans/qinbeans.net/actions/workflows/sveltejs.yml)
+A simplification of my original website using Sveltekit and Supabase
 
-# qinbeans.net
-
-My website
-
-# Index
-- [info](https://github.com/Qinbeans/qinbeans.net/wiki)
-- [Installation and Building](https://github.com/Qinbeans/qinbeans.net/wiki/Installation-and-Building)
-- [Stack](https://github.com/Qinbeans/qinbeans.net/wiki/Stack)
-- [Testing](https://github.com/Qinbeans/qinbeans.net/wiki/Testing)
-- [Documentation](https://github.com/Qinbeans/qinbeans.net/wiki/Docs)
+[Click here to visit qinbeans.net](https://qinbeans.net)
