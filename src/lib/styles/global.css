@@ -2,9 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+.holder::-webkit-scrollbar {
+    display: none;
+}
+
+.holder {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 /* add frosty background */
 .frosty {
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(7px);
 }
 
 .bg-image {
