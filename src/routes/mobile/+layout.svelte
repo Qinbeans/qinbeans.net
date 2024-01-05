@@ -11,6 +11,7 @@
     }
 
     const handleRailChange = () => {
+        handleRail()
         if (currentTile == data.currentTile) {
             return
         }
@@ -33,7 +34,7 @@
     Qinbeans/{data.currentTile.toUpperCase()}
 </AppBar>
 
-<main class="bg-image h-dvh w-dvw fixed text-center">
+<main class="bg-image-m h-dvh w-dvw fixed text-center">
     <slot/>
 </main>
 <div class="pt-12 h-dvh">
