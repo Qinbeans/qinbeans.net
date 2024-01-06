@@ -1,5 +1,6 @@
 <script lang="ts">
     import { DOC_TYPES } from "$lib/scripts/constants";
+	import { Accordion } from "@skeletonlabs/skeleton";
 
     export let title = '';
     export let description = '';
@@ -17,6 +18,7 @@
     export let margin: string = "m-2";
 
     export let inner_padding: string = "p-2";
+    export let inner_width: string = "w-full";
 
     // check if doc_type is in DOC_TYPES
     if (!DOC_TYPES.includes(doc_type)) {
@@ -24,20 +26,18 @@
     }
 </script>
 
-<div class="grid place-content-center card frosty {padding} {margin} {background} {color} {height} {width}">
+<div class="card frosty {padding} {margin} {background} {color} {height} {width}">
     {#if enable_image}
         <img src={image} alt={title} class="object-cover object-center rounded-2xl"/>
     {/if}
-    <div class="{inner_padding}">
+    <div class="{inner_padding} {inner_width}">
         <h1 class="text-center">{title}</h1>
         <div class="border-b border-black"></div>
-        {#if description != null && description != ''}
-            <p>{@html description}</p>
-        {:else}
-            <slot/>
-        {/if}
-        {#if doc_type == "article"}
-            <div class="border-b border-black"></div>
+        {#if doc_type == "accordion"}
+            <Accordion>
+                <slot/>
+            </Accordion>
+        {:else if doc_type == "article"}
             <div class="flex justify-between">
                 <div class="flex items-center">
                     <p class="text-sm">by {author}</p>
@@ -46,6 +46,13 @@
                     <p class="text-sm">{date}</p>
                 </div>
             </div>
+        {:else}
+            <div class="border-b border-black"></div>
+            {#if description != null && description != ''}
+                <p>{@html description}</p>
+            {:else}
+                <slot/>
+            {/if}
         {/if}
     </div>
 </div>

@@ -18,6 +18,13 @@ h4 {
     @apply text-xl;
 }
 
+a:hover {
+    @apply text-blue-600;
+}
+a {
+    text-shadow: 1px 1px 1px black;
+}
+
 .holder::-webkit-scrollbar {
     display: none;
 }

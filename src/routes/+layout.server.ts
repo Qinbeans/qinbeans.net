@@ -4,7 +4,7 @@ import type { LayoutServerLoad } from "./$types";
 export const load: LayoutServerLoad = async ({ url, request }) => {
     // check if the user is on a mobile device
     if (request.headers.get("user-agent")?.match(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i)) {
-        if (url.pathname.includes("/mobile") || url.pathname.includes("/assets")) {
+        if (url.pathname.includes("/mobile") || url.pathname.includes("/assets") || url.pathname.includes("/api") ) {
             return {
                 response: "pass"
             }

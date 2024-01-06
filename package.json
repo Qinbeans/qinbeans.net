@@ -41,6 +41,7 @@
 		"@supabase/supabase-js": "^2.39.1",
 		"@sveltejs/adapter-cloudflare": "^2.3.4",
 		"@sveltejs/vite-plugin-svelte": "^2.5.3",
-		"svelte-local-storage-store": "^0.6.4"
+		"octokit": "^3.1.2",
+		"svelte-persisted-store": "^0.8.1"
 	}
 }

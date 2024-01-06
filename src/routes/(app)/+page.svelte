@@ -4,13 +4,13 @@
 </script>
 
 <div class="grid grid-cols-1 gap-3 grid-flow-row w-dvw py-24 px-96">
-    <Card title="What I do." inner_padding="px-28 py-14" author="" date="" doc_type="document" height="h-fill" background="bg-black/25" color="text-white" width="w-full" enable_image={false}>
+    <Card title="What I do." inner_padding="px-[15%] py-8" author="" date="" doc_type="document" height="h-fill" background="bg-black/25" color="text-white" width="w-full" enable_image={false}>
         <p>
             I am a full-stack developer with a passion for creating beautiful and functional websites and applications.
         </p>
-        <Carasel content={["/assets/examples/calculator.webp", "/assets/examples/bloomlabs.webp", "/assets/examples/editor.webp", "/assets/examples/login.webp", "/assets/examples/yabai.webp"]} height="h-fill" padding="p-0" inner_class="w-fill shrink-0" image_class="h-64 w-full object-contain"/>
+        <Carasel content={["/assets/examples/calculator.webp", "/assets/examples/bloomlabs.webp", "/assets/examples/editor.webp", "/assets/examples/login.webp", "/assets/examples/yabai.webp"]} height="h-fill" padding="p-0" inner_class="w-fill shrink-0" image_class="h-[32rem] w-full object-contain"/>
     </Card>
-    <Card title="Where to find me?" inner_padding="px-28 py-14" author="" date="" doc_type="document" height="h-fill" background="bg-black/25" color="text-white" width="w-full" enable_image={false}>
+    <Card title="Where to find me?" inner_padding="px-[15%] py-8" author="" date="" doc_type="document" height="h-fill" background="bg-black/25" color="text-white" width="w-full" enable_image={false}>
         <ul>
             <li>
                 <a href="https://github.com/Qinbeans" class="flex gap-2">
