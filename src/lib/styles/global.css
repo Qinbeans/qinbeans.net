@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+    @apply text-4xl;
+}
+
+h2 {
+    @apply text-3xl;
+}
+
+h3 {
+    @apply text-2xl;
+}
+
+h4 {
+    @apply text-xl;
+}
+
+a:hover {
+    @apply text-blue-600;
+}
+a {
+    text-shadow: 1px 1px 1px black;
+}
+
+.holder::-webkit-scrollbar {
+    display: none;
+}
+
+.holder {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* add frosty background */
+.frosty {
+    backdrop-filter: blur(7px);
+}
+
+.bg-image {
+    background-image: url('/assets/tranquil.webp');
+    background-size: cover;
+}
+
+.bg-image-m {
+    background-image: url('/assets/tranquil-m.webp');
+    background-size: cover;
+}
+
+/* app rail slide animation */
+@keyframes app-rail-slide {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* app rail slide animation */
+@keyframes app-rail-slide-reverse {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* app rail slide class */
+.app-slide.rail {
+    animation: app-rail-slide 0.5s ease-in-out;
+}
+
+/* app rail slide class */
+.app-slide-reverse.rail {
+    animation: app-rail-slide-reverse 0.5s ease-in-out;
+    transform: translateX(-100%);
+}
+
+.app-slide-disabled.rail {
+    transform: translateX(-100%);
+}
+
+@keyframes app-bar-slide {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes app-bar-slide-reverse {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.app-slide.bar {
+    animation: app-bar-slide-reverse 0.25s ease-in-out;
+    transform: translateY(-100%);
+}
+
+.app-slide-reverse.bar {
+    animation: app-bar-slide 0.25s ease-in-out;
+}
+
+.app-slide-disabled.bar {
+    transform: translateY(0%);
+}
