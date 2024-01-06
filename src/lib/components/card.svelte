@@ -3,6 +3,7 @@
 	import { Accordion } from "@skeletonlabs/skeleton";
 
     export let title = '';
+    export let title_class = '';
     export let description = '';
     export let image = '/assets/placeholder.webp';
     export let author: string;
@@ -31,8 +32,10 @@
         <img src={image} alt={title} class="object-cover object-center rounded-2xl"/>
     {/if}
     <div class="{inner_padding} {inner_width}">
-        <h1 class="text-center">{title}</h1>
-        <div class="border-b border-black"></div>
+        {#if title != null && title != ''}
+            <h1 class="text-center {title_class}">{title}</h1>
+            <div class="border-b border-black"></div>
+        {/if}
         {#if doc_type == "accordion"}
             <Accordion>
                 <slot/>
@@ -47,7 +50,6 @@
                 </div>
             </div>
         {:else}
-            <div class="border-b border-black"></div>
             {#if description != null && description != ''}
                 <p>{@html description}</p>
             {:else}

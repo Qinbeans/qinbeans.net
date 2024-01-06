@@ -56,7 +56,7 @@
 
 </script>
 <Toast/>
-<div class="grid grid-cols-1 gap-3 grid-flow-row w-dvw py-24 px-96">
+<div class="grid grid-cols-1 gap-3 grid-flow-row w-dvw py-14 px-[15%]">
     <Card title="Contact" inner_padding="px-[15%] py-8" author="" date="" doc_type="document" height="h-fill" background="bg-black/25" color="text-white" width="w-full" inner_width="w-full" enable_image={false}>
         <p class="py-2 text-center">You can contact me through these methods:</p>
         <ul class="w-full text-center">
@@ -76,7 +76,7 @@
     </Card>
     <Card title="Contact Form" inner_padding="px-[15%] py-8" author="" date="" doc_type="document" height="h-fill" background="bg-black/25" color="text-white" width="w-full" inner_width="w-full" enable_image={false}>
         <p class="py-2 text-center">You can also submit a ticket</p>
-        <form class="flex flex-col" on:submit={submit}>
+        <form id="contact" class="flex flex-col" on:submit={submit}>
             <label for="name" class="text-gray-200">Name</label>
             <input bind:value={formData.name} type="text" width=100% name="name" id="name" class="mb-2 bg-transparent border-b border-gray-200 focus:border-gray-200 focus:ring-0 focus:outline-none"/>
             <label for="email" class="text-gray-200">Email</label>

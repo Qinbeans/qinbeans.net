@@ -3,7 +3,7 @@
     import Carasel from '$lib/components/carasel.svelte';
 </script>
 
-<div class="grid grid-cols-1 gap-3 grid-flow-row w-dvw py-24 px-96">
+<div class="grid grid-cols-1 gap-3 grid-flow-row w-dvw py-14 px-[15%]">
     <Card title="What I do." inner_padding="px-[15%] py-8" author="" date="" doc_type="document" height="h-fill" background="bg-black/25" color="text-white" width="w-full" enable_image={false}>
         <p>
             I am a full-stack developer with a passion for creating beautiful and functional websites and applications.

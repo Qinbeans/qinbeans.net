@@ -14,6 +14,11 @@ export const load: LayoutServerLoad = async ({ url, request }) => {
         // redirect to the mobile version
         throw redirect(302, path);
     }
+    // if the user is not on a mobile device, but is on the mobile version of the site, redirect them to the desktop version
+    if (url.pathname.includes("/mobile")) {
+        const path = `${url.origin}${url.pathname.replace("/mobile", "")}`;
+        throw redirect(302, path);
+    }
     return {
         response: "pass"
     }
