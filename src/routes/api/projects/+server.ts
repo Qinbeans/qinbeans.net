@@ -43,11 +43,11 @@ const getReadme = async (project: ProjectData) => {
 
 /** @type {import('./$types').RequestHandler} */
 export const GET = async ({ url }) => {
+    
     const page = url.searchParams.get('page')?parseInt(url.searchParams.get('page')!,10):1
     const per_page = url.searchParams.get('per_page')?parseInt(url.searchParams.get('per_page')!,10):10
-    let res;
     try {
-        res = await octokit.request('GET /users/{username}/repos', {
+        const res = await octokit.request('GET /users/{username}/repos', {
             username: 'Qinbeans',
             headers: {
             'X-GitHub-Api-Version': '2022-11-28'
@@ -56,24 +56,24 @@ export const GET = async ({ url }) => {
             page,
             sort: 'updated',
         })
-    } catch (error) {
-        return json({"error": error})
+        if (res.status !== 200) {
+            return json({"error": res})
+        }
+        const data = streamlineGithub(res.data);
+        for (let i = 0; i < data.length; i++) {
+            data[i] = await getReadme(data[i])
+        }
+        let readmes;
+        try {
+            readmes = compileReadmes(data);
+        } catch (error) {
+            return json({"error": error})
+        }
+        for (let i = 0; i < data.length; i++) {
+            data[i].readme.full = readmes[i];
+        }
+        return json(data)
+    } catch (_) {
+        return json({"error": octokit.log})
     }
-    if (res.status !== 200) {
-        return json({"error": res})
-    }
-    const data = streamlineGithub(res.data);
-    for (let i = 0; i < data.length; i++) {
-        data[i] = await getReadme(data[i])
-    }
-    let readmes;
-    try {
-        readmes = compileReadmes(data);
-    } catch (error) {
-        return json({"error": error})
-    }
-    for (let i = 0; i < data.length; i++) {
-        data[i].readme.full = readmes[i];
-    }
-    return json(data)
 }
