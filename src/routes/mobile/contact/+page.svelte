@@ -86,7 +86,7 @@
             <button type="submit" class="bg-transparent border border-gray-200 hover:bg-gray-200 hover:text-black focus:ring-0 focus:outline-none">Submit</button>
         </form>
     </Card>
-    <Card title="Chatroom" title_class="text-3xl" inner_padding="px-[7%] py-4" author="" date="" doc_type="document" height="h-fill" background="bg-black/25" color="text-white" width="w-full" inner_width="w-full" enable_image={false}>
+    <Card title="Chatroom" title_class="text-3xl" inner_padding="px-[7%] py-4" author="" date="" doc_type="document" height="h-fill" background="bg-black/25" color="text-white" width="" inner_width="w-full" enable_image={false}>
         <p class="py-2 line-through text-center">if you want to chat with me right now, you can join my chatroom</p>
         <p class="text-gray-200 text-center">This feature is currently under development</p>
     </Card>
