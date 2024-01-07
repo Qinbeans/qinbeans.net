@@ -4,7 +4,7 @@
 	import { Accordion, AccordionItem, Avatar } from '@skeletonlabs/skeleton';
 </script>
 
-<div class="grid grid-cols-1 gap-3 grid-flow-row w-dvw h-full py-14 px-1 holder overflow-scroll scroll-smooth">
+<div class="grid grid-cols-1 gap-3 grid-flow-row w-dvw h-full py-14 px-1 holder overflow-y-scroll overflow-x-hidden scroll-smooth">
     <Card title="FAQ" title_class="text-3xl" inner_padding="px-[7%] py-4" author="" date="" doc_type="accordion" height="h-fill" background="bg-black/25" color="text-white" width="" enable_image={false}>
         <div class="w-full translate-x-1/2 py-2">
             <Avatar src="/assets/pfp.webp" alt="My profile picture" class="w-24 h-24 rounded-full object-cover object-center -translate-x-1/2"/>
