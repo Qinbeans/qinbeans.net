@@ -1,7 +1,15 @@
 import { octokit } from "$lib/scripts/octokit";
+import showdown from 'showdown';
 import type { ProjectData } from "$lib/scripts/types.js";
-import { compileMarkdown, streamlineGithub } from "$lib/scripts/utils.js";
+import { streamlineGithub, replaceRelativePathsWithAbsolute } from "$lib/scripts/utils.js";
 import { json } from "@sveltejs/kit";
+
+const compileReadmes = (projects: ProjectData[]) => {
+    const absoluteMarkdown = projects.map((project) => replaceRelativePathsWithAbsolute(project.readme.full, project.author, project.name));
+    const conv = new showdown.Converter();
+    const htmls = absoluteMarkdown.map((markdown) => conv.makeHtml(markdown));
+    return htmls;
+}
 
 const getReadme = async (project: ProjectData) => {
     try {
@@ -30,9 +38,6 @@ const getReadme = async (project: ProjectData) => {
             return project
         }
     }
-    project.readme.short = project.readme.full.split('\n').slice(0, 5).join('\n') + "\n..."
-    project.readme.full = await compileMarkdown(project.readme.full, project.author, project.name)
-    project.readme.short = await compileMarkdown(project.readme.short, project.author, project.name)
     return project
 }
 
@@ -52,6 +57,15 @@ export const GET = async ({ url }) => {
     const data = streamlineGithub(res.data);
     for (let i = 0; i < data.length; i++) {
         data[i] = await getReadme(data[i])
+    }
+    let readmes;
+    try {
+        readmes = compileReadmes(data);
+    } catch (error) {
+        return json({"error": error})
+    }
+    for (let i = 0; i < data.length; i++) {
+        data[i].readme.full = readmes[i];
     }
     return json(data)
 }

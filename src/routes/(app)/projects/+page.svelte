@@ -48,6 +48,17 @@
         }
         const res = await fetch(origin+'/api/projects?page=1&per_page=5');
         const data = await res.json();
+        if (data.error) {
+            console.error(data.error);
+            alertSettings = {
+                message: data.error,
+                background: "variant-filled-error",
+                timeout: 5000
+            }
+            alertToast.trigger(alertSettings);
+            return;
+        }
+        console.log(data);
         $projects = data;
     });
 
@@ -60,6 +71,8 @@
                 throw new Error('Failed to fetch more projects');
             }
             const data = await res.json();
+
+            console.log(data);
 
             if (data.length > 0) {
                 $projects = [...$projects, ...data];
@@ -119,9 +132,11 @@
             <a href="{page.url}" target="_blank" class="bg-black/25 hover:bg-black/45 frosty text-white rounded-xl py-1 px-2 h-fit w-full">
                 View on GitHub
             </a>
-            <a href="/projects/render/{i}" target="_blank" class="bg-black/25 hover:bg-black/45 frosty text-white rounded-xl py-1 px-2 h-fit w-full">
-                View project
-            </a>
+            {#if page.readme.full != ''}
+                <a href="/projects/render/{i}" target="_blank" class="bg-black/25 hover:bg-black/45 frosty text-white rounded-xl py-1 px-2 h-fit w-full">
+                    View project
+                </a>
+            {/if}
         </Card>
     {:else}
         <div class="fixed top-0 left-0 h-dvh translate-y-1/2 w-dvw translate-x-1/2">

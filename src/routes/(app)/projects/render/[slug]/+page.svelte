@@ -8,12 +8,14 @@
     /** @type {import('./$types').PageServerData} */
     export let data: any;
     onMount(async () => {
+        console.log($projects)
         if ($projects.length > 0) {
+            data.project = data.project % $projects.length;
+            console.log(data.project)
             return;
         }
         // get page number
-        const page_num = Math.floor(data.project / 5);
-        console.log(`${data.origin}/api/projects?page=${page_num}&per_page=5`)
+        const page_num = Math.floor(data.project / 5) + 1;
         const res = await fetch(`${data.origin}/api/projects?page=${page_num}&per_page=5`);
         // get remainder
         data.project = data.project % 5;

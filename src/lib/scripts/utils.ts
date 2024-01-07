@@ -1,5 +1,3 @@
-import { compile } from 'mdsvex'
-
 /**
  * @param {string} markdown
  * @param {string} lines
@@ -46,20 +44,6 @@ export const streamlineGithub = (raw_github: any) => {
             forked: project.fork,
         }
     })
-}
-
-/**
- * @param {string} markdown
- * @param {string} author
- * @param {string} name
- * @returns {string}
- * @description compiles markdown into html
- **/
-export const compileMarkdown = async (markdown: string, author: string, name: string) => {
-    const absoluteMarkdown = replaceRelativePathsWithAbsolute(markdown, author, name);
-    const compiledResponse = await compile(absoluteMarkdown);
-    if (!compiledResponse) return "";
-    return compiledResponse.code;
 }
 
 /**
