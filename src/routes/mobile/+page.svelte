@@ -8,7 +8,7 @@
         <p class="text-sm">
             I am a full-stack developer with a passion for creating beautiful and functional websites and applications.
         </p>
-        <Carasel content={["/assets/examples/calculator.webp", "/assets/examples/bloomlabs.webp", "/assets/examples/editor.webp", "/assets/examples/login.webp", "/assets/examples/yabai.webp"]} height="h-fill" padding="p-0" inner_class="w-fill shrink-0" image_class="h-[24rem] w-full object-contain"/>
+        <Carasel content={["/assets/examples/calculator.webp", "/assets/examples/bloomlabs.webp", "/assets/examples/editor.webp", "/assets/examples/login.webp", "/assets/examples/yabai.webp"]} height="h-fill" padding="p-0" inner_class="w-fit shrink-0 bg-transparent border-0" image_class="h-[24rem] object-contain"/>
     </Card>
     <Card title="Where to find me?" title_class="text-3xl" inner_padding="px-[7%] pt-4" author="" date="" doc_type="document" height="h-fill" background="bg-black/25" color="text-white" width="" enable_image={false}>
         <ul>
