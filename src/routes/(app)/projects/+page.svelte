@@ -3,7 +3,6 @@
 	import { projects } from "$lib/scripts/store";
 	import { onMount } from "svelte";
     import { ProgressRadial, Toast, getToastStore, type ToastSettings, type AutocompleteOption, Autocomplete, type PopupSettings, popup  } from '@skeletonlabs/skeleton';
-	import { goto } from "$app/navigation";
 	
     /** @type {import('./$types').PageServerData}*/
     export let data: any;
@@ -49,7 +48,7 @@
         const res = await fetch(origin+'/api/projects?page=1&per_page=5');
         const data = await res.json();
         if (data.error) {
-            console.error(data.error);
+            console.log(data.error);
             alertSettings = {
                 message: data.error,
                 background: "variant-filled-error",
