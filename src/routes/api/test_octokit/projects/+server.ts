@@ -14,14 +14,25 @@ export const GET = async ({ request }) => {
         privateKey: envToKey(PUBLIC_OCTOKEY),
     });
     const octokit = await app.getInstallationOctokit(parseInt(PUBLIC_OCTOIID,10));
-    await octokit.request('GET /users/{username}/repos', {
-        username: 'Qinbeans',
-        headers: {
-        'X-GitHub-Api-Version': '2022-11-28'
-        },
-        per_page: 1,
-        page: 1,
-        sort: 'updated',
-    })
+    try {
+        await octokit.request('GET /users/{username}/repos', {
+            username: 'Qinbeans',
+            headers: {
+            'X-GitHub-Api-Version': '2022-11-28'
+            },
+            per_page: 1,
+            page: 1,
+            sort: 'updated',
+        })
+    } catch (error: any) {
+        let ret_val = ""
+        if (error.status)
+            ret_val = `Status: ${error.status}, `
+        if (error.response)
+            ret_val += `Response: ${error.response}, `
+        if (error.message)
+            ret_val += `Message: ${error.message}`
+        return json({"error": ret_val})
+    }
     return json({"status":"success"});
 };
