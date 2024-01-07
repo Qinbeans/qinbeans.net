@@ -38,7 +38,7 @@
             </svelte:fragment>
             <svelte:fragment slot="content">
                 <p>I am a full-stack developer with a passion for creating beautiful and functional websites and applications. With 1+ years of experience in web development, I have worked with a variety of technologies including Vue, Svelte, Node.js, and PostgreSQL.</p>
-                <Carasel content={["/assets/examples/calculator.webp", "/assets/examples/bloomlabs.webp", "/assets/examples/editor.webp", "/assets/examples/login.webp", "/assets/examples/yabai.webp"]} height="h-fill" padding="p-0" inner_class="w-fill shrink-0" image_class="h-[24rem] w-full object-fit"/>
+                <Carasel content={["/assets/examples/calculator.webp", "/assets/examples/bloomlabs.webp", "/assets/examples/editor.webp", "/assets/examples/login.webp", "/assets/examples/yabai.webp"]} height="h-fill" padding="p-0" inner_class="w-fit shrink-0 bg-transparent border-0" image_class="h-[24rem] object-contain"/>
                 <small class="text-gray-200">The conversation with the AI was a real test conversation using Pygmalion 14b</small>
                 <Accordion>
                     <AccordionItem>
