@@ -45,15 +45,20 @@ const getReadme = async (project: ProjectData) => {
 export const GET = async ({ url }) => {
     const page = url.searchParams.get('page')?parseInt(url.searchParams.get('page')!,10):1
     const per_page = url.searchParams.get('per_page')?parseInt(url.searchParams.get('per_page')!,10):10
-    const res = await octokit.request('GET /users/{username}/repos', {
-        username: 'Qinbeans',
-        headers: {
-        'X-GitHub-Api-Version': '2022-11-28'
-        },
-        per_page,
-        page,
-        sort: 'updated',
-    })
+    let res;
+    try {
+        res = await octokit.request('GET /users/{username}/repos', {
+            username: 'Qinbeans',
+            headers: {
+            'X-GitHub-Api-Version': '2022-11-28'
+            },
+            per_page,
+            page,
+            sort: 'updated',
+        })
+    } catch (error) {
+        return json({"error": error})
+    }
     if (res.status !== 200) {
         return json({"error": res})
     }

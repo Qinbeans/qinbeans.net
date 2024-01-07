@@ -47,7 +47,8 @@
         }
         const res = await fetch(origin+'/api/projects?page=1&per_page=5');
         const data = await res.json();
-        if (data.error) {
+        if (data.error || res.status != 200) {
+            data.error = data.error || 'Failed to fetch projects';
             console.log(data.error);
             alertSettings = {
                 message: data.error,
