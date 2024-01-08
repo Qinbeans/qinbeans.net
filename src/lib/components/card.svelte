@@ -17,6 +17,8 @@
     export let height: string = "h-96";
     export let width: string = "w-96";
     export let margin: string = "m-2";
+    export let image_class: string = "object-cover object-center rounded-2xl";
+    export let article_class: string = "flex justify-between";
 
     export let inner_padding: string = "p-2";
     export let inner_width: string = "w-full";
@@ -29,8 +31,8 @@
 
 <div class="card frosty {padding} {margin} {background} {color} {height} {width}">
     {#if enable_image}
-        <img src={image} alt={title} class="object-cover object-center rounded-2xl"/>
-    {/if}
+        <img src={image} alt={title} class="{image_class}"/>
+    {/if}    
     <div class="{inner_padding} {inner_width}">
         {#if title != null && title != ''}
             <h1 class="text-center {title_class}">{title}</h1>
@@ -40,20 +42,21 @@
             <Accordion>
                 <slot/>
             </Accordion>
-        {:else if doc_type == "article"}
-            <div class="flex justify-between">
-                <div class="flex items-center">
-                    <p class="text-sm">by {author}</p>
-                </div>
-                <div class="flex items-center">
-                    <p class="text-sm">{date}</p>
-                </div>
-            </div>
         {:else}
             {#if description != null && description != ''}
                 <p>{@html description}</p>
             {:else}
                 <slot/>
+            {/if}
+            {#if doc_type == "article"}
+                <div class="{article_class}">
+                    <div class="flex items-center">
+                        <p class="text-sm">by {author}</p>
+                    </div>
+                    <div class="flex items-center">
+                        <p class="text-sm">{date}</p>
+                    </div>
+                </div>
             {/if}
         {/if}
     </div>
