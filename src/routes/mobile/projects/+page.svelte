@@ -112,7 +112,7 @@
         </div>
     {/if}
     {#each $projects as page, i (i)}
-        <Card title='{page.author}/{page.name}' title_class="text-3xl" inner_padding="px-[7%] py-4" author="" date="" doc_type="document" height="h-fill" background="bg-black/25" color="text-white" width="w-fill" inner_width="w-full" enable_image={false}>
+        <Card title='{page.author}/{page.name}' title_class="text-3xl truncate" inner_padding="px-[7%] py-4" author="" date="" doc_type="document" height="h-fill" background="bg-black/25" color="text-white" width="w-fill" inner_width="w-full" enable_image={false}>
             <iframe src="/api/projects/{i}" class="mt-2 w-full h-64 mb-2 rounded-xl" title={page.name} frameborder="0"></iframe>
             <span class="text-right text-white text-xs">Last updated: {page.updated_at}</span>
             <br>

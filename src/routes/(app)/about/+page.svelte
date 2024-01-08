@@ -16,7 +16,7 @@
                 </h2>
             </svelte:fragment>
             <svelte:fragment slot="content">
-                It's a place for me to share my thoughts and ideas. I will be posting about my projects, my thoughts on various topics, and my experiences.
+                <p class="pl-3">It's a place for me to share my thoughts and ideas. I will be posting about my projects, my thoughts on various topics, and my experiences.</p>
             </svelte:fragment>
         </AccordionItem>
         <AccordionItem>
@@ -26,8 +26,19 @@
                 </h2>
             </svelte:fragment>
             <svelte:fragment slot="content">
-                <p>I used <a class="text-gray-200" href="https://svelte.dev" target="_blank" rel="noopener noreferrer">SvelteKit</a>, <a class="text-gray-200" href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer">TailwindCSS</a>, and <a class="text-gray-200" href="https://supabase.io" target="_blank" rel="noopener noreferrer">Supabase</a> to create this website. I used <a class="text-gray-200" href="https://skeleton.dev" target="_blank" rel="noopener noreferrer">Skeleton</a> components and styles to make the website look nice.</p>
-                <p class="underline">Images credits for backgrounds and some images to <a href="https://huggingface.co/Ojimi/anime-kawai-diffusion" target="_blank">Ojimi/anime-kawai-diffusion</a> and <a href="https://openai.com/research/dall-e" target="_blank">OpenAI's DALL-E</a></p>
+                <p class="pl-3">I used <a class="text-gray-200" href="https://svelte.dev" target="_blank" rel="noopener noreferrer">SvelteKit</a>, <a class="text-gray-200" href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer">TailwindCSS</a>, and <a class="text-gray-200" href="https://supabase.io" target="_blank" rel="noopener noreferrer">Supabase</a> to create this website. I used <a class="text-gray-200" href="https://skeleton.dev" target="_blank" rel="noopener noreferrer">Skeleton</a> components and styles to make the website look nice.</p>
+                <p class="underline pl-3">Images credits for backgrounds and some images to <a href="https://huggingface.co/Ojimi/anime-kawai-diffusion" target="_blank">Ojimi/anime-kawai-diffusion</a> and <a href="https://openai.com/research/dall-e" target="_blank">OpenAI's DALL-E</a></p>
+                <p class="pl-3">Since Github doesn't allow previews of their website in iframes for privacy reasons, I used <a href="https://https://docs.github.com/en/rest/apps?apiVersion=2022-11-28" target="_blank">GitHub's API</a> to scrape my projects for readmes and compile and load them into my website. The projects section loads into sessions as cache. The search function searches through this cache to find relevant information based one your query. Another option that was available was to use webhooks to get changes and update pre-compiled readmes, resulting in faster renders of my project readmes.</p>
+            </svelte:fragment>
+        </AccordionItem>
+        <AccordionItem>
+            <svelte:fragment slot="summary">
+                <h2 class="underline decoration-black underline-offset-4">
+                    Why can't I find your projects?
+                </h2>
+            </svelte:fragment>
+            <svelte:fragment slot="content">
+                <p class="pl-3">I have a lot of projects and I don't want to load them all at once as that could make you wait for minutes. I load them in sessions of 5 and you can load more by clicking the "Load more" button at the bottom of the page. This updates your sessions cache which might help you find the project you're looking for.</p>
             </svelte:fragment>
         </AccordionItem>
         <AccordionItem>
@@ -37,7 +48,7 @@
                 </h2>
             </svelte:fragment>
             <svelte:fragment slot="content">
-                I am a full-stack developer with a passion for creating beautiful and functional websites and applications. With 1+ years of experience in web development, I have worked with a variety of technologies including Vue, Svelte, Node.js, and PostgreSQL.
+                <p class="pl-3">I am a full-stack developer with a passion for creating beautiful and functional websites and applications. With 1+ years of experience in web development, I have worked with a variety of technologies including Vue, Svelte, Node.js, Javascript, Golang, Rust, and PostgreSQL.</p>
                 <Carasel content={["/assets/examples/calculator.webp", "/assets/examples/bloomlabs.webp", "/assets/examples/editor.webp", "/assets/examples/login.webp", "/assets/examples/yabai.webp"]} height="h-fill" padding="p-0" inner_class="w-fill shrink-0" image_class="h-[32rem] w-full object-contain"/>
                 <small class="text-gray-200">The conversation with the AI was a real test conversation using Pygmalion 14b</small>
                 <Accordion>
@@ -85,7 +96,7 @@
                 </h2>
             </svelte:fragment>
             <svelte:fragment slot="content">
-                No, I am not. I have experience with C, C++, Java, Python, and Golang. I have worked on a variety of projects that range from games to console applications. You can find more projects in my <a class="text-gray-200" href="/projects">projects</a> page.
+                <p class="pl-3">No, I am not. I have experience with C, C++, Java, Python, Rust, and Golang. I have worked on a variety of projects that range from games to console applications. You can find more projects in my <a class="text-gray-200" href="/projects">projects</a> page.</p>
             </svelte:fragment>
         </AccordionItem>
         <AccordionItem>
@@ -95,7 +106,7 @@
                 </h2>
             </svelte:fragment>
             <svelte:fragment slot="content">
-                I attended <a class="text-gray-200" href="https://csuchico.edu" target="_blank" rel="noopener noreferrer">California State University, Chico</a> and graduated with a B.S. in Computer Science in 2023. My favorite class was Dr. Sam Siewert's <a class="text-gray-200" href="https://sites.google.com/mail.csuchico.edu/csci-551" target="_blank" rel="noopener noreferrer">Numerical and Parallel Programming</a> course followed by Dr. Kevin Buffardi's Software Engineering Course.
+                <p class="pl-3">I attended <a class="text-gray-200" href="https://csuchico.edu" target="_blank" rel="noopener noreferrer">California State University, Chico</a> and graduated with a B.S. in Computer Science in 2023. My favorite class was Dr. Sam Siewert's <a class="text-gray-200" href="https://sites.google.com/mail.csuchico.edu/csci-551" target="_blank" rel="noopener noreferrer">Numerical and Parallel Programming</a> course followed by Dr. Kevin Buffardi's Software Engineering Course.</p>
             </svelte:fragment>
         </AccordionItem>
         <AccordionItem>
