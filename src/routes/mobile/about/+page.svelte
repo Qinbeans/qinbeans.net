@@ -26,7 +26,7 @@
                 </h2>
             </svelte:fragment>
             <svelte:fragment slot="content">
-                <p>I used <a class="text-gray-200" href="https://svelte.dev" target="_blank" rel="noopener noreferrer">SvelteKit</a>, <a class="text-gray-200" href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer">TailwindCSS</a>, and <a class="text-gray-200" href="https://supabase.io" target="_blank" rel="noopener noreferrer">Supabase</a> to create this website. I used <a class="text-gray-200" href="https://skeletonlabs.com" target="_blank" rel="noopener noreferrer">Skeleton Labs</a> components and styles to make the website look nice.</p>
+                <p>I used <a class="text-gray-200" href="https://svelte.dev" target="_blank" rel="noopener noreferrer">SvelteKit</a>, <a class="text-gray-200" href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer">TailwindCSS</a>, and <a class="text-gray-200" href="https://supabase.io" target="_blank" rel="noopener noreferrer">Supabase</a> to create this website. I used <a class="text-gray-200" href="https://skeleton.dev" target="_blank" rel="noopener noreferrer">Skeleton</a> components and styles to make the website look nice.</p>
                 <p class="underline">Images credits for backgrounds and some images to <a href="https://huggingface.co/Ojimi/anime-kawai-diffusion" target="_blank">Ojimi/anime-kawai-diffusion</a> and <a href="https://openai.com/research/dall-e" target="_blank">OpenAI's DALL-E</a></p>
             </svelte:fragment>
         </AccordionItem>
