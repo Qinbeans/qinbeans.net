@@ -70,7 +70,7 @@
             image={blog.image?blog.image:'/assets/placeholder.webp'}
             doc_type="article"
             inner_padding="px-[2%] py-4"
-            image_class="absolute w-full h-full object-cover rounded-2xl -translate-x-2 -translate-y-2 -z-20"
+            image_class="absolute w-full h-full object-cover rounded-2xl -z-20"
             height="h-fill"
             background="bg-black/25"
             color="text-white"

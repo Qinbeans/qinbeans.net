@@ -103,10 +103,4 @@
     p {
         @apply text-xs;
     }
-    h2 {
-        @apply text-xl;
-    }
-    h3 {
-        @apply text-lg;
-    }
 </style>

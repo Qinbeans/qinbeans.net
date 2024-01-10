@@ -112,7 +112,7 @@
 
 <Toast />
 
-<div bind:this={parent} class="grid grid-cols-1 gap-3 grid-flow-row w-dvw py-14 px-[15%]">
+<div bind:this={parent} class="flex flex-col gap-3 grid-flow-row w-dvw py-14 px-[15%]">
     {#if $projects.length != 0}
         <form id="autocomplete" autocomplete="off" class="frosty bg-black/25 px-14 py-4 rounded-xl w-full flex gap-2" on:submit={searchInput}>
             <input required name="autocomplete-search" type="text" class="w-full text-white bg-black/45 px-4 py-1 rounded-xl" use:popup={searchPopup} placeholder="Search for a project..." bind:value={searchValue} />
