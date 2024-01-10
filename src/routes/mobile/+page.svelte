@@ -3,7 +3,7 @@
     import Carasel from '$lib/components/carasel.svelte';
 </script>
 
-<div class="grid grid-cols-1 gap-3 grid-flow-row w-dvw h-full pt-14 holder overflow-scroll scroll-smooth">
+<div class="flex flex-col gap-3 grid-flow-row w-dvw h-full py-14 px-1 holder overflow-scroll scroll-smooth">
     <Card title="What I do." title_class="text-3xl" inner_padding="px-[7%] pt-4" author="" date="" doc_type="document" height="h-fill" background="bg-black/25" color="text-white" width="" enable_image={false}>
         <p class="text-sm">
             I am a full-stack developer with a passion for creating beautiful and functional websites and applications.
@@ -35,12 +35,3 @@
         </ul>
     </Card>
 </div>
-
-<style>
-    h2 {
-        @apply text-xl;
-    }
-    h3 {
-        @apply text-lg;
-    }
-</style>

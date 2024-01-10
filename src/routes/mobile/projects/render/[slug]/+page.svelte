@@ -35,14 +35,3 @@
         </Card>
     {/if}
 </div>
-<style>
-    p {
-        @apply text-sm;
-    }
-    h2 {
-        @apply text-xl;
-    }
-    h3 {
-        @apply text-lg;
-    }
-</style>

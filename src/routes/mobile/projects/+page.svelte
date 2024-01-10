@@ -102,13 +102,15 @@
 <Toast />
 <div class="grid grid-cols-1 gap-3 grid-flow-row w-dvw h-full py-14 px-1 holder overflow-scroll scroll-smooth">
     {#if $projects.length != 0}
-        <form id="autocomplete" autocomplete="off" class="frosty bg-black/25 p-2 m-2 rounded-xl flex gap-2" on:submit={searchInput}>
-            <input required name="autocomplete-search" type="text" class="w-full text-white bg-black/45 px-4 py-1 rounded-xl" use:popup={searchPopup} placeholder="Search for a project..." bind:value={searchValue} />
-            <button type="submit" class="hover:bg-black/75 bg-black/45 text-white px-2 py-1 rounded-xl"> Search </button>
-            <a bind:this={searchAnchor} href="{searchUrl}" target="_blank" class="hidden"> </a>
-        </form>
-        <div class="h-32 w-4/5 holder overflow-x-hidden z-50 bg-black/75 rounded-xl" data-popup="searchPopup">
-            <Autocomplete class="text-white" bind:input={searchValue} options={options} on:selection={selectionHandler} />
+        <div class="w-full">
+            <form id="autocomplete" autocomplete="off" class="p-2 flex gap-2 frosty bg-black/25 rounded-xl" on:submit={searchInput}>
+                <input required name="autocomplete-search" type="text" class="w-full text-white bg-black/45 px-4 py-1 rounded-xl" use:popup={searchPopup} placeholder="Search for a project..." bind:value={searchValue} />
+                <button type="submit" class="hover:bg-black/75 bg-black/45 text-white px-2 py-1 rounded-xl"> Search </button>
+                <a bind:this={searchAnchor} href="{searchUrl}" target="_blank" class="hidden"> </a>
+            </form>
+            <div class="h-32 w-4/5 holder overflow-x-hidden z-50 bg-black/75 rounded-xl" data-popup="searchPopup">
+                <Autocomplete class="text-white" bind:input={searchValue} options={options} on:selection={selectionHandler} />
+            </div>
         </div>
     {/if}
     {#each $projects as page, i (i)}
@@ -141,14 +143,3 @@
         </div>
     {/if}
 </div>
-<style>
-    p {
-        @apply text-sm;
-    }
-    h2 {
-        @apply text-xl;
-    }
-    h3 {
-        @apply text-lg;
-    }
-</style>
