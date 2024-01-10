@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Card from "$lib/components/card.svelte";
 	import { projects } from "$lib/scripts/store";
-	import { ProgressRadial, type AutocompleteOption } from "@skeletonlabs/skeleton";
+	import { ProgressRadial } from "@skeletonlabs/skeleton";
 
     /** @type {import('./$types').PageServerData} */
     export let data: any;
