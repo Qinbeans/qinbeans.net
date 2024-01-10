@@ -17,6 +17,7 @@
     export let height: string = "h-96";
     export let width: string = "w-96";
     export let margin: string = "m-2";
+    export let extra_class: string = "";
     export let image_class: string = "object-cover object-center rounded-2xl";
     export let article_class: string = "flex justify-between";
 
@@ -28,36 +29,37 @@
         throw new Error(`Invalid doc_type: ${doc_type}`);
     }
 </script>
-
-<div class="card frosty {padding} {margin} {background} {color} {height} {width}">
+<div class="card frosty {background} {height}">
     {#if enable_image}
         <img src={image} alt={title} class="{image_class}"/>
-    {/if}    
-    <div class="{inner_padding} {inner_width}">
-        {#if title != null && title != ''}
-            <h1 class="text-center {title_class}">{title}</h1>
-            <div class="border-b border-black"></div>
-        {/if}
-        {#if doc_type == "accordion"}
-            <Accordion>
-                <slot/>
-            </Accordion>
-        {:else}
-            {#if description != null && description != ''}
-                <p>{@html description}</p>
+    {/if}
+    <div class="{padding} {margin} {color} {height} {width} {extra_class}">
+        <div class="{inner_padding} {inner_width}">
+            {#if title != null && title != ''}
+                <h1 class="text-center {title_class}">{title}</h1>
+                <div class="border-b border-black"></div>
+            {/if}
+            {#if doc_type == "accordion"}
+                <Accordion>
+                    <slot/>
+                </Accordion>
             {:else}
-                <slot/>
-            {/if}
-            {#if doc_type == "article"}
-                <div class="{article_class}">
-                    <div class="flex items-center">
-                        <p class="text-sm">by {author}</p>
+                {#if description != null && description != ''}
+                    <p>{@html description}</p>
+                {:else}
+                    <slot/>
+                {/if}
+                {#if doc_type == "article"}
+                    <div class="{article_class}">
+                        <div class="flex items-center">
+                            <p class="text-sm">by {author}</p>
+                        </div>
+                        <div class="flex items-center">
+                            <p class="text-sm">{date}</p>
+                        </div>
                     </div>
-                    <div class="flex items-center">
-                        <p class="text-sm">{date}</p>
-                    </div>
-                </div>
+                {/if}
             {/if}
-        {/if}
+        </div>
     </div>
 </div>

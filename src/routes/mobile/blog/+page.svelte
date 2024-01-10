@@ -60,7 +60,7 @@
 
 </script>
 
-<div class="grid grid-cols-1 gap-3 grid-flow-row w-dvw h-full py-14 px-1 holder overflow-scroll scroll-smooth">
+<div class="flex flex-col gap-3 w-dvw h-full py-14 px-1 holder overflow-scroll scroll-smooth">
     {#each $blogs as blog, i (i)}
         <Card
             title={blog.title}
@@ -69,14 +69,15 @@
             date={blog.created_at}
             image={blog.image?blog.image:'/assets/placeholder.webp'}
             doc_type="article"
-            inner_padding="px-[7%] py-4"
-            image_class="absolute w-full h-full object-cover rounded-2xl -translate-x-2 -translate-y-2 -z-20"
-            height="h-full"
+            inner_padding="px-[7%] py-1"
+            image_class="w-full h-fit object-cover rounded-2xl -z-20"
+            height="h-[24rem]"
             background="bg-black/25"
             color="text-white"
             width="w-fill"
             inner_width="w-full"
             article_class="flex justify-between px-3 py-1 bg-black/65 rounded-lg"
+            extra_class="-translate-y-full"
         >
             <div class="rounded-xl text-left w-full bg-black/65 px-2 py-4 my-2 h-64 holder overflow-y-scroll text-ellipsis">
                 {@html blog.content}
