@@ -1,5 +1,6 @@
 import { redirect } from "@sveltejs/kit";
 import type { LayoutServerLoad } from "./$types";
+import * as uuid from "uuid";
 
 export const load: LayoutServerLoad = async ({ url, request }) => {
     // check if the user is on a mobile device
@@ -14,12 +15,15 @@ export const load: LayoutServerLoad = async ({ url, request }) => {
         // redirect to the mobile version
         throw redirect(302, path);
     }
+    const ip = request.headers.get("x-forwarded-for") || request.headers.get("cf-connecting-ip");
+    const hash = ip ? uuid.v5(ip, uuid.v5.URL) : uuid.v4();
     // if the user is not on a mobile device, but is on the mobile version of the site, redirect them to the desktop version
     if (url.pathname.includes("/mobile")) {
         const path = `${url.origin}${url.pathname.replace("/mobile", "")}`;
         throw redirect(302, path);
     }
     return {
-        response: "pass"
+        response: "pass",
+        unique_pass: hash
     }
 }

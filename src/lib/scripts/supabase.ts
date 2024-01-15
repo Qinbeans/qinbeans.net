@@ -6,6 +6,12 @@ export const supabase = createClient(
     PUBLIC_DB_KEY
 );
 
+export type Blog = Tables<"blogs">;
+export type Comment = Tables<"comments">;
+export type Contact = Tables<"contact">;
+export type UniqueVisitor = Tables<"unique_visitors">;
+export type DailyUniqueVisitorCount = Tables<"daily_unique_visitor_count">;
+
 export type Json =
   | string
   | number
@@ -23,29 +29,61 @@ export interface Database {
           created_at: string
           dislikes: number
           id: string
+          image: string | null
           likes: number
           title: string
-          image?: string
         }
         Insert: {
           content: string
           created_at?: string
           dislikes?: number
           id?: string
+          image?: string | null
           likes?: number
           title: string
-          image?: string
         }
         Update: {
           content?: string
           created_at?: string
           dislikes?: number
           id?: string
+          image?: string | null
           likes?: number
           title?: string
-          image?: string
         }
         Relationships: []
+      }
+      comments: {
+        Row: {
+          author: string
+          b_id: string
+          content: string
+          created_at: string
+          id: string
+        }
+        Insert: {
+          author: string
+          b_id: string
+          content: string
+          created_at?: string
+          id?: string
+        }
+        Update: {
+          author?: string
+          b_id?: string
+          content?: string
+          created_at?: string
+          id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "comments_b_id_fkey"
+            columns: ["b_id"]
+            isOneToOne: false
+            referencedRelation: "blogs"
+            referencedColumns: ["id"]
+          }
+        ]
       }
       contact: {
         Row: {
@@ -74,12 +112,46 @@ export interface Database {
         }
         Relationships: []
       }
+      unique_visitors: {
+        Row: {
+          created_at: string
+          date: string
+          hash: string
+          id: string
+        }
+        Insert: {
+          created_at?: string
+          date: string
+          hash: string
+          id?: string
+        }
+        Update: {
+          created_at?: string
+          date?: string
+          hash?: string
+          id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
-      [_ in never]: never
+      daily_unique_visitor_count: {
+        Row: {
+          unique_visitors: number | null
+          visit_date: string | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
-      [_ in never]: never
+      random_uuids: {
+        Args: {
+          num_uuids: number
+        }
+        Returns: {
+          hash: string
+        }[]
+      }
     }
     Enums: {
       [_ in never]: never

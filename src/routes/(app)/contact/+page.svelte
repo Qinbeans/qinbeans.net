@@ -2,7 +2,7 @@
     import Card from '$lib/components/card.svelte';
 	import type { ContactFormData } from '$lib/scripts/types';
     import { Toast, getToastStore } from '@skeletonlabs/skeleton';
-    import type { ToastSettings, ToastStore } from '@skeletonlabs/skeleton';
+    import type { ToastSettings } from '@skeletonlabs/skeleton';
 
     const formData: ContactFormData = {
         name: '',

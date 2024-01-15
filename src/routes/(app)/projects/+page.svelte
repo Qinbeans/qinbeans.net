@@ -89,6 +89,37 @@
         isLoadingMore = false;
     };
 
+    const reload = async () => {
+        $projects = [];
+        current_page = 1;
+        if (isLoadingMore) return;
+        isLoadingMore = true;
+        try {
+            const res = await fetch(`${origin}/api/projects?page=${current_page}&per_page=5`);
+            if (!res.ok) {
+                throw new Error('Failed to fetch more projects');
+            }
+            const data = await res.json();
+
+            console.log(data);
+
+            if (data.length > 0) {
+                $projects = [...data];
+                current_page = 1;
+            } else {
+                allProjectsLoaded = true; // No more projects to load
+            }
+        } catch (error: any) {
+            alertSettings = {
+                message: error.message,
+                background: "variant-filled-error",
+                timeout: 5000
+            }
+            alertToast.trigger(alertSettings);
+        }
+        isLoadingMore = false;
+    };
+
     const selectionHandler = (event: CustomEvent<AutocompleteOption<string>>) => {
         searchValue = event.detail.label;
         searchUrl = event.detail.value;
@@ -106,8 +137,6 @@
         }
         searchAnchor.click();
     }
-
-
 </script>
 
 <Toast />
@@ -142,8 +171,8 @@
         </div>
     {/each}
     {#if $projects.length != 0 && !allProjectsLoaded}
-    <div class="flex justify-center items-center">
-        <button class="bg-black/25 hover:bg-black/45 mx-[25%] frosty text-white rounded-xl p-2 mt-2 h-fit w-full"
+        <div class="flex justify-center items-center">
+            <button class="bg-black/25 hover:bg-black/45 mx-[25%] frosty text-white rounded-xl p-2 mt-2 h-fit w-full"
                 on:click={loadMore} disabled={isLoadingMore}>
                 {#if isLoadingMore}
                     Loading...
@@ -151,6 +180,19 @@
                     Load more
                 {/if}
             </button>
+            {#if !isLoadingMore}
+                <button class="bg-black/25 frosty rounded px-5 py-1 hover:bg-black/45" on:click={reload} disabled={isLoadingMore}>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+                    </svg>
+                </button>
+            {:else}
+                <div class="bg-black/25 frosty rounded px-5 py-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="white" class="w-6 h-6 animate-spin">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+                    </svg>                      
+                </div>
+            {/if}
         </div>
     {/if}
 </div>
