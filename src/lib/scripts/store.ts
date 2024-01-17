@@ -16,4 +16,4 @@ export const blogs = persisted("blogs", defaultBlogs, {
     storage:"session"
 });
 
-export const expirtation: Writable<Date | null> = persisted("expiration", null);
+export const expiration: Writable<Date | null> = persisted("expiration", null);
