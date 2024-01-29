@@ -25,6 +25,6 @@ export const load: LayoutServerLoad = async ({ url, request }) => {
     }
     return {
         response: "pass",
-        unique_pass: hash
+        unique_pass: hash,
     }
 }

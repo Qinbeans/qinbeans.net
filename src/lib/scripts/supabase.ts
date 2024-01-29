@@ -11,7 +11,6 @@ export type Comment = Tables<"comments">;
 export type Contact = Tables<"contact">;
 export type UniqueVisitor = Tables<"unique_visitors">;
 export type DailyUniqueVisitorCount = Tables<"daily_unique_visitor_count">;
-
 export type Json =
   | string
   | number
@@ -118,18 +117,21 @@ export interface Database {
           date: string
           hash: string
           id: string
+          location: string | null
         }
         Insert: {
           created_at?: string
           date: string
           hash: string
           id?: string
+          location?: string | null
         }
         Update: {
           created_at?: string
           date?: string
           hash?: string
           id?: string
+          location?: string | null
         }
         Relationships: []
       }
