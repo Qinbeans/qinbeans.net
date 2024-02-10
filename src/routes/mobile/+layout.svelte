@@ -1,4 +1,5 @@
 <script lang="ts">
+    import '$lib/styles/mobile.postcss';
 	import { goto } from '$app/navigation';
     import { AppBar, AppRail, AppRailTile, AppRailAnchor } from '@skeletonlabs/skeleton';
     /** @type {import('./$types').LayoutServerData}*/
