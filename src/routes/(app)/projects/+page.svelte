@@ -2,7 +2,7 @@
 	import Card from "$lib/components/card.svelte";
 	import { projects } from "$lib/scripts/store";
 	import { onMount } from "svelte";
-    import { ProgressRadial, Toast, getToastStore, type ToastSettings, type AutocompleteOption, Autocomplete, type PopupSettings, popup  } from '@skeletonlabs/skeleton';
+    import { ProgressRadial, getToastStore, type ToastSettings, type AutocompleteOption, Autocomplete, type PopupSettings, popup  } from '@skeletonlabs/skeleton';
 	
     /** @type {import('./$types').PageServerData}*/
     export let data: any;
@@ -138,8 +138,6 @@
         searchAnchor.click();
     }
 </script>
-
-<Toast />
 
 <div bind:this={parent} class="flex flex-col gap-3 grid-flow-row w-dvw py-14 px-[15%]">
     {#if $projects.length != 0}

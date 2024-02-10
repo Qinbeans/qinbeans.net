@@ -1,4 +1,5 @@
 <script lang="ts">
+    import '$lib/styles/desktop.postcss';
     import { AppBar } from '@skeletonlabs/skeleton';
 </script>
 
