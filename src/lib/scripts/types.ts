@@ -26,9 +26,3 @@ export interface Readme {
     full: string;
     short: string;
 }
-
-export interface Award {
-    from: string;
-    date: string;
-    data: any;
-}
