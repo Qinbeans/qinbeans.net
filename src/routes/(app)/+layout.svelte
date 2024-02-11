@@ -3,7 +3,7 @@
     import { AppBar } from '@skeletonlabs/skeleton';
 </script>
 
-<AppBar gridColumns="grid-cols-3" slotDefault="place-self-center" slotTrail="place-content-end" background="bg-black/35" padding="p-1" class="fixed frosty w-dvw z-10">
+<AppBar gridColumns="grid-cols-[repeat(3,1fr)]" slotDefault="place-self-center" slotTrail="place-content-end" background="bg-black/35" padding="p-1" class="fixed frosty w-dvw z-10">
 	<svelte:fragment slot="lead">
 		<a class="text-white text-lg button" href="/">Qinbeans</a>
 	</svelte:fragment>
@@ -11,6 +11,7 @@
 		<a class="button" href="/about">About</a>
 		<a class="button" href="/projects">Projects</a>
 		<a class="button" href="/blog">Blog</a>
+		<a class="button" href="/awards">Awards</a>
 	</div>
 	<svelte:fragment slot="trail">
 		<a class="text-white text-lg button" href="/contact">Contact</a>

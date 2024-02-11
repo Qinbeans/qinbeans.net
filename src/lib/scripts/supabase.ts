@@ -10,7 +10,9 @@ export type Blog = Tables<"blogs">;
 export type Comment = Tables<"comments">;
 export type Contact = Tables<"contact">;
 export type UniqueVisitor = Tables<"unique_visitors">;
+export type Award = Tables<"awards"> & { data: string[] };
 export type DailyUniqueVisitorCount = Tables<"daily_unique_visitor_count">;
+
 export type Json =
   | string
   | number
@@ -19,9 +21,36 @@ export type Json =
   | { [key: string]: Json | undefined }
   | Json[]
 
-export interface Database {
+export type Database = {
   public: {
     Tables: {
+      awards: {
+        Row: {
+          created_at: string
+          data: Json
+          date: string
+          from: string
+          id: number
+          title: string
+        }
+        Insert: {
+          created_at?: string
+          data: Json
+          date: string
+          from: string
+          id?: number
+          title: string
+        }
+        Update: {
+          created_at?: string
+          data?: Json
+          date?: string
+          from?: string
+          id?: number
+          title?: string
+        }
+        Relationships: []
+      }
       blogs: {
         Row: {
           content: string
@@ -117,21 +146,24 @@ export interface Database {
           date: string
           hash: string
           id: string
-          location: string | null
+          isDisplay: boolean
+          location: Json | null
         }
         Insert: {
           created_at?: string
           date: string
           hash: string
           id?: string
-          location?: string | null
+          isDisplay?: boolean
+          location?: Json | null
         }
         Update: {
           created_at?: string
           date?: string
           hash?: string
           id?: string
-          location?: string | null
+          isDisplay?: boolean
+          location?: Json | null
         }
         Relationships: []
       }

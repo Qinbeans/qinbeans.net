@@ -25,6 +25,7 @@ export const load: LayoutServerLoad = async ({ url, request }) => {
     }
     return {
         response: "pass",
+        ignore_checks: url.pathname.includes("/api"),
         unique_pass: hash,
     }
 }

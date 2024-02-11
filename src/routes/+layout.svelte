@@ -10,6 +10,7 @@
     /** @type {import('./$types').LayoutServerData}*/
     export let data: any;
     const hash = data.unique_pass;
+    const ignoreChecks = data.ignore_checks;
     
     initializeStores();
     storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
@@ -52,6 +53,7 @@
     }
 
     onMount(async () => {
+        if (ignoreChecks) return;
         if (typeof($expiration) === "string") {
             $expiration = new Date($expiration);
         }
