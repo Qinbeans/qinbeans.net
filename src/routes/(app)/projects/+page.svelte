@@ -49,7 +49,7 @@
         const data = await res.json();
         if (data.error || res.status != 200) {
             data.error = data.error || 'Failed to fetch projects';
-            console.log(data.error);
+            console.error(data.error);
             alertSettings = {
                 message: data.error,
                 background: "variant-filled-error",

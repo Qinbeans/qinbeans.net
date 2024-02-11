@@ -48,7 +48,7 @@
         const data = await res.json();
         if (data.error || res.status != 200) {
             data.error = data.error || 'Failed to fetch projects';
-            console.log(data.error);
+            console.error(data.error);
             alertSettings = {
                 message: data.error,
                 background: "variant-filled-error",
@@ -68,8 +68,6 @@
                 throw new Error('Failed to fetch more projects');
             }
             const data = await res.json();
-
-            console.log(data);
 
             if (data.length > 0) {
                 $projects = [...$projects, ...data];
@@ -99,8 +97,6 @@
                 throw new Error('Failed to fetch more projects');
             }
             const data = await res.json();
-
-            console.log(data);
 
             if (data.length > 0) {
                 $projects = [...data];
