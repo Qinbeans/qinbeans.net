@@ -13,7 +13,6 @@
         }
         // get page number
         const page_num = Math.floor(data.project / 5);
-        console.log(`${data.origin}/api/projects?page=${page_num}&per_page=5`)
         const res = await fetch(`${data.origin}/api/projects?page=${page_num}&per_page=5`);
         // get remainder
         data.project = data.project % 5;

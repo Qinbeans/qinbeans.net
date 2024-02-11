@@ -8,7 +8,8 @@ export const load: LayoutServerLoad = async ({ url, request }) => {
     if (agent.match(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i)) {
         if (url.pathname.includes("/mobile") || url.pathname.includes("/assets") || url.pathname.includes("/api") ) {
             return {
-                response: "pass"
+                response: "pass",
+                ignore_checks: url.pathname.includes("/api"),
             }
         }
         // replace the current URL with the mobile version, which just appends "mobile" after the domain name

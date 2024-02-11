@@ -90,7 +90,6 @@
                             state: data.address.state,
                             country: data.address.country
                         };
-                        console.log(location);
                         const {data: _, error} = await supabase.from("unique_visitors").insert({ hash, date: now.toISOString().split("T")[0], location });
                         if (error) {
                             console.error(error);

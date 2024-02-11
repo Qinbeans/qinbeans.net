@@ -8,10 +8,8 @@
     /** @type {import('./$types').PageServerData} */
     export let data: any;
     onMount(async () => {
-        console.log($projects)
         if ($projects.length > 0) {
             data.project = data.project % $projects.length;
-            console.log(data.project)
             return;
         }
         // get page number
