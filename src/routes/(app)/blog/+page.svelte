@@ -119,9 +119,6 @@
     });
 
 </script>
-<div>
-    
-</div>
 <div class="grid grid-cols-3 gap-3 grid-flow-row w-dvw py-14 px-[15%]">
     {#each $blogs as blog, i (i)}
         <Card
