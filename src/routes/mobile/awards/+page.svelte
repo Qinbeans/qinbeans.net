@@ -25,7 +25,7 @@
             enable_image={false}
         >
             {#if award.data[0] === "embed"}
-                <iframe title={award.title} src={award.data[1]} class="overflow-hidden w-full h-full" frameborder="0"/>
+                <object title={award.title} data={award.data[1]} type="application/pdf" class="w-full h-full"></object>
             {:else}
                 {award.data[1]}
             {/if}
