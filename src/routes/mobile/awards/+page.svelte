@@ -14,9 +14,9 @@
         <Card
             title={award.title}
             author={award.from}
-            date={award.date}
+            date={new Date(award.date).toLocaleDateString()}
             title_class="text-3xl truncate"
-            inner_padding="px-[5%] py-1 h-full"
+            inner_padding="px-[5%] py-1 h-[80%]"
             background="bg-black/25"
             color="text-white"
             width="w-fill"
@@ -24,7 +24,9 @@
             enable_image={false}
         >
             {#if award.data[0] === "embed"}
-                <iframe title={award.title} src={award.data[1]} height="80%" width="100%"/>
+                <object title={award.title} data={award.data[1]} type="application/pdf" class="w-full h-full">
+                    <span class="text-center">Your browser does not support PDFs. <a href="/contact">Contact me for further information</a></span>
+                </object>
             {:else}
                 {award.data[1]}
             {/if}
