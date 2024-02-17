@@ -1,0 +1,7 @@
+# All /assets files and directories are allowed
+User-agent: *
+Crawl-delay: 120
+Disallow: /projects/
+Disallow: /mobile/
+Disallow: /api/
+Disallow: /assets/examples/
