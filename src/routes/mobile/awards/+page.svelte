@@ -2,7 +2,6 @@
     import Card from "$lib/components/card.svelte";
     
 	import type { Award } from "$lib/scripts/supabase";
-	import { onMount } from "svelte";
 
     /** @type {import('./$types').PageServerData}*/
     export let data: any;
@@ -25,7 +24,9 @@
             enable_image={false}
         >
             {#if award.data[0] === "embed"}
-                <object title={award.title} data={award.data[1]} type="application/pdf" class="w-full h-full"></object>
+                <object title={award.title} data={award.data[1]} type="application/pdf" class="w-full h-full">
+                    <span class="text-center">Your browser does not support PDFs. <a href="/contact">Contact me for further information</a></span>
+                </object>
             {:else}
                 {award.data[1]}
             {/if}
