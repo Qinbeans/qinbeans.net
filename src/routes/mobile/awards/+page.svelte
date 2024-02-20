@@ -45,7 +45,7 @@
                         <span class="text-center">Your browser does not support PDFs. <a href="/contact">Contact me for further information</a></span>
                     </object>
                 {:else}
-                    <p class="text-center bg-black/25 p-2 rounded-md text-white">Location services are disabled, as this contains information I'd like to keep private. I would appreciate knowing who requests access to my files.</p>
+                    <p class="text-center bg-black/25 p-2 rounded-md text-white">Location services are disabled. As this contains information I'd like to keep relatively private, I would appreciate access to location.</p>
                 {/if}
             {/if}
         </Card>
