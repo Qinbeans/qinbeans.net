@@ -1,15 +1,52 @@
 <script lang="ts">
     import Card from "$lib/components/card.svelte";
-    
-	import type { Award } from "$lib/scripts/supabase";
+	import { awards } from "$lib/scripts/store";
+	import { getToastStore, type ToastSettings } from "@skeletonlabs/skeleton";
 	import { onMount } from "svelte";
 
     /** @type {import('./$types').PageServerData}*/
     export let data: any;
 
-    const awards: Award[] = data.awards;
+    const origin = data.origin;
+
+    let isLoadingMore = false;
+    let allAwardsLoaded = false;
 
     let canViewSecrets = false;
+
+    const alertToast = getToastStore();
+    let alertSettings: ToastSettings;
+
+    const loadAwards = async () => {
+        if (isLoadingMore || allAwardsLoaded) return;
+        isLoadingMore = true;
+        const res = await fetch(`${origin}/api/awards`,{
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        const { data: new_awards, error } = await res.json();
+        if (error) {
+            console.error(error);
+            alertSettings = {
+                message: error,
+                background: "variant-filled-error",
+                timeout: 5000
+            }
+            alertToast.trigger(alertSettings);
+            return;
+        }
+        if (new_awards.length === 0) {
+            allAwardsLoaded = true;
+            return;
+        }
+        if (new_awards.length < 5) {
+            allAwardsLoaded = true;
+        }
+        $awards = [...$awards, ...new_awards];
+        console.log($awards.length);
+        isLoadingMore = false;
+    };
 
     onMount(() => {
         if (navigator.geolocation) {
@@ -17,11 +54,15 @@
                 canViewSecrets = result.state === "granted";
             });
         }
+        if ($awards.length > 0) {
+            return;
+        }
+        loadAwards();
     });
 </script>
 
 <div class="grid grid-cols-1 gap-3 grid-flow-row w-dvw h-full py-14 px-1 holder overflow-scroll scroll-smooth">
-    {#each awards as award, i (i)}
+    {#each $awards as award, i (i)}
         <Card
             title={award.title}
             author={award.from}
@@ -49,5 +90,16 @@
                 {/if}
             {/if}
         </Card>
+    {:else}
+        {#if isLoadingMore}
+            <div class="w-full h-20 flex justify-center items-center">
+                <div class="loader"></div>
+            </div>
+        {/if}
+        {#if allAwardsLoaded}
+            <div class="w-full h-20 flex justify-center items-center">
+                <h1 class="text-3xl text-gray-500">No awards to show</h1>
+            </div>
+        {/if}
     {/each}
 </div>

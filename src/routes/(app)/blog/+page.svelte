@@ -9,6 +9,7 @@
 
     const page = data.page;
     const num = data.per_page;
+    const origin = data.origin;
 
     let isLoadingMore = false;
     let allBlogsLoaded = false;
