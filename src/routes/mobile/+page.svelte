@@ -33,10 +33,10 @@
                 </a>
             </li>
             <li>
-                <a href="https://www.hackerrank.com/profile/rfong7" target="_blank" class="flex gap-2">
+                <a href="https://www.hackerrank.com/profile/rfong3488" target="_blank" class="flex gap-2">
                     <img src="https://hrcdn.net/fcore/assets/work/header/hackerrank_logo-21e2867566.svg" class="w-8 h-8 bg-black rounded p-1" alt="hr">
                     <span class="py-1">
-                        hackerrank.com/profile/rfong7
+                        hackerrank.com/profile/rfong3488
                     </span>
                 </a>
             </li>
