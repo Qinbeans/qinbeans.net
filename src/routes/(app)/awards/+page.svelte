@@ -45,8 +45,6 @@
                     {:else}
                         <p class="text-center bg-black/25 p-2 rounded-md text-white">Location services are disabled, as this contains information I'd like to keep private. I would appreciate knowing who requests access to my files.</p>
                     {/if}
-                {:else}
-                    {award.data[1]}
                 {/if}
             </Card>
         {/each}
