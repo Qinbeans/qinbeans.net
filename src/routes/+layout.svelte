@@ -3,7 +3,7 @@
     import { getModalStore, getToastStore, initializeStores, type ModalSettings } from '@skeletonlabs/skeleton';
     import { computePosition, autoUpdate, offset, shift, flip, arrow } from '@floating-ui/dom';
     import { supabase } from "$lib/scripts/supabase";
-    import { expiration, projects, blogs } from "$lib/scripts/store";
+    import { expiration, projects, blogs, awards } from "$lib/scripts/store";
     import { storePopup, Toast, Modal } from '@skeletonlabs/skeleton';
 	import { onMount } from 'svelte';
     
@@ -108,6 +108,7 @@
             // empty projects and blogs
             $projects = [];
             $blogs = [];
+            $awards = [];
         }
     });
 </script>

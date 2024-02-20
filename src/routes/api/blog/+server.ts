@@ -1,4 +1,4 @@
-import { supabase, type Database } from "$lib/scripts/supabase"
+import { supabase, type Blog } from "$lib/scripts/supabase"
 import { json } from "@sveltejs/kit"
 import type { RequestHandler } from "./$types"
 
@@ -18,7 +18,7 @@ export const GET: RequestHandler = async ({url}) => {
         return json({"data":"","error": error})
     }
     // change date format
-    data.forEach((blog: Database["public"]["Tables"]["blogs"]["Row"]) => {
+    data.forEach((blog: Blog) => {
         blog.created_at = new Date(blog.created_at).toLocaleDateString()
     })
     return json({data, error})
