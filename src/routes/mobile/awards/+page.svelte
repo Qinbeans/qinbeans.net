@@ -4,11 +4,6 @@
 	import { getToastStore, type ToastSettings } from "@skeletonlabs/skeleton";
 	import { onMount } from "svelte";
 
-    /** @type {import('./$types').PageServerData}*/
-    export let data: any;
-
-    const origin = data.origin;
-
     let isLoadingMore = false;
     let allAwardsLoaded = false;
 
@@ -20,7 +15,7 @@
     const loadAwards = async () => {
         if (isLoadingMore || allAwardsLoaded) return;
         isLoadingMore = true;
-        const res = await fetch(`${origin}/api/awards`,{
+        const res = await fetch(`/api/awards`,{
             headers: {
                 'Content-Type': 'application/json'
             }
