@@ -60,6 +60,7 @@ export const replaceRelativePathsWithAbsolute = (markdown: string, author: strin
     matches?.push(...(markdown.match(bracket_regex) || []));
     if (!matches) return markdown;
     matches.forEach((match) => {
+        if (match.includes('http')) return;
         const relativePath = match.split('"')[1];
         const absolutePath = `https://raw.githubusercontent.com/${author}/${name}/main/${relativePath}`;
         markdown = markdown.replace(relativePath, absolutePath);
