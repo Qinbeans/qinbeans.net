@@ -70,8 +70,6 @@
             }
             const data = await res.json();
 
-            console.log(data);
-
             if (data.length > 0) {
                 $projects = [...$projects, ...data];
                 current_page++;
@@ -100,8 +98,6 @@
                 throw new Error('Failed to fetch more projects');
             }
             const data = await res.json();
-
-            console.log(data);
 
             if (data.length > 0) {
                 $projects = [...data];
@@ -169,15 +165,7 @@
         </div>
     {/each}
     {#if $projects.length != 0 && !allProjectsLoaded}
-        <div class="flex justify-center items-center">
-            <button class="bg-black/25 hover:bg-black/45 mx-[25%] frosty text-white rounded-xl p-2 mt-2 h-fit w-full"
-                on:click={loadMore} disabled={isLoadingMore}>
-                {#if isLoadingMore}
-                    Loading...
-                {:else}
-                    Load more
-                {/if}
-            </button>
+        <div class="flex justify-center items-center gap-2">
             {#if !isLoadingMore}
                 <button class="bg-black/25 frosty rounded px-5 py-1 hover:bg-black/45" on:click={reload} disabled={isLoadingMore}>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-6 h-6">
@@ -191,6 +179,12 @@
                     </svg>                      
                 </div>
             {/if}
+            <button class="bg-black/25 frosty rounded px-5 py-1 hover:bg-black/45"
+                on:click={loadMore} disabled={isLoadingMore}>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                </svg>
+            </button>
         </div>
     {/if}
 </div>

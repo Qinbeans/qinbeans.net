@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: radial-gradient(#0f0f0f, #1b1b1b);
+    }
+}
+
+/* light mode */
+@media (prefers-color-scheme: light) {
+    body {
+        background: radial-gradient(#f0f0f0, #6f6f6f);
+    }
+}
+
 h1 {
     @apply text-4xl;
 }

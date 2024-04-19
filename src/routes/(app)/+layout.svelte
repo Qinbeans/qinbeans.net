@@ -1,5 +1,4 @@
 <script lang="ts">
-    import '$lib/styles/desktop.postcss';
     import { AppBar } from '@skeletonlabs/skeleton';
 </script>
 
@@ -17,8 +16,6 @@
 		<a class="text-white text-lg button" href="/contact">Contact</a>
 	</svelte:fragment>
 </AppBar>
-
-<div class="bg-image fixed h-dvh w-dvw z-0"></div>
 
 <main class="h-dvh overflow-x-hidden scroll-smooth">
 	<slot/>
