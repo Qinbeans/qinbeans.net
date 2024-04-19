@@ -44,7 +44,6 @@
             allAwardsLoaded = true;
         }
         $awards = [...$awards, ...new_awards];
-        console.log($awards.length);
         isLoadingMore = false;
     };
 
