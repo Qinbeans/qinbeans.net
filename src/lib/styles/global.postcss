@@ -7,6 +7,15 @@
     body {
         background: radial-gradient(#0f0f0f, #1b1b1b);
     }
+    a:not(.button) {
+        @apply text-indigo-400;
+    }
+    a:hover {
+        @apply text-purple-500;
+    }
+    .icon {
+        @apply fill-white bg-gray-800;
+    }
 }
 
 /* light mode */
@@ -14,6 +23,23 @@
     body {
         background: radial-gradient(#f0f0f0, #6f6f6f);
     }
+    a:not(.button) {
+        @apply text-indigo-300;
+    }
+    a:hover {
+        @apply text-purple-300;
+    }
+    .icon {
+        @apply fill-gray-300 bg-black;
+    }
+}
+
+.icon {
+    @apply w-8 h-8 rounded-full p-1;
+}
+
+.icon-anchor {
+    @apply flex gap-2 w-fit;
 }
 
 h1 {
@@ -32,12 +58,11 @@ h4 {
     @apply text-xl;
 }
 
-a:hover {
-    @apply text-blue-600;
-}
+
 a {
     text-shadow: 1px 1px 1px black;
 }
+
 
 .holder::-webkit-scrollbar {
     display: none;

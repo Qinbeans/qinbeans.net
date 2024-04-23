@@ -16,7 +16,10 @@
                 </h2>
             </svelte:fragment>
             <svelte:fragment slot="content">
-                <p class="pl-3">It's a place for me to share my thoughts and ideas. I will be posting about my projects, my thoughts on various topics, and my experiences.</p>
+                <h3 class="pl-1">Purpose</h3>
+                <p class="pl-3">It's a place for me to share my thoughts and ideas. I will be posting about my projects, my thoughts, and my experiences.</p>
+                <h3 class="pl-1">Philosophy</h3>
+                <p class="pl-3">This website was designed to be highly modular and easy to update and deploy. An example of this modularity is the reuse of several components throughout the website--the website is essentially using a singlular component called "Card" that changes state based on content.</p> 
             </svelte:fragment>
         </AccordionItem>
         <AccordionItem>
